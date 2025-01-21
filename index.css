@@ -1,4 +1,4 @@
-/* General Styles */
+General Styles
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -25,11 +25,12 @@ h1 {
 
 .nav-links {
     list-style-type: none;
+    display: flex; /* Flexbox for horizontal alignment */
+    gap: 20px; /* Spacing between links */
 }
 
 .nav-links li {
-    display: inline;
-    margin-right: 20px;
+    display: inline-block;
 }
 
 .nav-links a {
@@ -106,4 +107,30 @@ body.dark-mode {
 
 .footer.dark-mode {
     background-color: #1c042d;
+}
+
+
+/* Responsive Design */
+
+/* Mobile Styles (up to 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack logo and links vertically */
+        align-items: flex-start; /* Align to the left */
+        padding-bottom: 10px; /* Add spacing below navbar items */
+        gap: 10px; /* Add spacing between elements in navbar */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 10px; /* Add spacing between links */
+        width: 100%; /* Full width for mobile screens */
+        padding-left: 0; /* Remove default padding */
+        margin-top: 10px; /* Add spacing from logo or toggle button */
+        align-items: flex-start; /* Align links to the left */
+        list-style-type: none; /* Remove bullets for links on mobile view */
+        
+      }
+      .theme-toggle{
+      align-self:right}
 }
