@@ -183,12 +183,7 @@
       font-size: 1rem;
     }
   }
-  /* section:hover {
-    background-color: var(--hover-color);
-    color: var(--bg-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
-  } */
-
+ 
   section:hover {
     background-color: var(--hover-color);
     color: var(--bg-color);
@@ -198,4 +193,64 @@
   body.light-theme section:hover {
     background-color: var(--hover-lightcolor);
     color: var(--text-color);
+  }
+
+  footer {
+    background-color: #1e1e1e;
+    color: var(--text-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 2px solid var(--accent-color);
+    margin-top: 20px;
+  }
+  
+  body.light-theme footer {
+    background-color: #f0f0f0;
+  }
+  
+  .footer-content {
+    text-align: center;
+  }
+  
+  .footer-content p {
+    margin: 0;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Add spacing between the icons */
+  }
+  
+  .footer-links a {
+    display: inline-block;
+    font-size: 30px; /* Adjusted icon size */
+    color: var(--text-color);
+    transition: transform 0.3s, color 0.3s;
+  }
+  
+  .footer-links a:hover {
+    transform: scale(1.1);
+    color: var(--accent-color);
+  }
+  
+  body.light-theme .footer-links a {
+    color: var(--text-color); /* Light theme icon color */
+  }
+  
+  body.light-theme .footer-links a:hover {
+    color: var(--accent-color); /* Light theme hover effect */
+  }
+  
+  /* Responsive Footer */
+  @media screen and (max-width: 768px) {
+    .footer-links {
+      flex-wrap: wrap;
+      gap: 15px;
+    }
   }
