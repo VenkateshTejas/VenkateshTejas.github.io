@@ -82,6 +82,7 @@
   
   section {
     display: flex;
+    scroll-margin: 130px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -174,6 +175,8 @@
   
     .menu.active {
       display: flex;
+      top: 60px;
+
     }
   
     section {
@@ -205,7 +208,7 @@
     display: none; /* Hide by default */
     flex-direction: column;
     justify-content: space-between;
-    height: 22px;
+    height: 35px;
     width: 30px;
   }
   
@@ -240,6 +243,7 @@
     }
   
     .menu.active {
+      top: 100px;
       display: flex;
       transform: translateX(0);
     }
@@ -257,7 +261,7 @@
     }
   }
 
-  
+
   footer {
     background-color: #1e1e1e;
     color: var(--text-color);
