@@ -5,6 +5,8 @@
     --section-bg-color: #1f1f1f;
     --card-bg-color: #2a2a2a;
     --light-card-bg: #eaeaea;
+    --hover-color: rgb(81, 69, 5);
+    --hover-lightcolor:rgb(184, 247, 247);
   }
   
   body.light-theme {
@@ -14,6 +16,7 @@
     --section-bg-color: #f9f9f9;
     --card-bg-color: #ffffff;
     --light-card-bg: #f4f4f4;
+  
   }
   
   body {
@@ -78,7 +81,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 100vh;
+    min-height: 50vh;
     padding: 40px 20px;
     margin-bottom: 20px;
     background-color: var(--section-bg-color);
@@ -179,4 +182,20 @@
     section p {
       font-size: 1rem;
     }
+  }
+  /* section:hover {
+    background-color: var(--hover-color);
+    color: var(--bg-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  } */
+
+  section:hover {
+    background-color: var(--hover-color);
+    color: var(--bg-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  body.light-theme section:hover {
+    background-color: var(--hover-lightcolor);
+    color: var(--text-color);
   }

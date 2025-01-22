@@ -9,3 +9,4 @@ themeSwitcher.addEventListener("click", () => {
 hamburger.addEventListener("click", () => {
   menu.classList.toggle("active");
 });
+
