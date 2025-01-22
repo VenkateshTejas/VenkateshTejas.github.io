@@ -211,6 +211,8 @@
     justify-content: space-between;
     height: 35px;
     width: 30px;
+    margin-right: 20px;
+    padding-right: 20px;
   }
   
   #hamburger div {
@@ -265,7 +267,7 @@
 
   footer {
     background-color: #1e1e1e;
-    color: white;
+    color: var(--accent-color);
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -286,7 +288,7 @@
     margin: 0;
     font-size: 1rem;
     margin-bottom: 15px;
-    color:white;
+    color:var(--accent-color);
   }
   
   .footer-links {
@@ -298,7 +300,7 @@
   .footer-links a {
     display: inline-block;
     font-size: 30px; /* Adjusted icon size */
-    color: white;
+    color: var(--accent-color);
     transition: transform 0.3s, color 0.3s;
   }
   
@@ -308,11 +310,12 @@
   }
   
   body.light-theme .footer-links a {
-    color: white; /* Light theme icon color */
+    color: var(--accent-color) /* Light theme icon color */
   }
   
   body.light-theme .footer-links a:hover {
-    color: white; /* Light theme hover effect */
+    color:#6200ea;
+    ; /* Light theme hover effect */
   }
   
   /* Responsive Footer */
@@ -322,3 +325,5 @@
       gap: 15px;
     }
   }
+
+  
