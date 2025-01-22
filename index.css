@@ -199,7 +199,65 @@
     background-color: var(--hover-lightcolor);
     color: var(--text-color);
   }
+/* Ensure the hamburger menu appears clean */
+#hamburger {
+    cursor: pointer;
+    display: none; /* Hide by default */
+    flex-direction: column;
+    justify-content: space-between;
+    height: 22px;
+    width: 30px;
+  }
+  
+  #hamburger div {
+    height: 4px;
+    background-color: var(--text-color);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  body.light-theme #hamburger div {
+    background-color: var(--text-color);
+  }
+  
+  /* Show hamburger on small screens */
+  @media screen and (max-width: 768px) {
+    #hamburger {
+      display: flex;
+    }
+  
+    .menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 10px;
+      background-color: var(--card-bg-color);
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+  
+    .menu.active {
+      display: flex;
+      transform: translateX(0);
+    }
+  
+    .menu a {
+      padding: 10px 0;
+      text-align: center;
+      font-size: 1.2rem;
+      color: var(--text-color);
+      transition: color 0.3s ease;
+    }
+  
+    .menu a:hover {
+      color: var(--accent-color);
+    }
+  }
 
+  
   footer {
     background-color: #1e1e1e;
     color: var(--text-color);
