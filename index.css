@@ -1,136 +1,182 @@
-General Styles
-body {
-    font-family: Arial, sans-serif;
+:root {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --accent-color: #b3a11a;
+    --section-bg-color: #1f1f1f;
+    --card-bg-color: #2a2a2a;
+    --light-card-bg: #eaeaea;
+  }
+  
+  body.light-theme {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --accent-color: #6200ea;
+    --section-bg-color: #f9f9f9;
+    --card-bg-color: #ffffff;
+    --light-card-bg: #f4f4f4;
+  }
+  
+  body {
     margin: 0;
-    padding: 0;
-}
-
-.section {
-    padding: 50px;
-}
-
-h1 {
-    text-align: center;
-}
-
-/* Navbar */
-.navbar {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  header {
+    background-color: #1e1e1e;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    color: rgb(8, 8, 8);
-    padding: 15px 20px;
-}
-
-.nav-links {
-    list-style-type: none;
-    display: flex; /* Flexbox for horizontal alignment */
-    gap: 20px; /* Spacing between links */
-}
-
-.nav-links li {
-    display: inline-block;
-}
-
-.nav-links a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-}
-
-.nav-links a:hover {
-    text-decoration: underline;
-}
-
-/* Theme Toggle Button */
-.theme-toggle {
-    background-color: transparent;
-    border: none;
+    padding: 10px 20px;
+  }
+  
+  body.light-theme header {
+    background-color: #f0f0f0;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .logo {
+    font-size: 24px;
+    color: var(--accent-color);
+  }
+  
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  #theme-switcher {
+    background: none;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    border-radius: 50%;
+    padding: 5px;
     cursor: pointer;
-    font-size: 1.5rem; /* Adjust size for visibility */
-    color: rgb(187, 180, 142); /* Matches navbar text color */
-}
-
-.theme-toggle:hover {
-    color: #ffcc00; /* Highlight effect on hover */
-}
-
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth; /* Enables smooth scrolling */
-}
-
-/* Footer */
-.footer {
-    background-color: #070707;
-    color: white;
+  }
+  
+  .menu a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 10px 0;
-}
-
-.footer .social-links a {
-    color: rgb(255, 255, 255);
-}
-
-.footer .social-links a:hover {
-    text-decoration: underline;
-}
-
-/* Hobbies Section */
-.hobbies .fun-list li {
-    list-style-type: square;
-}
-
-/* Default (Light Mode) */
-body {
-    background-color: #e3e4dd;
-    color: #000000;
-}
-
-.navbar {
-    background-color: #070707;
-}
-
-.footer {
-    background-color: #030303;
-}
-
-/* Dark Mode */
-body.dark-mode {
-    background-color: #1b1a1a;
-    color: #e6e6e6;
-}
-
-.navbar.dark-mode {
-    background-color: #1c042d;
-}
-
-.footer.dark-mode {
-    background-color: #1c042d;
-}
-
-
-/* Responsive Design */
-
-/* Mobile Styles (up to 768px) */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column; /* Stack logo and links vertically */
-        align-items: flex-start; /* Align to the left */
-        padding-bottom: 10px; /* Add spacing below navbar items */
-        gap: 10px; /* Add spacing between elements in navbar */
+    min-height: 100vh;
+    padding: 40px 20px;
+    margin-bottom: 20px;
+    background-color: var(--section-bg-color);
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  body.light-theme section {
+    box-shadow: 0px 4px 10px rgba(200, 200, 200, 0.4);
+  }
+  
+  section:nth-child(odd) {
+    background-color: var(--card-bg-color);
+  }
+  
+  body.light-theme section:nth-child(odd) {
+    background-color: var(--light-card-bg);
+  }
+  
+  section h2 {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+  
+  section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    color: var(--text-color);
+  }
+  
+  section h3 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    color: var(--accent-color);
+  }
+  
+  button {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive Styling */
+  @media screen and (max-width: 768px) {
+    nav {
+      flex-wrap: wrap;
+      padding: 10px;
     }
-
-    .nav-links {
-        flex-direction: column; /* Stack links vertically */
-        gap: 10px; /* Add spacing between links */
-        width: 100%; /* Full width for mobile screens */
-        padding-left: 0; /* Remove default padding */
-        margin-top: 10px; /* Add spacing from logo or toggle button */
-        align-items: flex-start; /* Align links to the left */
-        list-style-type: none; /* Remove bullets for links on mobile view */
-        
-      }
-      .theme-toggle{
-      align-self:right}
-}
+  
+    .logo {
+      flex: 1;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  
+    .actions {
+      flex: 1;
+      justify-content: flex-end;
+    }
+  
+    .menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 10px;
+      background-color: var(--card-bg-color);
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+  
+    .menu.active {
+      display: flex;
+    }
+  
+    section {
+      padding: 20px;
+    }
+  
+    section h2 {
+      font-size: 2rem;
+    }
+  
+    section p {
+      font-size: 1rem;
+    }
+  }
