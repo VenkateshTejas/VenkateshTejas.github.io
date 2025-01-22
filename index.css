@@ -4,9 +4,9 @@
     --accent-color: #b3a11a;
     --section-bg-color: #1f1f1f;
     --card-bg-color: #2a2a2a;
-    --light-card-bg: #eaeaea;
-    --hover-color: rgb(81, 69, 5);
-    --hover-lightcolor:rgb(184, 247, 247);
+    --light-card-bg: #dce1d2;
+    --hover-color: rgb(80, 76, 58);
+    --hover-lightcolor:rgb(212, 239, 239);
   }
   
   body.light-theme {
@@ -40,7 +40,7 @@
   }
   
   body.light-theme header {
-    background-color: #f0f0f0;
+    background-color: #080808;
   }
   
   nav {
@@ -265,7 +265,7 @@
 
   footer {
     background-color: #1e1e1e;
-    color: var(--text-color);
+    color: white;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -275,7 +275,7 @@
   }
   
   body.light-theme footer {
-    background-color: #f0f0f0;
+    background-color: #050505;
   }
   
   .footer-content {
@@ -286,7 +286,7 @@
     margin: 0;
     font-size: 1rem;
     margin-bottom: 15px;
-    color: var(--text-color);
+    color:white;
   }
   
   .footer-links {
@@ -298,7 +298,7 @@
   .footer-links a {
     display: inline-block;
     font-size: 30px; /* Adjusted icon size */
-    color: var(--text-color);
+    color: white;
     transition: transform 0.3s, color 0.3s;
   }
   
@@ -308,11 +308,11 @@
   }
   
   body.light-theme .footer-links a {
-    color: var(--text-color); /* Light theme icon color */
+    color: white; /* Light theme icon color */
   }
   
   body.light-theme .footer-links a:hover {
-    color: var(--accent-color); /* Light theme hover effect */
+    color: white; /* Light theme hover effect */
   }
   
   /* Responsive Footer */
