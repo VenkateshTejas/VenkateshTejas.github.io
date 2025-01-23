@@ -233,7 +233,7 @@
     height: 4px;
     background-color: var(--text-color);
     border-radius: 5px;
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
   }
   
   body.light-theme #hamburger div {
