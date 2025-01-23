@@ -346,4 +346,14 @@
     }
   }
 
-  
+  .xyz {
+    background-color: rgb(1, 1, 1);
+  }
+
+  .ct {
+    color:#b3a11a;
+  }
+
+  .fmt p {
+    text-align: left;
+  }
