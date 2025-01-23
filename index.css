@@ -4,7 +4,7 @@
     --accent-color: #b3a11a;
     --section-bg-color: #1f1f1f;
     --card-bg-color: #2a2a2a;
-    --light-card-bg: #dce1d2;
+    --light-card-bg: #000000;
     --hover-color: rgb(80, 76, 58);
     --hover-lightcolor:rgb(255, 255, 255);
     --nav-text:white;
@@ -327,7 +327,6 @@
   .footer-links a:hover {
     transform: scale(1.1);
     color:white;
-    ;
   }
   
   body.light-theme .footer-links a {
@@ -347,11 +346,11 @@
   }
 
   .xyz {
-    background-color: rgb(1, 1, 1);
+    background-color:var(--light-card-bg);
   }
 
   .ct {
-    color:#b3a11a;
+    color:var(--accent-color);
   }
 
   .fmt p {
