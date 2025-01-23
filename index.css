@@ -222,7 +222,7 @@
     width: 30px;
     margin-right: 20px;
     /* padding-right: 20px; */
-    padding: 5%;
+    padding: 15px;;
   }
   
   #hamburger div {
@@ -249,8 +249,8 @@
       top: 60px;
       right: 10px;
       background-color: var(--card-bg-color);
-      padding: 15px;
-      border-radius: 8px;
+      padding: 18%;
+      border-radius: 2px;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
       transition: transform 0.3s ease;
     }
@@ -259,7 +259,7 @@
       top: 65px;
       display: flex;
       transform: translateX(0);
-      margin-right: 60px;
+      margin-right: 0px;
     }
   
     .menu a {
