@@ -6,16 +6,17 @@
     --card-bg-color: #2a2a2a;
     --light-card-bg: #dce1d2;
     --hover-color: rgb(80, 76, 58);
-    --hover-lightcolor:rgb(212, 239, 239);
+    --hover-lightcolor:rgb(255, 255, 255);
   }
   
   body.light-theme {
-    --bg-color: #ffffff;
+    --bg-color: #abd9f2;
     --text-color: #000000;
     --accent-color: #6200ea;
-    --section-bg-color: #f9f9f9;
+    --section-bg-color: #abd9f2;
     --card-bg-color: #ffffff;
-    --light-card-bg: #f4f4f4;
+    --light-card-bg: #ffffff;
+    --nav-text:white;
   
   }
   
@@ -53,7 +54,7 @@
   
   .logo {
     font-size: 24px;
-    color: var(--accent-color);
+    color: var(--nav-text);
   }
   
   .actions {
@@ -72,7 +73,7 @@
   }
   
   .menu a {
-    color: var(--accent-color);
+    color: var(--nav-text);
     text-decoration: none;
     font-weight: bold;
     padding: 10px;
@@ -292,13 +293,26 @@
     margin: 0;
     font-size: 1rem;
     margin-bottom: 15px;
+    color:var(--nav-text);
+  }
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Add spacing between the icons */
     color:var(--accent-color);
   }
-  
+
+  .social-links a {
+    display: inline-block;
+    font-size: 30px; /* Adjusted icon size */
+    color: var(--accent-color);
+    transition: transform 0.3s, color 0.3s;
+  }
   .footer-links {
     display: flex;
     justify-content: center;
     gap: 25px; /* Add spacing between the icons */
+    color:var(--nav-text);
   }
   
   .footer-links a {
@@ -315,12 +329,11 @@
   }
   
   body.light-theme .footer-links a {
-    color: var(--accent-color) /* Light theme icon color */
+    color: var(--nav-text) /* Light theme icon color */
   }
   
-  body.light-theme .footer-links a:hover {
+  body.light-theme .social-links .footer-links a:hover {
     color:#b3a11a;
-    ; /* Light theme hover effect */
   }
   
   /* Responsive Footer */
