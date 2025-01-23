@@ -7,6 +7,8 @@
     --light-card-bg: #dce1d2;
     --hover-color: rgb(80, 76, 58);
     --hover-lightcolor:rgb(255, 255, 255);
+    --nav-text:white;
+
   }
   
   body.light-theme {
@@ -196,16 +198,16 @@
     }
   }
  
-  section:hover {
+  /* section:hover {
     background-color: var(--hover-color);
     color: var(--bg-color);
     transition: background-color 0.3s ease, color 0.3s ease;
-  }
+  } */
   
-  body.light-theme section:hover {
+  /* body.light-theme section:hover {
     background-color: var(--hover-lightcolor);
     color: var(--text-color);
-  }
+  } */
 /* Ensure the hamburger menu appears clean */
 #hamburger {
     cursor: pointer;
