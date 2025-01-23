@@ -75,6 +75,7 @@
     color: var(--accent-color);
     text-decoration: none;
     font-weight: bold;
+    padding: 10px;
   }
   
   main {
@@ -149,6 +150,7 @@
     nav {
       flex-wrap: wrap;
       padding: 10px;
+      max-height: 30px;
     }
   
     .logo {
@@ -212,7 +214,8 @@
     height: 35px;
     width: 30px;
     margin-right: 20px;
-    padding-right: 20px;
+    /* padding-right: 20px; */
+    padding: 5%;
   }
   
   #hamburger div {
@@ -246,16 +249,17 @@
     }
   
     .menu.active {
-      top: 100px;
+      top: 65px;
       display: flex;
       transform: translateX(0);
+      margin-right: 40px;
     }
   
     .menu a {
       padding: 10px 0;
       text-align: center;
-      font-size: 1.2rem;
-      color:#6200ea;
+      font-size: 1rem;
+      color:var(--accent-color);
       transition: color 0.3s ease;
     }
   
@@ -306,7 +310,8 @@
   
   .footer-links a:hover {
     transform: scale(1.1);
-    color: var(--accent-color);
+    color:white;
+    ;
   }
   
   body.light-theme .footer-links a {
@@ -314,7 +319,7 @@
   }
   
   body.light-theme .footer-links a:hover {
-    color:#6200ea;
+    color:#b3a11a;
     ; /* Light theme hover effect */
   }
   
