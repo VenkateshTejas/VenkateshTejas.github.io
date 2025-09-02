@@ -3,137 +3,236 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tejas V</title>
-  <link rel="stylesheet" href="index.css">
+  <title>Tejas V - Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <header>
     <nav>
-      <div style="position: fixed; top: 2.5%; left: 5">
-        <h1 class="logo">Tejas Venkatesh</h1>
+      <div class="nav-top">
+        <a href="#about" class="logo">Tejas Venkatesh</a>
       </div>
       
-      <div class="menu">
-        <div style="position: fixed; top: 2%;left: 38%">
-        <a href="#about">About   </a>
-        <a href="#education">Education   </a>
-        <a href="#projects">Projects   </a>
-        <a href="#experience">Experience   </a>
-        <a href="#hobbies">Hobbies  </a>
-      </div>
-    </div>
-      <div class="actions">
-        <div style="position: fixed; display: flex;top: 1.25%;left: 80%;">
-        <button id="theme-switcher">🌙</button>
-        <button class="hamburger" id="hamburger">&#9776;</button>
-      </div>
+      <div class="nav-bottom">
+        <ul class="nav-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#hobbies">Hobbies</a></li>
+        </ul>
+        
+        <div class="nav-controls">
+          <button class="theme-toggle" id="theme-toggle">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+          </button>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
       </div>
     </nav>
   </header>
   
   <main>
-    <section id="about" color: ><h2>About</h2><img src="pictures/Remove background project.jpeg" alt="Circular Photo" style="width: 200px; height: 250px; border-radius: 50%;">
-        <h3 style="color: b3a11a;">Tejas Venkatesh</h3> <!-- Changed color to black -->        
-       
-        <div class="footer-content">
-            <div class="social-links">
-
-            <a href="mailto:tejasvenki1997@gmail.com" aria-label="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/tejas-venkateshli/" target="_blank" aria-label="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="tel:+1 6177925754" aria-label="Phone">
-            <i class="fas fa-phone"></i>
-          </a>
-            </div>
+    <!-- About Section -->
+    <section id="about">
+      <div class="section-content">
+        <div class="hero-content">
+          <div class="profile-image">
+            <img src="pictures/Remove%20background%20project.jpeg" alt="Tejas Venkatesh" style="width: 100%; height: 100%; object-fit: cover;" />
+          </div>
+          
+          <h1 class="hero-title">Tejas Venkatesh</h1>
+          <p class="hero-subtitle">Product Enthusiast & Technology Innovator</p>
+          
+          <div class="social-links">
+            <a href="mailto:tejasvenki1997@gmail.com" class="social-link" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/tejas-venkateshli/" target="_blank" class="social-link" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="tel:+16177925754" class="social-link" aria-label="Phone">
+              <i class="fas fa-phone"></i>
+            </a>
+            <a href="https://github.com/VenkateshTejas" target="_blank" class="social-link" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          
+          <p class="hero-description">
+            A passionate Product enthusiast with a love for engaging conversations and innovative solutions. 
+            When I'm not diving deep into technology, you'll find me enjoying sports and exploring new ideas. 
+            Let's connect to discuss innovations or explore impactful collaborations!
+          </p>
         </div>
-        <br>
-          <p>A data and cloud enthusiast who thrives on innovation. <br> Loves engaging conversations, and balances it all with a passion for sports! <br> Let’s connect to discuss innovations or explore impactful collaborations!</p></section>
-    <section id="education"><h2>Education</h2><h3>Northeastern University</h3><p>Master's in Information Systems</p><h3>K.S School of Engineerimg and Management</h3><p>Bachelor of Computer Science </p></section>
-    <section id="projects"><h2>Projects</h2><p>Your project details here.</p></section>
-    <section id="experience"><h2>Experience</h2>
-      <section class="container my-4">
-        <div class="row">
-          <!-- Card 1 -->
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body xyz">
-                <h5 class="ct"><b> DELL TECHNOLOGIES</b></h5>
-                <h5 class="ct"><i> Associate Consultant <br>(Mar 2022 - Aug 2024) </i></h5> <br>
-                <p class="card-text" style="text-align: left">● Atos Siemens: Led V2V migrations for 2000+ VMs using RP4VM and vSphere, automating tasks with Excel to reduce manual work by 50%, and ensuring seamless client communication. <br>
-                  <br>
-                  ● NBN & Parexel: Managed end-to-end V2V migrations for 1000+ VMs using HCX and Zerto, configuring replications, providing HyperCare support, and fostering client retention and satisfaction. <br>
-                 <br>
-                  ● GE Aerospace: Delivered on-call HyperCare support, resolving OS-level issues, ensuring 99.9%+ business continuity, and driving customer satisfaction.</p>
-              </div>
-            </div>
-          </div>
-          <!-- Card 2 -->
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body xyz">
-                <h5 class="ct"><b>TATA CS</b></h5>
-                <h5 class="ct"><i> Product Specialist<br>(Jan 2021 - Feb 2022) </i></h5> <br>
-                <p class="card-text" style="text-align:left" >● Led communication and coordination across a 10-member team for the Google YouTube TV project, ensuring
-                  smooth collaboration between departments and delivering a unified project outcome. <br>
-                  <br>
-                  ● Managed timely topic assignments, resulting in consistent and eﬃcient delivery of project content within
-                  deadlines. <br>
-                  <br>
-                  ● Trained and directed a team of 25+ staﬀ members responsible for developing design concepts into art layouts
-                  and preparing layouts for printing, resulting in improved design consistency and streamlined production
-                  processes.</p>
-              </div>
-            </div>
-          </div>
-          <!-- Card 3 -->
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body xyz">
-                  <h5 class="ct"><b>ACCENTURE</b></h5>
-                  <h5 class="ct"><i> Technical Support Specialist<br>(Dec 2019 - Nov 2020) </i></h5> <br>
-                  <p class="card-text" style="text-align: left">● Asset Compliance Management: Ensured compliance for 100s of company provided assets, achieving a 100% audit pass rate and minimizing regulatory risks. <br>
-                    <br>
-                    ● Initiated and managed remote sessions with clients to address and resolve all Accenture native software issues, ensuring
-                    devices met necessary standards. Also managed Accenture procurement.<br>
-                    <br>
-                    ● Achieved a 95% success rate in resolving compliance and Microsoft application related issues, improving
-                    client satisfaction and reducing device-related risks.</p>
-                    <br>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <!-- Bootstrap JS -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+      </div>
     </section>
-    <section id="hobbies"><h2>Hobbies</h2><p>Your hobbies details here.</p></section>
+
+    <!-- Education Section -->
+    <section id="education">
+      <h2 class="section-title">Education</h2>
+      <div class="section-content">
+        <div class="education-grid">
+          <div class="education-card scroll-reveal">
+            <div class="university">Northeastern University</div>
+            <p class="degree">Master's in Information Systems</p>
+            <p class="location">Boston, MA</p>
+          </div>
+          <div class="education-card scroll-reveal">
+            <div class="university">K.S School of Engineering and Management</div>
+            <p class="degree">Bachelor of Computer Science</p>
+            <p class="location">India</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="section-content">
+        <div class="projects-container">
+          <div class="coming-soon">
+            <i class="fas fa-code"></i>
+            <h3>Exciting Projects Coming Soon!</h3>
+            <p>Currently working on some amazing projects that will be showcased here shortly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+      <h2 class="section-title">Experience</h2>
+      <div class="section-content">
+        <div class="experience-grid">
+          <div class="experience-card scroll-reveal">
+            <div class="experience-logo">
+              <img src="data:image/svg+xml,%3Csvg width='80' height='40' viewBox='0 0 80 40' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='80' height='40' fill='white'/%3E%3Ctext x='40' y='20' text-anchor='middle' fill='%23007db8' font-family='Arial' font-weight='bold' font-size='12'%3EDELL%3C/text%3E%3Ctext x='40' y='32' text-anchor='middle' fill='%23007db8' font-family='Arial' font-size='8'%3ETechnologies%3C/text%3E%3C/svg%3E" alt="Dell Technologies" />
+            </div>
+            <div class="experience-content">
+              <div class="company-name">DELL TECHNOLOGIES</div>
+              <div class="position">Associate Consultant (Mar 2022 - Aug 2024)</div>
+              <ul class="experience-description">
+                <li><strong>Product Ownership:</strong> Led end-to-end migration roadmaps for enterprise clients requiring zero downtime, coordinating multi-stakeholder teams to deliver solutions for <strong>3000+</strong> systems across <strong>Atos</strong>, <strong>Siemens</strong>, <strong>NBN</strong>, <strong>Parexel</strong>, and <strong>GE Aerospace</strong>, achieving <strong>99.9%+</strong> business continuity</li>
+                <li><strong>Process Innovation:</strong> Addressed <strong>40-hour</strong> manual migration cycles by developing Python/PowerCLI automation solutions and standardized workflows, reducing manual work by <strong>50%</strong> and improving customer satisfaction by <strong>35%</strong></li>
+                <li><strong>Customer Success Management:</strong> Managed GE Aerospace's mission-critical migration with <strong>24/7</strong> monitoring protocols, achieving <strong>99.9%+</strong> uptime and securing <strong>$500K+</strong> in additional projects</li>
+                <li><strong>Business Impact:</strong> Delivered NBN's 6-event workload migration within 90-day deadline by orchestrating cross-timezone teams and vendor relationships, securing <strong>$1M+</strong> client retention through on-time execution</li>
+                <li><strong>Cross-functional Leadership:</strong> Coordinated technical teams and stakeholders across complex migrations using RP4VM, vSphere, CMDB, Ansible, HCX, and Zerto, improving team productivity by <strong>40%</strong></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="experience-card scroll-reveal">
+            <div class="experience-logo">
+              <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                <div style="font-family: Arial, sans-serif; font-weight: bold; font-size: 14px; letter-spacing: -0.5px; display: flex; margin-bottom: 2px;">
+                  <span style="color: #ff4444;">t</span>
+                  <span style="color: #ff8800;">c</span>
+                  <span style="color: #dd2277;">s</span>
+                </div>
+                <div style="font-family: Arial, sans-serif; font-size: 5px; color: #0066cc; font-weight: 600; text-align: center; line-height: 1;">
+                  <div>TATA</div>
+                  <div>CONSULTANCY</div>
+                  <div>SERVICES</div>
+                </div>
+              </div>
+            </div>
+            <div class="experience-content">
+              <div class="company-name">TATA CONSULTANCY SERVICES</div>
+              <div class="position">Product Specialist (Jan 2021 - Feb 2022)</div>
+              <ul class="experience-description">
+                <li><strong>Product Coordination:</strong> Led Google YouTube TV project resolving cross-team alignment issues through daily standups and shared dashboards, achieving <strong>95%</strong> sprint completion with <strong>25%</strong> faster delivery</li>
+                <li><strong>Resource Management:</strong> Addressed inconsistent design-to-production workflows across <strong>25+</strong> team members through training modules and standardized processes, improving design consistency by <strong>60%</strong> while reducing production errors</li>
+                <li><strong>Timeline & Quality Management:</strong> Managed tight project deadlines by implementing systematic review processes and resource allocation strategies, ensuring consistent delivery and reducing time-to-market by <strong>30%</strong></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="experience-card scroll-reveal">
+            <div class="experience-logo">
+              <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                <div style="width: 20px; height: 20px; background: #A100FF; transform: rotate(45deg); margin-bottom: 8px;"></div>
+                <div style="font-family: Arial, sans-serif; font-size: 9px; font-weight: bold; color: #000; text-align: center;">accenture</div>
+              </div>
+            </div>
+            <div class="experience-content">
+              <div class="company-name">ACCENTURE</div>
+              <div class="position">Technical Support Specialist (Dec 2019 - Nov 2020)</div>
+              <ul class="experience-description">
+                <li><strong>Asset Compliance Management:</strong> Ensured compliance for 100s of company provided assets, achieving a 100% audit pass rate and minimizing regulatory risks.</li>
+                <li>Initiated and managed remote sessions with clients to address and resolve all Accenture native software issues, ensuring devices met necessary standards. Also managed Accenture procurement.</li>
+                <li>Achieved a 95% success rate in resolving compliance and Microsoft application related issues, improving client satisfaction and reducing device-related risks.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies">
+      <h2 class="section-title">Hobbies & Interests</h2>
+      <div class="section-content">
+        <div class="hobbies-container">
+          <div class="hobbies-list">
+            <div class="hobby-item scroll-reveal">
+              <i class="fas fa-football-ball"></i>
+              <span>Sports Enthusiast</span>
+            </div>
+            
+            <div class="hobby-item scroll-reveal">
+              <i class="fas fa-comments"></i>
+              <span>Engaging Conversations</span>
+            </div>
+            
+            <div class="hobby-item scroll-reveal">
+              <i class="fas fa-lightbulb"></i>
+              <span>Innovation Explorer</span>
+            </div>
+            
+            <div class="hobby-item scroll-reveal">
+              <i class="fas fa-book"></i>
+              <span>Continuous Learning</span>
+            </div>
+            
+            <div class="hobby-item scroll-reveal">
+              <i class="fas fa-code"></i>
+              <span>Tech Enthusiast</span>
+            </div>
+            
+            <div class="hobby-item scroll-reveal">
+              <i class="fas fa-users"></i>
+              <span>Team Collaboration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-  <script src="script.js"></script>
-</body>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-<footer>
-  <div class="footer-content">
-    <p>© 2025 Tejas Venkatesh. All Rights Reserved.</p>
+  <footer>
     <div class="footer-links">
-      <a href="mailto:tejasvenki1997@gmail.com" aria-label="Email">
+      <a href="mailto:tejasvenki1997@gmail.com" class="footer-link" aria-label="Email">
         <i class="fas fa-envelope"></i>
       </a>
-      <a href="https://www.linkedin.com/in/tejas-venkateshli/" target="_blank" aria-label="LinkedIn">
+      <a href="https://www.linkedin.com/in/tejas-venkateshli/" target="_blank" class="footer-link" aria-label="LinkedIn">
         <i class="fab fa-linkedin"></i>
-      </a>  
-      <a href="tel:+1 6177925754" aria-label="Phone">
+      </a>
+      <a href="tel:+16177925754" class="footer-link" aria-label="Phone">
         <i class="fas fa-phone"></i>
       </a>
     </div>
-  </div>
-</footer>
+    <p>&copy; 2025 Tejas Venkatesh. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
