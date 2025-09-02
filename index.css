@@ -4,6 +4,7 @@
   --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
   --dark-gradient: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
   --success-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  --warning-gradient: linear-gradient(135deg, #ff9a56 0%, #ff6b6b 100%);
   
   --bg-color: #0a0a0a;
   --text-color: #ffffff;
@@ -21,6 +22,7 @@ body.light-theme {
   --accent-gradient: linear-gradient(135deg, #0984e3 0%, #74b9ff 100%);
   --dark-gradient: linear-gradient(135deg, #2d3436 0%, #636e72 100%);
   --success-gradient: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+  --warning-gradient: linear-gradient(135deg, #ff9a56 0%, #ff6b6b 100%);
   
   --bg-color: linear-gradient(135deg, #ddd6fe 0%, #e0e7ff 100%);
   --text-color: #1a202c;
@@ -394,6 +396,7 @@ body.light-theme .hero-subtitle {
   display: flex;
   gap: 2rem;
   align-items: flex-start;
+  text-align: left;
 }
 
 .experience-logo {
@@ -417,6 +420,7 @@ body.light-theme .hero-subtitle {
 
 .experience-content {
   flex: 1;
+  text-align: left;
 }
 
 .experience-card::before {
@@ -464,6 +468,7 @@ body.light-theme .position {
 .experience-description {
   text-align: left;
   line-height: 1.6;
+  list-style: none;
 }
 
 body.light-theme .experience-description {
@@ -610,6 +615,7 @@ body.light-theme .experience-description {
 .project-description {
   margin-bottom: 1.5rem;
   line-height: 1.6;
+  text-align: left;
 }
 
 .project-description p {
@@ -638,6 +644,112 @@ body.light-theme .experience-description {
   background: var(--accent-color);
   color: white;
   transform: translateY(-1px);
+}
+
+/* Leadership Achievements Section */
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.leadership-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.leadership-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.leadership-card:hover::before {
+  left: 100%;
+}
+
+.leadership-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+  border-color: var(--accent-color);
+}
+
+.leadership-logo {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: white;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.leadership-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.leadership-content {
+  flex: 1;
+  text-align: center;
+  width: 100%;
+}
+
+.leadership-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  background: var(--warning-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.leadership-period {
+  font-size: 0.9rem;
+  color: var(--accent-color);
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 0.8rem;
+  opacity: 0.9;
+}
+
+body.light-theme .leadership-period {
+  color: #0984e3;
+  opacity: 0.8;
+}
+
+.leadership-description {
+  line-height: 1.6;
+  opacity: 0.9;
+  text-align: center;
+}
+
+body.light-theme .leadership-description {
+  color: #2d3748;
+  opacity: 0.8;
 }
 
 /* Hobbies Section */
@@ -874,6 +986,23 @@ body.light-theme .footer-link {
   
   .footer-links {
     flex-wrap: wrap;
+  }
+
+  .leadership-card {
+    padding: 1.5rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .leadership-logo {
+    margin: 0 auto;
+    width: 70px;
+    height: 70px;
+  }
+
+  .leadership-content {
+    text-align: center;
   }
 }
 
