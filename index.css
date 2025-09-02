@@ -17,21 +17,21 @@
 }
 
 body.light-theme {
-  --primary-gradient: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-  --secondary-gradient: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);
-  --accent-gradient: linear-gradient(135deg, #0984e3 0%, #74b9ff 100%);
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
   --dark-gradient: linear-gradient(135deg, #2d3436 0%, #636e72 100%);
-  --success-gradient: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+  --success-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
   --warning-gradient: linear-gradient(135deg, #ff9a56 0%, #ff6b6b 100%);
   
-  --bg-color: linear-gradient(135deg, #ddd6fe 0%, #e0e7ff 100%);
+  --bg-color: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   --text-color: #1a202c;
-  --accent-color: #0984e3;
-  --section-bg: rgba(255, 255, 255, 0.85);
+  --accent-color: #4facfe;
+  --section-bg: rgba(255, 255, 255, 0.95);
   --card-bg: rgba(255, 255, 255, 0.9);
-  --nav-bg: rgba(255, 255, 255, 0.95);
-  --shadow: 0 20px 40px rgba(9, 132, 227, 0.15);
-  --glow: 0 0 30px rgba(9, 132, 227, 0.3);
+  --nav-bg: rgba(255, 255, 255, 0.98);
+  --shadow: 0 20px 40px rgba(79, 172, 254, 0.2);
+  --glow: 0 0 30px rgba(79, 172, 254, 0.4);
 }
 
 * {
@@ -65,9 +65,9 @@ body::before {
 
 body.light-theme::before {
   background: 
-    radial-gradient(circle at 20% 50%, rgba(9, 132, 227, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(255, 107, 107, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 40% 80%, rgba(253, 121, 168, 0.08) 0%, transparent 50%);
+    radial-gradient(circle at 20% 50%, rgba(79, 172, 254, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(102, 126, 234, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(118, 75, 162, 0.12) 0%, transparent 50%);
 }
 
 /* Smooth scrolling */
@@ -179,7 +179,7 @@ body.light-theme .nav-menu a {
 }
 
 body.light-theme .theme-toggle {
-  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -343,8 +343,9 @@ section {
 }
 
 body.light-theme .hero-subtitle {
-  opacity: 0.8;
+  opacity: 0.85;
   color: #4a5568;
+  font-weight: 500;
 }
 
 .social-links {
@@ -461,8 +462,9 @@ body.light-theme .hero-subtitle {
 }
 
 body.light-theme .position {
-  opacity: 0.7;
-  color: #718096;
+  opacity: 0.8;
+  color: #4facfe;
+  font-weight: 500;
 }
 
 .experience-description {
@@ -473,6 +475,7 @@ body.light-theme .position {
 
 body.light-theme .experience-description {
   color: #2d3748;
+  font-weight: 400;
 }
 
 .experience-description li {
@@ -737,8 +740,9 @@ body.light-theme .experience-description {
 }
 
 body.light-theme .leadership-period {
-  color: #0984e3;
-  opacity: 0.8;
+  color: #4facfe;
+  opacity: 0.9;
+  font-weight: 500;
 }
 
 .leadership-description {
@@ -749,7 +753,8 @@ body.light-theme .leadership-period {
 
 body.light-theme .leadership-description {
   color: #2d3748;
-  opacity: 0.8;
+  opacity: 0.9;
+  font-weight: 400;
 }
 
 /* Hobbies Section */
@@ -816,12 +821,13 @@ footer p {
 }
 
 body.light-theme footer {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(79, 172, 254, 0.2);
+  background: rgba(255, 255, 255, 0.98);
 }
 
 body.light-theme footer p {
   color: var(--text-color);
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .footer-links {
@@ -843,6 +849,43 @@ body.light-theme footer p {
 }
 
 body.light-theme .footer-link {
+  color: var(--accent-color);
+}
+
+/* Light theme card enhancements */
+body.light-theme .experience-card,
+body.light-theme .project-card,
+body.light-theme .education-card,
+body.light-theme .leadership-card,
+body.light-theme .hobbies-container {
+  border: 1px solid rgba(79, 172, 254, 0.15);
+  box-shadow: 0 4px 20px rgba(79, 172, 254, 0.1);
+}
+
+body.light-theme .experience-card:hover,
+body.light-theme .project-card:hover,
+body.light-theme .education-card:hover,
+body.light-theme .leadership-card:hover {
+  box-shadow: 0 8px 30px rgba(79, 172, 254, 0.2);
+  border-color: var(--accent-color);
+}
+
+body.light-theme #about {
+  border: 1px solid rgba(79, 172, 254, 0.2);
+  box-shadow: 0 8px 40px rgba(79, 172, 254, 0.15);
+}
+
+/* Light theme navigation enhancements */
+body.light-theme nav {
+  border-bottom: 1px solid rgba(79, 172, 254, 0.15);
+}
+
+body.light-theme .nav-menu a {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+body.light-theme .nav-menu a:hover {
   color: var(--accent-color);
 }
 
