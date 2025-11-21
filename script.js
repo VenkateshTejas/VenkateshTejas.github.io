@@ -368,3 +368,46 @@ document.addEventListener('DOMContentLoaded', () => {
     new TicTacToe();
   }
 });
+
+
+// Section Title Animations on Scroll
+const observeSectionTitles = () => {
+  const sectionTitles = document.querySelectorAll('.section-title');
+  
+  const titleObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        // Re-trigger the gradient animation
+        entry.target.style.animation = 'none';
+        setTimeout(() => {
+          entry.target.style.animation = 'gradientShift 3s linear infinite, fadeInUp 1s ease forwards';
+        }, 10);
+      }
+    });
+  }, {
+    threshold: 0.5,
+    rootMargin: '0px 0px -50px 0px'
+  });
+  
+  sectionTitles.forEach(title => {
+    titleObserver.observe(title);
+  });
+};
+
+// Initialize on DOM load
+document.addEventListener('DOMContentLoaded', () => {
+  observeSectionTitles();
+  
+  // Add hover sound effect (optional - visual feedback only)
+  const sectionTitles = document.querySelectorAll('.section-title');
+  sectionTitles.forEach(title => {
+    title.addEventListener('mouseenter', () => {
+      title.style.transform = 'scale(1.05) translateY(0)';
+    });
+    
+    title.addEventListener('mouseleave', () => {
+      title.style.transform = 'scale(1) translateY(0)';
+    });
+  });
+});
