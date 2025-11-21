@@ -48,6 +48,8 @@ body {
   line-height: 1.6;
   min-height: 100vh;
   position: relative;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 body::before {
@@ -76,7 +78,6 @@ body.light-theme::before {
 html {
   scroll-behavior: smooth;
   height: 100%;
-  overflow-x: hidden;
 }
 
 /* Header */
@@ -1563,6 +1564,11 @@ body.light-theme .nav-menu a:hover {
     overflow-x: hidden;
     position: relative;
     max-width: 100%;
+    height: auto;
+  }
+  
+  body {
+    overflow-y: visible;
   }
   
   main {
@@ -1846,42 +1852,29 @@ body.light-theme .nav-menu a:hover {
   background: var(--secondary-gradient);
 }
 
-/* iOS and Mobile Scroll Fix */
-@supports (-webkit-touch-callout: none) {
-  /* iOS specific fixes */
-  body {
-    -webkit-overflow-scrolling: touch;
-    position: fixed;
-    width: 100%;
-    overflow-y: auto;
-  }
-  
-  main {
-    padding-bottom: env(safe-area-inset-bottom);
-  }
+/* Mobile Scroll Fix */
+html {
+  -webkit-overflow-scrolling: touch;
 }
 
-/* Prevent overscroll on mobile */
-html, body {
-  overscroll-behavior: none;
+/* Prevent overscroll bounce on mobile */
+body {
   overscroll-behavior-y: contain;
 }
 
 /* Ensure footer stays at bottom on mobile */
 @media (max-width: 768px) {
   body {
-    display: flex;
-    flex-direction: column;
     min-height: 100vh;
     min-height: -webkit-fill-available;
   }
   
   main {
     flex: 1;
+    padding-bottom: 2rem;
   }
   
   footer {
     margin-top: auto;
-    flex-shrink: 0;
   }
 }
