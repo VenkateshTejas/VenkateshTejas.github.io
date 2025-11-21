@@ -1823,3 +1823,623 @@ body.light-theme .nav-menu a:hover {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--secondary-gradient);
 }
+/* Add these enhanced hero styles to your index.css */
+
+/* Enhanced Profile Image Section */
+.profile-wrapper {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto 3rem auto;
+}
+
+.profile-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid transparent;
+  border-top-color: var(--accent-color);
+  border-radius: 50%;
+  animation: spin 3s linear infinite;
+}
+
+.profile-ring:nth-child(1) {
+  width: 280px;
+  height: 280px;
+  animation-delay: 0s;
+  opacity: 0.3;
+}
+
+.profile-ring:nth-child(2) {
+  width: 300px;
+  height: 300px;
+  animation-delay: 0.5s;
+  animation-direction: reverse;
+  border-top-color: #f093fb;
+  opacity: 0.3;
+}
+
+.profile-ring:nth-child(3) {
+  width: 320px;
+  height: 320px;
+  animation-delay: 1s;
+  border-top-color: #667eea;
+  opacity: 0.3;
+}
+
+@keyframes spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.profile-badge {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  background: var(--accent-gradient);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.4rem;
+  box-shadow: 0 4px 15px rgba(0, 242, 254, 0.5);
+  animation: wave 1.5s ease-in-out infinite;
+  border: 3px solid var(--bg-color);
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Enhanced Title Animation */
+.hero-text-wrapper {
+  margin-bottom: 2rem;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.title-word {
+  display: inline-block;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: titleFloat 3s ease-in-out infinite;
+}
+
+.title-word:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+@keyframes titleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Animated Subtitle Carousel */
+.hero-subtitle-wrapper {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+}
+
+.subtitle-prefix {
+  color: var(--text-color);
+  opacity: 0.7;
+  margin-right: 0.3rem;
+}
+
+.subtitle-carousel {
+  position: relative;
+  height: 40px;
+  overflow: hidden;
+  width: 280px;
+  text-align: left;
+}
+
+.subtitle-item {
+  position: absolute;
+  width: 100%;
+  text-align: left;
+  font-weight: 600;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+/* Only show first item initially */
+.subtitle-item:first-child {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation for all items */
+.subtitle-item {
+  animation: carouselSlide 12s infinite;
+}
+
+.subtitle-item:nth-child(1) { animation-delay: 0s; }
+.subtitle-item:nth-child(2) { animation-delay: 3s; }
+.subtitle-item:nth-child(3) { animation-delay: 6s; }
+.subtitle-item:nth-child(4) { animation-delay: 9s; }
+
+@keyframes carouselSlide {
+  0% { 
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  5%, 25% { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+  30%, 100% { 
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+/* Highlight Pills - Removed */
+
+/* CTA Buttons Enhancement */
+.hero-cta-section {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.resume-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shimmer {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.view-work-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: transparent;
+  color: var(--accent-color);
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid var(--accent-color);
+}
+
+.view-work-btn:hover {
+  background: var(--accent-gradient);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 242, 254, 0.5);
+}
+
+.view-work-btn i {
+  transition: transform 0.3s ease;
+}
+
+.view-work-btn:hover i {
+  transform: translateX(5px);
+}
+
+/* Enhanced Description Card */
+.hero-description-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  overflow: hidden;
+}
+
+.description-icon {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  background: var(--accent-gradient);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1rem;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.text-highlight {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+.description-decoration {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: var(--accent-gradient);
+  opacity: 0.1;
+  border-radius: 50%;
+  transform: translate(30px, 30px);
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  text-align: center;
+  margin-top: 3rem;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.scroll-indicator span {
+  font-size: 0.9rem;
+  opacity: 0.6;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.scroll-arrow {
+  font-size: 1.2rem;
+  color: var(--accent-color);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+/* Light theme adjustments */
+body.light-theme .hero-description-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(79, 172, 254, 0.2);
+  box-shadow: 0 10px 30px rgba(79, 172, 254, 0.1);
+}
+
+body.light-theme .highlight-pill {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(79, 172, 254, 0.2);
+}
+
+body.light-theme .subtitle-prefix {
+  color: #4a5568;
+}
+
+body.light-theme .text-highlight {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .profile-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .profile-ring:nth-child(1) {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .profile-ring:nth-child(2) {
+    width: 240px;
+    height: 240px;
+  }
+  
+  .profile-ring:nth-child(3) {
+    width: 260px;
+    height: 260px;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle-wrapper {
+    font-size: 1.1rem;
+  }
+  
+  .subtitle-carousel {
+    width: 220px;
+  }
+  
+  .hero-cta-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .view-work-btn {
+    width: 200px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .subtitle-carousel {
+    width: 200px;
+  }
+  
+  .hero-subtitle-wrapper {
+    font-size: 1rem;
+  }
+}
+/* Enhanced Section Titles with Animations */
+.section-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Gradient text with animation */
+.section-title {
+  background: linear-gradient(
+    90deg,
+    #667eea 0%,
+    #764ba2 20%,
+    #f093fb 40%,
+    #4facfe 60%,
+    #00f2fe 80%,
+    #667eea 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s linear infinite, fadeInUp 1s ease forwards;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* Decorative elements for section titles */
+.section-title::before,
+.section-title::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 2px;
+  background: var(--accent-gradient);
+  opacity: 0;
+  animation: expandLine 1s ease 0.5s forwards;
+}
+
+.section-title::before {
+  left: 50%;
+  transform: translate(-120px, -50%);
+}
+
+.section-title::after {
+  right: 50%;
+  transform: translate(120px, -50%);
+}
+
+@keyframes expandLine {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 50px;
+    opacity: 0.6;
+  }
+}
+
+/* Specific animations for each section */
+#education .section-title {
+  animation-delay: 0.1s;
+}
+
+#education .section-title::before,
+#education .section-title::after {
+  background: var(--success-gradient);
+}
+
+#projects .section-title {
+  animation-delay: 0.1s;
+}
+
+#projects .section-title::before,
+#projects .section-title::after {
+  background: var(--primary-gradient);
+}
+
+#experience .section-title {
+  animation-delay: 0.1s;
+}
+
+#experience .section-title::before,
+#experience .section-title::after {
+  background: var(--secondary-gradient);
+}
+
+#leadership .section-title {
+  animation-delay: 0.1s;
+}
+
+#leadership .section-title::before,
+#leadership .section-title::after {
+  background: var(--warning-gradient);
+}
+
+#hobbies .section-title {
+  animation-delay: 0.1s;
+}
+
+#hobbies .section-title::before,
+#hobbies .section-title::after {
+  background: var(--accent-gradient);
+}
+
+#game .section-title {
+  animation-delay: 0.1s;
+}
+
+#game .section-title::before,
+#game .section-title::after {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+/* Hover effect for section titles */
+.section-title {
+  cursor: default;
+  transition: transform 0.3s ease;
+}
+
+.section-title:hover {
+  transform: scale(1.05) translateY(0);
+}
+
+/* Add floating dots animation */
+.section-title {
+  overflow: visible;
+}
+
+.section-title::before,
+.section-title::after {
+  content: '◆';
+  font-size: 1rem;
+  background: none;
+  width: auto;
+  height: auto;
+  color: var(--accent-color);
+  animation: floatDots 3s ease-in-out infinite;
+}
+
+.section-title::before {
+  animation-delay: 0s;
+  left: 50%;
+  transform: translate(-150px, -50%);
+}
+
+.section-title::after {
+  animation-delay: 0.5s;
+  right: 50%;
+  transform: translate(150px, -50%);
+}
+
+@keyframes floatDots {
+  0%, 100% {
+    transform: translate(var(--translate-x, -150px), -50%) translateY(0);
+  }
+  50% {
+    transform: translate(var(--translate-x, -150px), -50%) translateY(-10px);
+  }
+}
+
+.section-title::after {
+  --translate-x: 150px;
+}
+
+/* Glowing effect on scroll reveal */
+.section-title.in-view {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    filter: drop-shadow(0 0 10px rgba(79, 172, 254, 0.3));
+  }
+  to {
+    filter: drop-shadow(0 0 20px rgba(79, 172, 254, 0.6));
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .section-title::before {
+    left: 50%;
+    transform: translate(-80px, -50%);
+  }
+  
+  .section-title::after {
+    right: 50%;
+    transform: translate(80px, -50%);
+  }
+  
+  .section-title::before,
+  .section-title::after {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title::before,
+  .section-title::after {
+    display: none;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}
