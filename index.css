@@ -46,10 +46,6 @@ body {
   color: var(--text-color);
   overflow-x: hidden;
   line-height: 1.6;
-  min-height: 100vh;
-  position: relative;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
 }
 
 body::before {
@@ -65,7 +61,6 @@ body::before {
     radial-gradient(circle at 40% 80%, rgba(118, 75, 162, 0.1) 0%, transparent 50%);
   pointer-events: none;
   z-index: -1;
-  overflow: hidden;
 }
 
 body.light-theme::before {
@@ -77,7 +72,6 @@ body.light-theme::before {
 
 html {
   scroll-behavior: smooth;
-  height: 100%;
 }
 
 /* Header */
@@ -258,8 +252,6 @@ body.light-theme .hamburger span {
 /* Main Content */
 main {
   padding-top: 80px;
-  min-height: calc(100vh - 80px);
-  padding-bottom: 0;
 }
 
 section {
@@ -1444,14 +1436,11 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 2rem;
   text-align: center;
-  position: relative;
-  margin-top: auto;
 }
 
 footer p {
   color: var(--text-color);
   opacity: 0.8;
-  margin-bottom: 0;
 }
 
 body.light-theme footer {
@@ -1560,22 +1549,6 @@ body.light-theme .nav-menu a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  html, body {
-    overflow-x: hidden;
-    position: relative;
-    max-width: 100%;
-    height: auto;
-  }
-  
-  body {
-    overflow-y: visible;
-  }
-  
-  main {
-    min-height: auto;
-    padding-bottom: 1rem;
-  }
-  
   .nav-menu {
     position: fixed;
     top: 110px;
@@ -1589,7 +1562,6 @@ body.light-theme .nav-menu a:hover {
     align-items: center;
     padding-top: 2rem;
     transition: left 0.3s ease;
-    overflow-y: auto;
   }
   
   .nav-menu.active {
@@ -1850,31 +1822,4 @@ body.light-theme .nav-menu a:hover {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--secondary-gradient);
-}
-
-/* Mobile Scroll Fix */
-html {
-  -webkit-overflow-scrolling: touch;
-}
-
-/* Prevent overscroll bounce on mobile */
-body {
-  overscroll-behavior-y: contain;
-}
-
-/* Ensure footer stays at bottom on mobile */
-@media (max-width: 768px) {
-  body {
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
-  }
-  
-  main {
-    flex: 1;
-    padding-bottom: 2rem;
-  }
-  
-  footer {
-    margin-top: auto;
-  }
 }
