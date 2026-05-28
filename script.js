@@ -89,27 +89,36 @@ window.addEventListener('scroll', () => {
    CARD PACK OPENING — Pokémon-style intro
    ════════════════════════════════════════════════════ */
 (function () {
-  const intro = document.getElementById('packIntro');
-  const pack  = document.getElementById('pack');
-  const burst = document.getElementById('burst');
-  if (!intro || !pack || !burst) return;
+  const intro       = document.getElementById('packIntro');
+  const pack        = document.getElementById('pack');
+  const tearEl      = document.getElementById('packTear');
+  const cardBurstEl = document.getElementById('cardBurst');
+  const burst       = document.getElementById('burst');
+  if (!intro || !pack || !tearEl || !burst) return;
 
   // Disable page scroll until opened
   document.body.style.overflow = 'hidden';
 
+  let isOpen      = false;
+  let startX      = null;
+  let startY      = null;
+  let dragging    = false;
+  let horizSwipe  = false;
+  const SWIPE_THRESHOLD = 110;   // px of horizontal drag needed to "tear"
+
   function spawnSparks() {
-    const count = 26;
+    const count = 28;
     for (let i = 0; i < count; i++) {
       const s = document.createElement('span');
       s.className = 'spark';
       const angle    = (Math.PI * 2 * i) / count + (Math.random() * 0.5);
-      const distance = 220 + Math.random() * 180;
+      const distance = 240 + Math.random() * 200;
       const tx = Math.cos(angle) * distance;
       const ty = Math.sin(angle) * distance;
       s.style.setProperty('--tx', `${tx}px`);
       s.style.setProperty('--ty', `${ty}px`);
-      s.style.animationDelay = `${Math.random() * 0.15}s`;
-      const colors = ['#fff', '#ffd700', '#ff9966', '#4facfe', '#f5576c'];
+      s.style.animationDelay = `${Math.random() * 0.2}s`;
+      const colors = ['#ffffff', '#87b3ff', '#4a8aff', '#ffd700', '#00d4ff'];
       const c = colors[Math.floor(Math.random() * colors.length)];
       s.style.background  = c;
       s.style.boxShadow   = `0 0 12px ${c}, 0 0 24px ${c}`;
@@ -118,40 +127,104 @@ window.addEventListener('scroll', () => {
     burst.classList.add('go');
   }
 
+  function resetTearTransform() {
+    tearEl.style.transition = '';
+    tearEl.style.transform  = '';
+    tearEl.style.opacity    = '';
+  }
+
   function openPack() {
-    if (pack.classList.contains('is-cut')) return;
+    if (isOpen) return;
+    isOpen = true;
+    resetTearTransform();
     pack.classList.add('is-cut');
     intro.classList.add('is-cut');
-    spawnSparks();
 
-    // After tear finishes, fade overlay and scroll to hero
+    // Cards burst out shortly after the tear flies off
+    setTimeout(() => {
+      if (cardBurstEl) cardBurstEl.classList.add('is-burst');
+      spawnSparks();
+    }, 280);
+
+    // Fade overlay and scroll to hero after cards have spread
     setTimeout(() => {
       intro.classList.add('is-gone');
       document.body.style.overflow = '';
       const about = document.getElementById('about');
       if (about) about.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 950);
+    }, 2100);
 
-    // Remove overlay from DOM after fade
-    setTimeout(() => { intro.remove(); }, 2200);
+    // Cleanup
+    setTimeout(() => { intro.remove(); }, 3200);
   }
 
-  pack.addEventListener('click', openPack);
-  pack.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openPack(); }
+  // ── Swipe gesture (with live visual feedback on the tear strip) ──
+  pack.addEventListener('pointerdown', (e) => {
+    if (isOpen) return;
+    startX     = e.clientX;
+    startY     = e.clientY;
+    dragging   = false;
+    horizSwipe = false;
+    try { pack.setPointerCapture(e.pointerId); } catch (_) {}
   });
 
-  // Drag-to-slice gesture (cut horizontally across pack)
-  let startX = null, startY = null;
-  pack.addEventListener('pointerdown', (e) => {
-    startX = e.clientX; startY = e.clientY;
+  pack.addEventListener('pointermove', (e) => {
+    if (isOpen || startX == null) return;
+    const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
+
+    // Decide once whether this is a horizontal swipe
+    if (!dragging && (Math.abs(dx) > 6 || Math.abs(dy) > 6)) {
+      dragging   = true;
+      horizSwipe = Math.abs(dx) > Math.abs(dy);
+    }
+
+    if (horizSwipe) {
+      // Live feedback: tear strip follows the finger as it's "torn off"
+      const progress = Math.min(Math.abs(dx) / SWIPE_THRESHOLD, 1);
+      tearEl.style.transition = 'none';
+      tearEl.style.transform  = `translateX(${dx * 0.65}px) translateY(${-Math.abs(dx) * 0.18}px) rotate(${dx * 0.06}deg)`;
+      tearEl.style.opacity    = `${1 - progress * 0.55}`;
+    }
   });
+
   pack.addEventListener('pointerup', (e) => {
-    if (startX == null) return;
-    const dx = Math.abs(e.clientX - startX);
-    const dy = Math.abs(e.clientY - startY);
-    if (dx > 60 && dx > dy) openPack();
+    if (isOpen || startX == null) return;
+    const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
+    try { pack.releasePointerCapture(e.pointerId); } catch (_) {}
+
+    if (horizSwipe && Math.abs(dx) > SWIPE_THRESHOLD) {
+      // Past threshold — complete the tear
+      openPack();
+    } else if (!dragging && Math.abs(dx) < 8 && Math.abs(dy) < 8) {
+      // Treated as a tap — also opens (accessibility / desktop)
+      openPack();
+    } else {
+      // Snap back
+      tearEl.style.transition = 'transform 0.35s ease, opacity 0.35s ease';
+      tearEl.style.transform  = '';
+      tearEl.style.opacity    = '';
+    }
+
     startX = startY = null;
+    dragging = false;
+    horizSwipe = false;
+  });
+
+  pack.addEventListener('pointercancel', () => {
+    if (isOpen) return;
+    tearEl.style.transition = 'transform 0.35s ease, opacity 0.35s ease';
+    tearEl.style.transform  = '';
+    tearEl.style.opacity    = '';
+    startX = startY = null;
+    dragging = false;
+    horizSwipe = false;
+  });
+
+  // Keyboard fallback (Enter / Space)
+  pack.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openPack(); }
   });
 })();
 

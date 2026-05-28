@@ -10,7 +10,7 @@
 </head>
 <body>
 
-  <!-- ═════════════ CARD PACK OPENING INTRO ═════════════ -->
+  <!-- ═════════════ CARD PACK OPENING INTRO (royal blue, top-tear) ═════════════ -->
   <div class="pack-intro" id="packIntro">
     <div class="pack-stars" aria-hidden="true">
       <span></span><span></span><span></span><span></span><span></span>
@@ -18,16 +18,17 @@
       <span></span><span></span>
     </div>
     <div class="pack-stage">
-      <div class="pack" id="pack" role="button" tabindex="0" aria-label="Tap to open">
-        <div class="pack-half pack-top">
+      <div class="pack" id="pack" role="button" tabindex="0" aria-label="Swipe across the pack to open">
+        <!-- Main pack body (royal blue, full design) -->
+        <div class="pack-segment pack-body">
           <div class="pack-design">
             <div class="pack-corner tl">★</div>
             <div class="pack-corner tr">★</div>
             <div class="pack-corner bl">★</div>
             <div class="pack-corner br">★</div>
             <div class="pack-emblem">
-              <svg viewBox="0 0 100 100" width="68" height="68">
-                <polygon points="50,8 92,30 92,70 50,92 8,70 8,30" fill="none" stroke="#fff" stroke-width="3" opacity="0.85"/>
+              <svg viewBox="0 0 100 100" width="76" height="76">
+                <polygon points="50,8 92,30 92,70 50,92 8,70 8,30" fill="none" stroke="#fff" stroke-width="3" opacity="0.9"/>
                 <text x="50" y="62" text-anchor="middle" font-family="Impact, sans-serif" font-size="38" fill="#fff" font-weight="900">TV</text>
               </svg>
             </div>
@@ -37,31 +38,36 @@
             <div class="pack-foil"></div>
           </div>
         </div>
-        <div class="pack-half pack-bottom">
-          <div class="pack-design">
-            <div class="pack-corner tl">★</div>
-            <div class="pack-corner tr">★</div>
-            <div class="pack-corner bl">★</div>
-            <div class="pack-corner br">★</div>
-            <div class="pack-emblem">
-              <svg viewBox="0 0 100 100" width="68" height="68">
-                <polygon points="50,8 92,30 92,70 50,92 8,70 8,30" fill="none" stroke="#fff" stroke-width="3" opacity="0.85"/>
-                <text x="50" y="62" text-anchor="middle" font-family="Impact, sans-serif" font-size="38" fill="#fff" font-weight="900">TV</text>
-              </svg>
-            </div>
-            <div class="pack-title">TEJAS V</div>
-            <div class="pack-edition">PORTFOLIO &nbsp;·&nbsp; 2026 EDITION</div>
-            <div class="pack-rays"></div>
-            <div class="pack-foil"></div>
+
+        <!-- Top tear strip (peels off when swiped) -->
+        <div class="pack-segment pack-tear" id="packTear">
+          <div class="pack-tear-design">
+            <span class="tear-text">SWIPE TO TEAR</span>
           </div>
         </div>
+
+        <!-- Dashed perforation line between tear and body -->
         <div class="pack-cutline" aria-hidden="true"></div>
+
+        <!-- Swipe hint below the pack -->
         <div class="pack-hint">
           <span class="swipe-arrow swipe-l">&lsaquo;</span>
-          SWIPE TO CUT OPEN
+          SWIPE ACROSS TO OPEN
           <span class="swipe-arrow swipe-r">&rsaquo;</span>
         </div>
       </div>
+
+      <!-- Mini trading cards that burst out after the tear -->
+      <div class="card-burst" id="cardBurst" aria-hidden="true">
+        <div class="mini-card mc-1"><span>★</span></div>
+        <div class="mini-card mc-2"><span>★</span></div>
+        <div class="mini-card mc-3"><span>★</span></div>
+        <div class="mini-card mc-4"><span>★</span></div>
+        <div class="mini-card mc-5"><span>★</span></div>
+        <div class="mini-card mc-6"><span>★</span></div>
+        <div class="mini-card mc-7"><span>★</span></div>
+      </div>
+
       <div class="burst" id="burst" aria-hidden="true"></div>
     </div>
   </div>
@@ -69,7 +75,16 @@
   <header>
     <nav>
       <div class="nav-top">
-        <a href="#about" class="logo">Tejas Venkatesh</a>
+        <span class="nav-corner nav-corner-l" aria-hidden="true"></span>
+        <a href="#about" class="logo">
+          <span class="logo-prefix">&lt;/&gt;</span>
+          Tejas Venkatesh
+          <span class="logo-status" title="Online">
+            <span class="logo-status-dot"></span>
+            ONLINE
+          </span>
+        </a>
+        <span class="nav-corner nav-corner-r" aria-hidden="true"></span>
       </div>
       
       <div class="nav-bottom">
