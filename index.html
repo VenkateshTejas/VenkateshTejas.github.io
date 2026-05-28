@@ -9,6 +9,59 @@
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
+
+  <!-- ═════════════ CARD PACK OPENING INTRO ═════════════ -->
+  <div class="pack-intro" id="packIntro">
+    <div class="pack-stars" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span>
+    </div>
+    <div class="pack-stage">
+      <div class="pack" id="pack" role="button" tabindex="0" aria-label="Tap to open">
+        <div class="pack-half pack-top">
+          <div class="pack-design">
+            <div class="pack-corner tl">★</div>
+            <div class="pack-corner tr">★</div>
+            <div class="pack-corner bl">★</div>
+            <div class="pack-corner br">★</div>
+            <div class="pack-emblem">
+              <svg viewBox="0 0 100 100" width="68" height="68">
+                <polygon points="50,8 92,30 92,70 50,92 8,70 8,30" fill="none" stroke="#fff" stroke-width="3" opacity="0.85"/>
+                <text x="50" y="62" text-anchor="middle" font-family="Impact, sans-serif" font-size="38" fill="#fff" font-weight="900">TV</text>
+              </svg>
+            </div>
+            <div class="pack-title">TEJAS V</div>
+            <div class="pack-edition">PORTFOLIO &nbsp;·&nbsp; 2026 EDITION</div>
+            <div class="pack-rays"></div>
+            <div class="pack-foil"></div>
+          </div>
+        </div>
+        <div class="pack-half pack-bottom">
+          <div class="pack-design">
+            <div class="pack-corner tl">★</div>
+            <div class="pack-corner tr">★</div>
+            <div class="pack-corner bl">★</div>
+            <div class="pack-corner br">★</div>
+            <div class="pack-emblem">
+              <svg viewBox="0 0 100 100" width="68" height="68">
+                <polygon points="50,8 92,30 92,70 50,92 8,70 8,30" fill="none" stroke="#fff" stroke-width="3" opacity="0.85"/>
+                <text x="50" y="62" text-anchor="middle" font-family="Impact, sans-serif" font-size="38" fill="#fff" font-weight="900">TV</text>
+              </svg>
+            </div>
+            <div class="pack-title">TEJAS V</div>
+            <div class="pack-edition">PORTFOLIO &nbsp;·&nbsp; 2026 EDITION</div>
+            <div class="pack-rays"></div>
+            <div class="pack-foil"></div>
+          </div>
+        </div>
+        <div class="pack-cutline" aria-hidden="true"></div>
+        <div class="pack-hint">TAP TO CUT OPEN</div>
+      </div>
+      <div class="burst" id="burst" aria-hidden="true"></div>
+    </div>
+  </div>
+
   <header>
     <nav>
       <div class="nav-top">
@@ -41,50 +94,298 @@
   </header>
   
   <main>
-    <!-- About Section -->
-    <section id="about">
-      <div class="section-content">
-        <div class="hero-content">
-          <div class="profile-image">
-            <img src="pictures/Remove%20background%20project.jpeg" alt="Tejas Venkatesh" style="width: 100%; height: 100%; object-fit: cover;" />
-          </div>
-          
-          <h1 class="hero-title">Tejas Venkatesh</h1>
-          <p class="hero-subtitle">Product Enthusiast & Technology Innovator</p>
-          
-          <div class="social-links">
-            <a href="mailto:venkatesh.te@northeastern.edu" class="social-link" aria-label="Email">
-              <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/tejas-venkateshli/" target="_blank" class="social-link" aria-label="LinkedIn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="tel:+16177925754" class="social-link" aria-label="Phone">
-              <i class="fas fa-phone"></i>
-            </a>
-            <a href="https://github.com/VenkateshTejas" target="_blank" class="social-link" aria-label="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
-          
-          <div class="resume-section">
-            <a href="pictures/Tejas-Venkatesh-Resume.pdf" download="Tejas-Venkatesh-Resume.pdf" target="_blank" class="resume-btn" aria-label="Download Resume">
-              <i class="fas fa-download"></i>
-              <span>Download Resume</span>
-            </a>
-          </div>
-          
-          <p class="hero-description">
-            A passionate Product enthusiast with a love for engaging conversations and innovative solutions. 
-            When I'm not diving deep into technology, you'll find me enjoying sports and exploring new ideas. 
-            Let's connect to discuss innovations or explore impactful collaborations!
-          </p>
-        </div>
+    <!-- About Section — PS5 themed -->
+    <section id="about" class="ps5-hero">
+      <!-- Ambient glows -->
+      <div class="ps5-ambient" aria-hidden="true">
+        <div class="ps5-glow ps5-glow-1"></div>
+        <div class="ps5-glow ps5-glow-2"></div>
+        <div class="ps5-glow ps5-glow-3"></div>
       </div>
+
+      <!-- White PS5 console silhouette -->
+      <svg class="ps5-console" viewBox="0 0 700 820" aria-hidden="true">
+        <defs>
+          <linearGradient id="psStrip" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%"  stop-color="#00d4ff"/>
+            <stop offset="50%" stop-color="#0080ff"/>
+            <stop offset="100%" stop-color="#00d4ff"/>
+          </linearGradient>
+          <filter id="bluePulse">
+            <feGaussianBlur stdDeviation="4"/>
+          </filter>
+          <linearGradient id="consoleShine" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%"  stop-color="rgba(255,255,255,0.95)"/>
+            <stop offset="55%" stop-color="rgba(220,235,250,0.6)"/>
+            <stop offset="100%" stop-color="rgba(180,200,230,0.4)"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Soft floor shadow -->
+        <ellipse cx="350" cy="800" rx="280" ry="14" fill="rgba(0,128,255,0.18)" filter="url(#bluePulse)"/>
+
+        <!-- Left white wing (curved organic shape) -->
+        <path d="M 80 80 C 80 50, 120 50, 165 50 L 320 50 L 332 100 L 332 720 L 320 760 L 165 760 C 120 760, 80 740, 80 700 Z"
+              fill="url(#consoleShine)" stroke="rgba(0,128,255,0.5)" stroke-width="2"/>
+        <!-- Right white wing -->
+        <path d="M 620 80 C 620 50, 580 50, 535 50 L 380 50 L 368 100 L 368 720 L 380 760 L 535 760 C 580 760, 620 740, 620 700 Z"
+              fill="url(#consoleShine)" stroke="rgba(0,128,255,0.5)" stroke-width="2"/>
+
+        <!-- Black core -->
+        <rect x="332" y="50" width="36" height="710" fill="#050a14"/>
+        <!-- Blue glowing light strip -->
+        <rect x="345" y="70" width="10" height="670" fill="url(#psStrip)" filter="url(#bluePulse)"/>
+        <rect x="347" y="70" width="6"  height="670" fill="#00d4ff"/>
+
+        <!-- PS logo plate (top) -->
+        <circle cx="350" cy="32" r="20" fill="rgba(255,255,255,0.85)" stroke="rgba(0,128,255,0.6)" stroke-width="2"/>
+        <text x="350" y="40" text-anchor="middle" fill="#0080ff" font-family="Arial Black, sans-serif" font-weight="900" font-size="18">PS</text>
+
+        <!-- Vents on left wing -->
+        <g opacity="0.15">
+          <line x1="100" y1="120" x2="120" y2="120" stroke="#0080ff" stroke-width="1.5"/>
+          <line x1="100" y1="135" x2="120" y2="135" stroke="#0080ff" stroke-width="1.5"/>
+          <line x1="100" y1="150" x2="120" y2="150" stroke="#0080ff" stroke-width="1.5"/>
+          <line x1="100" y1="660" x2="120" y2="660" stroke="#0080ff" stroke-width="1.5"/>
+          <line x1="100" y1="675" x2="120" y2="675" stroke="#0080ff" stroke-width="1.5"/>
+          <line x1="100" y1="690" x2="120" y2="690" stroke="#0080ff" stroke-width="1.5"/>
+        </g>
+        <g opacity="0.15">
+          <line x1="580" y1="120" x2="600" y2="120" stroke="#0080ff" stroke-width="1.5"/>
+          <line x1="580" y1="135" x2="600" y2="135" stroke="#0080ff" stroke-width="1.5"/>
+          <line x1="580" y1="150" x2="600" y2="150" stroke="#0080ff" stroke-width="1.5"/>
+          <line x1="580" y1="660" x2="600" y2="660" stroke="#0080ff" stroke-width="1.5"/>
+          <line x1="580" y1="675" x2="600" y2="675" stroke="#0080ff" stroke-width="1.5"/>
+          <line x1="580" y1="690" x2="600" y2="690" stroke="#0080ff" stroke-width="1.5"/>
+        </g>
+      </svg>
+
+      <!-- Floating PlayStation symbols -->
+      <div class="ps-symbols" aria-hidden="true">
+        <span class="ps-sym ps-tri">▲</span>
+        <span class="ps-sym ps-cir">●</span>
+        <span class="ps-sym ps-cross">✕</span>
+        <span class="ps-sym ps-sq">■</span>
+        <span class="ps-sym ps-tri ps-sym-2">▲</span>
+        <span class="ps-sym ps-cross ps-sym-3">✕</span>
+      </div>
+
+      <!-- Hero card -->
+      <div class="hero-card">
+        <div class="hero-card-header">
+          <span class="hero-tag-left"><span class="hero-dot"></span>PROFILE · ONLINE</span>
+          <span class="hero-tag-right">FINAL BOSS</span>
+        </div>
+
+        <div class="hero-photo-frame">
+          <div class="hero-photo-ring"></div>
+          <div class="profile-image">
+            <img src="pictures/Remove%20background%20project.jpeg" alt="Tejas Venkatesh" />
+          </div>
+          <span class="hero-photo-dot"></span>
+        </div>
+
+        <h1 class="hero-title">TEJAS VENKATESH</h1>
+        <div class="hero-trophy-row">
+          <span class="trophy plat" title="Platinum">●</span>
+          <span class="trophy gold" title="Gold">●</span>
+          <span class="trophy silv" title="Silver">●</span>
+          <span class="trophy bron" title="Bronze">●</span>
+          <span class="trophy-count">LVL 92</span>
+        </div>
+        <p class="hero-subtitle">Product Enthusiast &amp; Technology Innovator</p>
+
+        <div class="social-links">
+          <a href="mailto:venkatesh.te@northeastern.edu" class="social-link" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/tejas-venkateshli/" target="_blank" class="social-link" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="tel:+16177925754" class="social-link" aria-label="Phone">
+            <i class="fas fa-phone"></i>
+          </a>
+          <a href="https://github.com/VenkateshTejas" target="_blank" class="social-link" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+
+        <div class="ps-buttons">
+          <a href="pictures/Tejas-Venkatesh-Resume.pdf" target="_blank" class="ps-btn ps-btn-view">
+            <span class="ps-key ps-key-cross"><svg viewBox="0 0 24 24" width="14" height="14"><line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></span>
+            <span class="ps-btn-text">View Resume</span>
+          </a>
+          <a href="pictures/Tejas-Venkatesh-Resume.pdf" download="Tejas-Venkatesh-Resume.pdf" class="ps-btn ps-btn-download">
+            <span class="ps-key ps-key-tri"><svg viewBox="0 0 24 24" width="14" height="14"><polygon points="12,4 22,20 2,20" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg></span>
+            <span class="ps-btn-text">Download Resume</span>
+          </a>
+        </div>
+
+        <p class="hero-description">
+          A passionate Product enthusiast with a love for engaging conversations and innovative solutions.
+          When I'm not diving deep into technology, you'll find me enjoying sports and exploring new ideas.
+          Let's connect to discuss innovations or explore impactful collaborations!
+        </p>
+      </div>
+
+      <!-- DualSense Controller -->
+      <svg class="ps5-controller" viewBox="0 0 420 260" aria-hidden="true">
+        <defs>
+          <linearGradient id="ctlBody" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%"  stop-color="#ffffff"/>
+            <stop offset="55%" stop-color="#f1f4fa"/>
+            <stop offset="100%" stop-color="#c8d1e0"/>
+          </linearGradient>
+          <linearGradient id="ctlInset" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%"  stop-color="#1a1a2e"/>
+            <stop offset="100%" stop-color="#0a0a1a"/>
+          </linearGradient>
+          <radialGradient id="stickShine" cx="35%" cy="30%">
+            <stop offset="0%"  stop-color="#3a3a4e"/>
+            <stop offset="100%" stop-color="#0a0a14"/>
+          </radialGradient>
+          <filter id="ctlBlur"><feGaussianBlur stdDeviation="3"/></filter>
+        </defs>
+
+        <!-- Body main shape -->
+        <path d="
+          M 95 25
+          Q 210 8, 325 25
+          Q 370 35, 380 80
+          L 380 140
+          Q 372 215, 290 240
+          Q 250 246, 230 208
+          Q 220 200, 210 200
+          Q 200 200, 190 208
+          Q 170 246, 130 240
+          Q 48 215, 40 140
+          L 40 80
+          Q 50 35, 95 25 Z"
+          fill="url(#ctlBody)" stroke="#1a1a2e" stroke-width="2.5"/>
+
+        <!-- Touchpad outer recess -->
+        <rect x="140" y="48" width="140" height="68" rx="10" fill="#dde3ee" stroke="#1a1a2e" stroke-width="1.2"/>
+        <!-- Touchpad surface -->
+        <rect x="148" y="56" width="124" height="52" rx="6" fill="#f0f3fa"/>
+        <!-- Blue light bar below touchpad -->
+        <rect x="146" y="116" width="128" height="5" rx="2.5" fill="#00d4ff" filter="url(#ctlBlur)" opacity="0.85"/>
+        <rect x="146" y="116" width="128" height="3" rx="1.5" fill="#7df0ff"/>
+
+        <!-- PS logo button (below touchpad center) -->
+        <circle cx="210" cy="155" r="11" fill="#e8ecf2" stroke="#1a1a2e" stroke-width="1.2"/>
+        <text x="210" y="160" text-anchor="middle" fill="#1a1a2e" font-family="Arial Black, sans-serif" font-weight="900" font-size="11">PS</text>
+
+        <!-- Create / Options small bars -->
+        <rect x="116" y="65"  width="14" height="5" rx="2" fill="#1a1a2e"/>
+        <rect x="290" y="65"  width="14" height="5" rx="2" fill="#1a1a2e"/>
+
+        <!-- ─── D-pad (left) ─── -->
+        <g transform="translate(95, 130)">
+          <circle r="26" fill="url(#ctlBody)" stroke="#1a1a2e" stroke-width="1.2"/>
+          <rect x="-18" y="-6" width="36" height="12" rx="3" fill="url(#ctlInset)"/>
+          <rect x="-6"  y="-18" width="12" height="36" rx="3" fill="url(#ctlInset)"/>
+          <!-- subtle highlights -->
+          <polygon points="-15,0 -10,-3 -10,3" fill="rgba(255,255,255,0.4)"/>
+          <polygon points="15,0 10,-3 10,3"    fill="rgba(255,255,255,0.4)"/>
+          <polygon points="0,-15 -3,-10 3,-10" fill="rgba(255,255,255,0.4)"/>
+          <polygon points="0,15 -3,10 3,10"    fill="rgba(255,255,255,0.4)"/>
+        </g>
+
+        <!-- ─── Action buttons (right) ─── -->
+        <g transform="translate(325, 130)">
+          <circle r="26" fill="url(#ctlBody)" stroke="#1a1a2e" stroke-width="1.2"/>
+          <!-- Triangle (top) -->
+          <circle cx="0"   cy="-15" r="8.5" fill="url(#ctlInset)"/>
+          <polygon points="0,-19 -4,-12 4,-12" fill="none" stroke="#6bdb6b" stroke-width="1.6" stroke-linejoin="round"/>
+          <!-- Circle (right) -->
+          <circle cx="15"  cy="0"   r="8.5" fill="url(#ctlInset)"/>
+          <circle cx="15"  cy="0"   r="3.6" fill="none" stroke="#ff6f6f" stroke-width="1.6"/>
+          <!-- Cross (bottom) -->
+          <circle cx="0"   cy="15"  r="8.5" fill="url(#ctlInset)"/>
+          <line x1="-3.6" y1="11.4" x2="3.6"  y2="18.6" stroke="#5cb8ff" stroke-width="1.7" stroke-linecap="round"/>
+          <line x1="3.6"  y1="11.4" x2="-3.6" y2="18.6" stroke="#5cb8ff" stroke-width="1.7" stroke-linecap="round"/>
+          <!-- Square (left) -->
+          <circle cx="-15" cy="0"   r="8.5" fill="url(#ctlInset)"/>
+          <rect x="-18.5" y="-3.5" width="7" height="7" rx="0.8" fill="none" stroke="#ff7fd9" stroke-width="1.6"/>
+        </g>
+
+        <!-- ─── Analog sticks ─── -->
+        <g transform="translate(155, 188)">
+          <circle r="24" fill="#1a1a2e"/>
+          <circle r="19" fill="url(#stickShine)" stroke="#3a3a4e" stroke-width="0.8"/>
+          <circle r="6"  fill="#0a0a14"/>
+        </g>
+        <g transform="translate(265, 188)">
+          <circle r="24" fill="#1a1a2e"/>
+          <circle r="19" fill="url(#stickShine)" stroke="#3a3a4e" stroke-width="0.8"/>
+          <circle r="6"  fill="#0a0a14"/>
+        </g>
+
+        <!-- Microphone / speaker grille -->
+        <ellipse cx="210" cy="225" rx="14" ry="3" fill="#3a3a4e"/>
+
+        <!-- Top status LED -->
+        <circle cx="210" cy="38" r="2" fill="#00d4ff" opacity="0.9"/>
+      </svg>
     </section>
 
-    <!-- Education Section -->
-    <section id="education">
+    <!-- Education Section (Cricket theme) -->
+    <section id="education" class="themed cricket-theme">
+      <div class="theme-deco" aria-hidden="true">
+        <div class="pitch-grass"></div>
+        <div class="pitch-strip"></div>
+        <div class="boundary-line"></div>
+        <svg class="deco-stumps" viewBox="0 0 70 110">
+          <rect x="8"  y="14" width="8" height="88" rx="3" fill="#e8c98e" stroke="#7a4a25" stroke-width="1.5"/>
+          <rect x="31" y="14" width="8" height="88" rx="3" fill="#e8c98e" stroke="#7a4a25" stroke-width="1.5"/>
+          <rect x="54" y="14" width="8" height="88" rx="3" fill="#e8c98e" stroke="#7a4a25" stroke-width="1.5"/>
+          <ellipse cx="23" cy="13" rx="9" ry="4" fill="#caa472" stroke="#7a4a25" stroke-width="1"/>
+          <ellipse cx="47" cy="13" rx="9" ry="4" fill="#caa472" stroke="#7a4a25" stroke-width="1"/>
+          <rect x="2" y="102" width="66" height="6" rx="2" fill="#5c8a3a"/>
+        </svg>
+        <svg class="deco-bat" viewBox="0 0 50 150">
+          <rect x="20" y="0"   width="10" height="42" rx="3" fill="#caa472" stroke="#5a3a1c" stroke-width="1"/>
+          <rect x="17" y="40"  width="16" height="8"  rx="2" fill="#7a4a25"/>
+          <path d="M 8 48 L 42 48 L 44 142 Q 25 152 6 142 Z" fill="#f4d999" stroke="#7a4a25" stroke-width="2"/>
+          <line x1="25" y1="58" x2="25" y2="135" stroke="#a07343" stroke-width="1.2"/>
+          <line x1="18" y1="58" x2="18" y2="132" stroke="#a07343" stroke-width="0.7"/>
+          <line x1="32" y1="58" x2="32" y2="132" stroke="#a07343" stroke-width="0.7"/>
+        </svg>
+        <svg class="deco-bat deco-bat-2" viewBox="0 0 50 150">
+          <rect x="20" y="0"   width="10" height="42" rx="3" fill="#caa472" stroke="#5a3a1c" stroke-width="1"/>
+          <rect x="17" y="40"  width="16" height="8"  rx="2" fill="#7a4a25"/>
+          <path d="M 8 48 L 42 48 L 44 142 Q 25 152 6 142 Z" fill="#f4d999" stroke="#7a4a25" stroke-width="2"/>
+          <line x1="25" y1="58" x2="25" y2="135" stroke="#a07343" stroke-width="1.2"/>
+        </svg>
+        <svg class="deco-ball ball-1" viewBox="0 0 80 80">
+          <circle cx="40" cy="40" r="36" fill="#c41e3a" stroke="#7a0a1a" stroke-width="2"/>
+          <ellipse cx="40" cy="40" rx="36" ry="14" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.9"/>
+          <ellipse cx="40" cy="40" rx="36" ry="14" fill="none" stroke="#fff" stroke-width="1" stroke-dasharray="2 4" opacity="0.6" transform="rotate(15 40 40)"/>
+          <circle cx="40" cy="40" r="36" fill="url(#ballShine)"/>
+          <defs>
+            <radialGradient id="ballShine" cx="30%" cy="30%">
+              <stop offset="0%" stop-color="rgba(255,255,255,0.5)"/>
+              <stop offset="40%" stop-color="rgba(255,255,255,0)"/>
+            </radialGradient>
+          </defs>
+        </svg>
+        <svg class="deco-ball ball-2" viewBox="0 0 80 80">
+          <circle cx="40" cy="40" r="36" fill="#c41e3a" stroke="#7a0a1a" stroke-width="2"/>
+          <ellipse cx="40" cy="40" rx="36" ry="14" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.9"/>
+        </svg>
+      </div>
+      <svg class="section-drop drop-cricket" viewBox="0 0 80 80" aria-hidden="true">
+        <circle cx="40" cy="40" r="36" fill="#c41e3a" stroke="#7a0a1a" stroke-width="2"/>
+        <ellipse cx="40" cy="40" rx="36" ry="14" fill="none" stroke="#fff" stroke-width="1.6" stroke-dasharray="4 3"/>
+        <ellipse cx="40" cy="40" rx="36" ry="14" fill="none" stroke="#fff" stroke-width="1.2" stroke-dasharray="3 5" opacity="0.6" transform="rotate(20 40 40)"/>
+        <circle cx="40" cy="40" r="36" fill="url(#dropBallShine)"/>
+        <defs>
+          <radialGradient id="dropBallShine" cx="30%" cy="30%">
+            <stop offset="0%" stop-color="rgba(255,255,255,0.6)"/>
+            <stop offset="50%" stop-color="rgba(255,255,255,0)"/>
+          </radialGradient>
+        </defs>
+      </svg>
       <h2 class="section-title">Education</h2>
       <div class="section-content">
         <div class="education-grid">
@@ -102,8 +403,74 @@
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
+    <!-- Projects Section (Valorant tactical theme) -->
+    <section id="projects" class="themed valorant-theme">
+      <div class="theme-deco" aria-hidden="true">
+        <div class="tac-grid"></div>
+        <div class="tac-scan"></div>
+        <svg class="deco-crosshair" viewBox="0 0 120 120">
+          <circle cx="60" cy="60" r="4" fill="#ff4655"/>
+          <line x1="60" y1="6"  x2="60" y2="42"  stroke="#ff4655" stroke-width="4" stroke-linecap="round"/>
+          <line x1="60" y1="78" x2="60" y2="114" stroke="#ff4655" stroke-width="4" stroke-linecap="round"/>
+          <line x1="6"  y1="60" x2="42"  y2="60" stroke="#ff4655" stroke-width="4" stroke-linecap="round"/>
+          <line x1="78" y1="60" x2="114" y2="60" stroke="#ff4655" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="60" cy="60" r="48" fill="none" stroke="#ff4655" stroke-width="2" stroke-dasharray="6 4" opacity="0.7"/>
+          <circle cx="60" cy="60" r="32" fill="none" stroke="#ff4655" stroke-width="1.5" opacity="0.5"/>
+        </svg>
+        <svg class="deco-crosshair deco-crosshair-2" viewBox="0 0 120 120">
+          <circle cx="60" cy="60" r="3" fill="#00d4ff"/>
+          <line x1="60" y1="20" x2="60" y2="48"  stroke="#00d4ff" stroke-width="3" stroke-linecap="round"/>
+          <line x1="60" y1="72" x2="60" y2="100" stroke="#00d4ff" stroke-width="3" stroke-linecap="round"/>
+          <line x1="20" y1="60" x2="48"  y2="60" stroke="#00d4ff" stroke-width="3" stroke-linecap="round"/>
+          <line x1="72" y1="60" x2="100" y2="60" stroke="#00d4ff" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <svg class="deco-spike" viewBox="0 0 80 110">
+          <path d="M 40 6 L 68 30 L 68 80 L 40 102 L 12 80 L 12 30 Z" fill="rgba(255,70,85,0.08)" stroke="#ff4655" stroke-width="3"/>
+          <circle cx="40" cy="54" r="9" fill="#ff4655"/>
+          <circle cx="40" cy="54" r="9" fill="none" stroke="#ff4655" stroke-width="2" opacity="0.5">
+            <animate attributeName="r" values="9;22;9" dur="1.6s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.6;0;0.6" dur="1.6s" repeatCount="indefinite"/>
+          </circle>
+          <line x1="40" y1="20" x2="40" y2="44" stroke="#ff4655" stroke-width="3" stroke-linecap="round"/>
+          <line x1="40" y1="64" x2="40" y2="88" stroke="#ff4655" stroke-width="3" stroke-linecap="round"/>
+          <text x="40" y="118" text-anchor="middle" fill="#ff4655" font-family="Inter, sans-serif" font-size="8" font-weight="700" letter-spacing="2">SPIKE</text>
+        </svg>
+        <div class="agent-card">
+          <div class="agent-card-top">AGENT · 01</div>
+          <div class="agent-card-num">DUELIST</div>
+        </div>
+        <div class="tac-corner tac-tl"></div>
+        <div class="tac-corner tac-tr"></div>
+        <div class="tac-corner tac-bl"></div>
+        <div class="tac-corner tac-br"></div>
+        <div class="tac-slash tac-slash-1"></div>
+        <div class="tac-slash tac-slash-2"></div>
+      </div>
+      <svg class="section-drop drop-valorant" viewBox="0 0 60 110" aria-hidden="true">
+        <defs>
+          <linearGradient id="bulletBody" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%"  stop-color="#a87410"/>
+            <stop offset="30%" stop-color="#f4d266"/>
+            <stop offset="55%" stop-color="#ffe9a0"/>
+            <stop offset="80%" stop-color="#f4d266"/>
+            <stop offset="100%" stop-color="#a87410"/>
+          </linearGradient>
+          <linearGradient id="bulletTip" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%"  stop-color="#7a5510"/>
+            <stop offset="50%" stop-color="#dba93c"/>
+            <stop offset="100%" stop-color="#7a5510"/>
+          </linearGradient>
+        </defs>
+        <!-- bullet tip -->
+        <path d="M 30 6 Q 50 14 50 42 L 10 42 Q 10 14 30 6 Z" fill="url(#bulletTip)"/>
+        <!-- bullet shell -->
+        <rect x="10" y="42" width="40" height="58" rx="2" fill="url(#bulletBody)"/>
+        <!-- shell rim -->
+        <rect x="10" y="42" width="40" height="4" fill="#7a5510"/>
+        <rect x="10" y="92" width="40" height="3" fill="#7a5510"/>
+        <!-- primer ring -->
+        <circle cx="30" cy="100" r="6" fill="none" stroke="#7a5510" stroke-width="1.5"/>
+      </svg>
       <h2 class="section-title">Projects</h2>
       <div class="section-content">
         <div class="projects-grid">
@@ -176,8 +543,182 @@
       </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience">
+    <!-- Experience Section (Football pitch theme) -->
+    <section id="experience" class="themed football-theme">
+      <div class="theme-deco" aria-hidden="true">
+        <div class="pitch-bg"></div>
+        <div class="pitch-circle-large"></div>
+        <div class="pitch-circle"></div>
+        <div class="pitch-spot"></div>
+        <div class="pitch-line"></div>
+        <div class="penalty-box pb-left"></div>
+        <div class="penalty-box pb-right"></div>
+        <svg class="deco-cleat" viewBox="0 0 280 170">
+          <defs>
+            <linearGradient id="cleatBody" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%"  stop-color="#2a2a2a"/>
+              <stop offset="55%" stop-color="#050505"/>
+              <stop offset="100%" stop-color="#1a1a1a"/>
+            </linearGradient>
+            <linearGradient id="cleatSole" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%"  stop-color="#ffffff"/>
+              <stop offset="100%" stop-color="#9a9aa0"/>
+            </linearGradient>
+            <radialGradient id="cleatShine" cx="30%" cy="25%">
+              <stop offset="0%"  stop-color="rgba(255,255,255,0.45)"/>
+              <stop offset="50%" stop-color="rgba(255,255,255,0)"/>
+            </radialGradient>
+          </defs>
+
+          <!-- Ground shadow -->
+          <ellipse cx="140" cy="162" rx="120" ry="6" fill="rgba(0,0,0,0.45)"/>
+
+          <!-- Studs (bottom row) -->
+          <g fill="#0a0a0a" stroke="#000" stroke-width="1">
+            <ellipse cx="44"  cy="158" rx="8"  ry="5"/>
+            <ellipse cx="78"  cy="160" rx="9"  ry="6"/>
+            <ellipse cx="115" cy="161" rx="9"  ry="6"/>
+            <ellipse cx="150" cy="161" rx="9"  ry="6"/>
+            <ellipse cx="185" cy="160" rx="9"  ry="6"/>
+            <ellipse cx="220" cy="158" rx="8"  ry="5"/>
+            <ellipse cx="248" cy="155" rx="7"  ry="4"/>
+          </g>
+          <!-- Stud tops (highlight rings) -->
+          <g fill="#3a3a3a">
+            <ellipse cx="44"  cy="156" rx="4"  ry="2"/>
+            <ellipse cx="78"  cy="158" rx="5"  ry="2"/>
+            <ellipse cx="115" cy="159" rx="5"  ry="2"/>
+            <ellipse cx="150" cy="159" rx="5"  ry="2"/>
+            <ellipse cx="185" cy="158" rx="5"  ry="2"/>
+            <ellipse cx="220" cy="156" rx="4"  ry="2"/>
+            <ellipse cx="248" cy="153" rx="3"  ry="1.5"/>
+          </g>
+
+          <!-- Sole plate (white) -->
+          <path d="
+            M 30 138
+            Q 22 156, 48 158
+            L 245 154
+            Q 262 152, 258 138
+            Z"
+            fill="url(#cleatSole)" stroke="#000" stroke-width="2"/>
+
+          <!-- Boot upper body -->
+          <path d="
+            M 30 138
+            Q 34 100, 72 82
+            L 118 66
+            Q 158 58, 200 70
+            Q 232 82, 252 108
+            Q 262 126, 258 138
+            Z"
+            fill="url(#cleatBody)" stroke="#000" stroke-width="2.5"/>
+
+          <!-- Three brand stripes (Adidas-style) -->
+          <g stroke="#ffffff" stroke-width="5.5" stroke-linecap="round" fill="none" opacity="0.95">
+            <line x1="106" y1="84" x2="88" y2="132"/>
+            <line x1="120" y1="80" x2="103" y2="132"/>
+            <line x1="134" y1="76" x2="120" y2="132"/>
+          </g>
+
+          <!-- Tongue / collar (white opening) -->
+          <path d="
+            M 72 82
+            Q 84 66, 110 62
+            L 142 60
+            L 148 84
+            Q 122 90, 96 90 Z"
+            fill="#f4f4f4" stroke="#000" stroke-width="2"/>
+
+          <!-- Eyelets -->
+          <g fill="#1a1a1a">
+            <circle cx="108" cy="72" r="2.2"/>
+            <circle cx="120" cy="70" r="2.2"/>
+            <circle cx="132" cy="68" r="2.2"/>
+            <circle cx="108" cy="82" r="2.2"/>
+            <circle cx="120" cy="80" r="2.2"/>
+            <circle cx="132" cy="78" r="2.2"/>
+          </g>
+          <!-- Lace strings -->
+          <g stroke="#1a1a1a" stroke-width="2.2" fill="none" stroke-linecap="round">
+            <path d="M 108 72 Q 120 76, 132 78"/>
+            <path d="M 108 82 Q 120 78, 132 68"/>
+            <path d="M 120 70 L 120 80"/>
+          </g>
+
+          <!-- Toe cap highlight curve -->
+          <path d="M 200 76 Q 232 88, 252 108" fill="none" stroke="#fff" stroke-width="2.5" opacity="0.4"/>
+
+          <!-- Heel detail -->
+          <path d="M 32 118 Q 34 128, 36 138" fill="none" stroke="#fff" stroke-width="2" opacity="0.35"/>
+
+          <!-- Red brand swoosh accent -->
+          <path d="M 162 116 Q 200 104, 240 116" fill="none" stroke="#ff3333" stroke-width="3.5" stroke-linecap="round"/>
+
+          <!-- Subtle body shine highlight -->
+          <path d="
+            M 30 138
+            Q 34 100, 72 82
+            L 118 66
+            Q 158 58, 200 70
+            Q 232 82, 252 108
+            Q 262 126, 258 138
+            Z"
+            fill="url(#cleatShine)"/>
+        </svg>
+        <svg class="deco-goal" viewBox="0 0 160 110">
+          <line x1="8" y1="8"   x2="152" y2="8"   stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+          <line x1="8" y1="8"   x2="8"   y2="102" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+          <line x1="152" y1="8" x2="152" y2="102" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+          <g stroke="#fff" stroke-width="1.2" opacity="0.85">
+            <line x1="8" y1="22" x2="152" y2="22"/>
+            <line x1="8" y1="36" x2="152" y2="36"/>
+            <line x1="8" y1="50" x2="152" y2="50"/>
+            <line x1="8" y1="64" x2="152" y2="64"/>
+            <line x1="8" y1="78" x2="152" y2="78"/>
+            <line x1="8" y1="92" x2="152" y2="92"/>
+            <line x1="24"  y1="8" x2="24"  y2="102"/>
+            <line x1="42"  y1="8" x2="42"  y2="102"/>
+            <line x1="60"  y1="8" x2="60"  y2="102"/>
+            <line x1="80"  y1="8" x2="80"  y2="102"/>
+            <line x1="100" y1="8" x2="100" y2="102"/>
+            <line x1="118" y1="8" x2="118" y2="102"/>
+            <line x1="136" y1="8" x2="136" y2="102"/>
+          </g>
+        </svg>
+        <svg class="deco-flag" viewBox="0 0 60 100">
+          <line x1="14" y1="6" x2="14" y2="94" stroke="#7a3a1c" stroke-width="3"/>
+          <path d="M 14 8 L 54 18 L 14 32 Z" fill="#ff3333"/>
+          <ellipse cx="14" cy="96" rx="9" ry="3" fill="rgba(0,0,0,0.3)"/>
+        </svg>
+      </div>
+      <svg class="section-drop drop-football" viewBox="0 0 80 80" aria-hidden="true">
+        <circle cx="40" cy="40" r="36" fill="#fff" stroke="#000" stroke-width="2.5"/>
+        <!-- Central black pentagon -->
+        <polygon points="40,26 54,35 49,51 31,51 26,35" fill="#000"/>
+        <!-- 5 outer black pentagon tips -->
+        <polygon points="40,4  44,10 40,15 36,10" fill="#000"/>
+        <polygon points="76,24 70,29 64,24 70,18" fill="#000"/>
+        <polygon points="60,74 54,67 60,62 67,67" fill="#000"/>
+        <polygon points="20,74 26,67 20,62 13,67" fill="#000"/>
+        <polygon points="4,24  10,29 16,24 10,18" fill="#000"/>
+        <!-- Black seam lines -->
+        <g stroke="#000" stroke-width="2" stroke-linecap="round" fill="none">
+          <line x1="40" y1="26" x2="40" y2="15"/>
+          <line x1="54" y1="35" x2="64" y2="24"/>
+          <line x1="49" y1="51" x2="60" y2="62"/>
+          <line x1="31" y1="51" x2="20" y2="62"/>
+          <line x1="26" y1="35" x2="16" y2="24"/>
+        </g>
+        <!-- Shine -->
+        <circle cx="40" cy="40" r="36" fill="url(#dropFootShine)"/>
+        <defs>
+          <radialGradient id="dropFootShine" cx="30%" cy="25%">
+            <stop offset="0%" stop-color="rgba(255,255,255,0.65)"/>
+            <stop offset="50%" stop-color="rgba(255,255,255,0)"/>
+          </radialGradient>
+        </defs>
+      </svg>
       <h2 class="section-title">Experience</h2>
       <div class="section-content">
         <div class="experience-grid">
@@ -242,8 +783,86 @@
       </div>
     </section>
 
-    <!-- Leadership Achievements Section -->
-    <section id="leadership">
+    <!-- Leadership Section (Pickleball court theme) -->
+    <section id="leadership" class="themed pickleball-theme">
+      <div class="theme-deco" aria-hidden="true">
+        <div class="court-bg"></div>
+        <div class="court-kitchen kitchen-left"></div>
+        <div class="court-kitchen kitchen-right"></div>
+        <div class="court-baseline bl-left"></div>
+        <div class="court-baseline bl-right"></div>
+        <div class="court-net"></div>
+        <svg class="deco-paddle paddle-1" viewBox="0 0 100 160">
+          <rect x="42" y="116" width="16" height="42" rx="4" fill="#1a1a1a" stroke="#000" stroke-width="1.5"/>
+          <rect x="38" y="108" width="24" height="10" rx="3" fill="#2d2d2d"/>
+          <ellipse cx="50" cy="58" rx="42" ry="56" fill="#1976c8" stroke="#0a3f70" stroke-width="3.5"/>
+          <ellipse cx="50" cy="58" rx="42" ry="56" fill="url(#paddleHoles)" opacity="0.4"/>
+          <ellipse cx="50" cy="58" rx="42" ry="56" fill="url(#paddleShine)"/>
+          <text x="50" y="64" text-anchor="middle" fill="#fff" font-family="Impact, sans-serif" font-size="20" font-weight="900" opacity="0.5">TV</text>
+          <defs>
+            <pattern id="paddleHoles" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+              <circle cx="5" cy="5" r="1.5" fill="#0a3f70"/>
+            </pattern>
+            <radialGradient id="paddleShine" cx="30%" cy="25%">
+              <stop offset="0%" stop-color="rgba(255,255,255,0.5)"/>
+              <stop offset="45%" stop-color="rgba(255,255,255,0)"/>
+            </radialGradient>
+          </defs>
+        </svg>
+        <svg class="deco-paddle paddle-2" viewBox="0 0 100 160">
+          <rect x="42" y="116" width="16" height="42" rx="4" fill="#1a1a1a" stroke="#000" stroke-width="1.5"/>
+          <rect x="38" y="108" width="24" height="10" rx="3" fill="#2d2d2d"/>
+          <ellipse cx="50" cy="58" rx="42" ry="56" fill="#d63b3b" stroke="#7a1818" stroke-width="3.5"/>
+          <ellipse cx="50" cy="58" rx="42" ry="56" fill="url(#paddleHoles2)" opacity="0.4"/>
+          <defs>
+            <pattern id="paddleHoles2" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+              <circle cx="5" cy="5" r="1.5" fill="#7a1818"/>
+            </pattern>
+          </defs>
+        </svg>
+        <svg class="deco-pball pball-1" viewBox="0 0 80 80">
+          <circle cx="40" cy="40" r="36" fill="#ffe33d" stroke="#caa400" stroke-width="2.5"/>
+          <circle cx="28" cy="28" r="4" fill="#a07a00"/>
+          <circle cx="48" cy="24" r="4" fill="#a07a00"/>
+          <circle cx="56" cy="40" r="4" fill="#a07a00"/>
+          <circle cx="50" cy="56" r="4" fill="#a07a00"/>
+          <circle cx="28" cy="54" r="4" fill="#a07a00"/>
+          <circle cx="22" cy="40" r="4" fill="#a07a00"/>
+          <circle cx="40" cy="14" r="4" fill="#a07a00"/>
+          <circle cx="40" cy="40" r="36" fill="url(#pballShine)"/>
+          <defs>
+            <radialGradient id="pballShine" cx="30%" cy="25%">
+              <stop offset="0%" stop-color="rgba(255,255,255,0.55)"/>
+              <stop offset="45%" stop-color="rgba(255,255,255,0)"/>
+            </radialGradient>
+          </defs>
+        </svg>
+        <svg class="deco-pball pball-2" viewBox="0 0 80 80">
+          <circle cx="40" cy="40" r="36" fill="#ffe33d" stroke="#caa400" stroke-width="2.5"/>
+          <circle cx="28" cy="28" r="4" fill="#a07a00"/>
+          <circle cx="48" cy="24" r="4" fill="#a07a00"/>
+          <circle cx="56" cy="40" r="4" fill="#a07a00"/>
+          <circle cx="50" cy="56" r="4" fill="#a07a00"/>
+          <circle cx="28" cy="54" r="4" fill="#a07a00"/>
+        </svg>
+      </div>
+      <svg class="section-drop drop-pickleball" viewBox="0 0 80 80" aria-hidden="true">
+        <circle cx="40" cy="40" r="36" fill="#ffe33d" stroke="#caa400" stroke-width="2.5"/>
+        <circle cx="26" cy="26" r="3.5" fill="#a07a00"/>
+        <circle cx="48" cy="22" r="3.5" fill="#a07a00"/>
+        <circle cx="56" cy="38" r="3.5" fill="#a07a00"/>
+        <circle cx="52" cy="56" r="3.5" fill="#a07a00"/>
+        <circle cx="28" cy="56" r="3.5" fill="#a07a00"/>
+        <circle cx="20" cy="40" r="3.5" fill="#a07a00"/>
+        <circle cx="40" cy="14" r="3.5" fill="#a07a00"/>
+        <circle cx="40" cy="40" r="36" fill="url(#dropPBShine)"/>
+        <defs>
+          <radialGradient id="dropPBShine" cx="30%" cy="25%">
+            <stop offset="0%" stop-color="rgba(255,255,255,0.7)"/>
+            <stop offset="50%" stop-color="rgba(255,255,255,0)"/>
+          </radialGradient>
+        </defs>
+      </svg>
       <h2 class="section-title">Leadership Achievements</h2>
       <div class="section-content">
         <div class="leadership-grid">
@@ -294,42 +913,55 @@
       </div>
     </section>
 
-    <!-- Hobbies Section -->
-    <section id="hobbies">
-      <h2 class="section-title">Hobbies & Interests</h2>
+    <!-- Tic-Tac-Toe Section -->
+    <section id="hobbies" class="themed ttt-theme">
+      <div class="theme-deco" aria-hidden="true">
+        <div class="ttt-bg-grid"></div>
+      </div>
+      <h2 class="section-title">Let's Play</h2>
       <div class="section-content">
-        <div class="hobbies-container">
-          <div class="hobbies-list">
-            <div class="hobby-item scroll-reveal">
-              <i class="fas fa-football-ball"></i>
-              <span>Sports Enthusiast</span>
+        <div class="ttt-wrapper">
+          <p class="ttt-intro">Made it this far? Beat me at a quick game of <strong>Tic-Tac-Toe</strong>. You're <span class="ttt-x">X</span>, I'm <span class="ttt-o">O</span>.</p>
+
+          <div class="ttt-difficulty" id="tttDifficulty">
+            <span class="ttt-diff-label">DIFFICULTY</span>
+            <button class="ttt-diff-btn active" data-diff="easy">Easy</button>
+            <button class="ttt-diff-btn" data-diff="medium">Medium</button>
+            <button class="ttt-diff-btn" data-diff="hard">Hard</button>
+          </div>
+
+          <div class="ttt-status" id="tttStatus">Your move</div>
+
+          <div class="ttt-board" id="tttBoard">
+            <button class="ttt-cell" data-i="0" aria-label="Cell 1"></button>
+            <button class="ttt-cell" data-i="1" aria-label="Cell 2"></button>
+            <button class="ttt-cell" data-i="2" aria-label="Cell 3"></button>
+            <button class="ttt-cell" data-i="3" aria-label="Cell 4"></button>
+            <button class="ttt-cell" data-i="4" aria-label="Cell 5"></button>
+            <button class="ttt-cell" data-i="5" aria-label="Cell 6"></button>
+            <button class="ttt-cell" data-i="6" aria-label="Cell 7"></button>
+            <button class="ttt-cell" data-i="7" aria-label="Cell 8"></button>
+            <button class="ttt-cell" data-i="8" aria-label="Cell 9"></button>
+          </div>
+
+          <div class="ttt-scoreboard">
+            <div class="ttt-score">
+              <span class="ttt-score-label">YOU</span>
+              <span class="ttt-score-val" id="tttScoreX">0</span>
             </div>
-            
-            <div class="hobby-item scroll-reveal">
-              <i class="fas fa-comments"></i>
-              <span>Engaging Conversations</span>
+            <div class="ttt-score">
+              <span class="ttt-score-label">DRAW</span>
+              <span class="ttt-score-val" id="tttScoreD">0</span>
             </div>
-            
-            <div class="hobby-item scroll-reveal">
-              <i class="fas fa-lightbulb"></i>
-              <span>Innovation Explorer</span>
-            </div>
-            
-            <div class="hobby-item scroll-reveal">
-              <i class="fas fa-book"></i>
-              <span>Continuous Learning</span>
-            </div>
-            
-            <div class="hobby-item scroll-reveal">
-              <i class="fas fa-code"></i>
-              <span>Tech Enthusiast</span>
-            </div>
-            
-            <div class="hobby-item scroll-reveal">
-              <i class="fas fa-users"></i>
-              <span>Team Collaboration</span>
+            <div class="ttt-score">
+              <span class="ttt-score-label">ME</span>
+              <span class="ttt-score-val" id="tttScoreO">0</span>
             </div>
           </div>
+
+          <button class="ttt-reset" id="tttReset">
+            <i class="fas fa-redo"></i> New Game
+          </button>
         </div>
       </div>
     </section>
@@ -347,7 +979,7 @@
         <i class="fas fa-phone"></i>
       </a>
     </div>
-    <p>&copy; 2025 Tejas Venkatesh. All Rights Reserved.</p>
+    <p>&copy; 2026 Tejas Venkatesh. All Rights Reserved.</p>
   </footer>
 
   <script src="script.js"></script>
