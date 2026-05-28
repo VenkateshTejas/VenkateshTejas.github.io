@@ -1509,8 +1509,11 @@ body.light-theme .nav-menu a:hover {
     radial-gradient(circle at 70% 70%, rgba(245,  87, 108, 0.22) 0%, transparent 60%),
     linear-gradient(135deg, #0b0d24 0%, #160b2e 100%);
   display: flex;
-  align-items: center;
+  /* Pack sits in the lower portion of the screen so the burst animation
+     (cards flying upward, sparks fanning out) has the whole top half to play in */
+  align-items: flex-end;
   justify-content: center;
+  padding-bottom: clamp(60px, 14vh, 160px);
   overflow: hidden;
   transition: opacity 0.9s ease, visibility 0.9s ease;
 }
