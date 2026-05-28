@@ -3289,22 +3289,128 @@ body.light-theme .ps5-hero .profile-image {
 }
 body.light-theme .hero-photo-dot { border-color: #e6eef9; background: #00a050; box-shadow: 0 0 8px #00a050; }
 
-/* Title + trophies */
+/* ── Hero name block — broadcast/title-card treatment ── */
+.hero-name-block {
+  position: relative;
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+/* "NOW PLAYING" tag above the name */
+.hero-name-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: #00d4ff;
+  text-transform: uppercase;
+  padding: 0.28rem 0.85rem;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.14), rgba(0, 128, 255, 0.04));
+  border: 1px solid rgba(0, 212, 255, 0.45);
+  border-radius: 3px;
+  margin-bottom: 1rem;
+}
+.hero-name-tag-dot {
+  width: 6px;
+  height: 6px;
+  background: #ff4466;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #ff4466;
+  animation: tagDotPulse 1.3s ease-in-out infinite;
+}
+@keyframes tagDotPulse {
+  0%, 100% { opacity: 1;   transform: scale(1);   }
+  50%      { opacity: 0.4; transform: scale(0.7); }
+}
+
+/* Big bold title with stacked neon-shadow for depth */
 .ps5-hero .hero-title {
+  position: relative;
   font-family: 'Inter', sans-serif !important;
-  font-size: clamp(1.6rem, 3.5vw, 2.4rem) !important;
+  font-size: clamp(2rem, 4.5vw, 3rem) !important;
   font-weight: 900 !important;
-  letter-spacing: 3px !important;
-  margin-bottom: 0.5rem !important;
-  color: #fff !important;
-  -webkit-text-fill-color: #fff !important;
+  letter-spacing: 5px !important;
+  line-height: 1.05 !important;
+  margin: 0 0 0.45rem !important;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
   background: none !important;
-  text-shadow: 0 0 25px rgba(0, 212, 255, 0.6), 0 2px 6px rgba(0,0,0,0.4) !important;
+  text-shadow: none !important;
+}
+/* Foreground white text */
+.hero-title-text {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  background: linear-gradient(180deg, #ffffff 0%, #cfeaff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 24px rgba(0, 212, 255, 0.55))
+          drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6));
+}
+/* Stacked cyan ghost behind the text for 3D depth */
+.hero-title-shadow {
+  position: absolute;
+  inset: 0;
+  display: inline-block;
+  color: transparent;
+  -webkit-text-stroke: 1.2px rgba(0, 212, 255, 0.55);
+  transform: translate(4px, 4px);
+  z-index: 1;
+  filter: blur(0.4px);
+  opacity: 0.85;
 }
 body.light-theme .ps5-hero .hero-title {
-  color: #0a1f3a !important;
-  -webkit-text-fill-color: #0a1f3a !important;
-  text-shadow: 0 0 12px rgba(0, 128, 255, 0.25) !important;
+  background: linear-gradient(110deg,
+              #0a1f3a 0%,
+              #0080cc 25%,
+              #0a1f3a 50%,
+              #00688c 75%,
+              #0a1f3a 100%) !important;
+  background-size: 250% auto !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  -webkit-text-stroke: 0.5px rgba(0, 128, 200, 0.4);
+  filter: drop-shadow(0 0 14px rgba(0, 128, 200, 0.30));
+}
+
+/* Decorative divider between name and subtitle */
+.hero-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  margin: 0.3rem auto 0.9rem;
+  width: 75%;
+  max-width: 320px;
+}
+.hero-divider-line {
+  flex: 1;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.85), transparent);
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.6);
+}
+.hero-divider-icon {
+  color: #00d4ff;
+  font-size: 0.75rem;
+  text-shadow: 0 0 14px #00d4ff;
+  animation: dividerPulse 3s ease-in-out infinite;
+}
+body.light-theme .hero-divider-line {
+  background: linear-gradient(90deg, transparent, rgba(0, 128, 200, 0.7), transparent);
+  box-shadow: 0 0 8px rgba(0, 128, 200, 0.4);
+}
+body.light-theme .hero-divider-icon {
+  color: #0080cc;
+  text-shadow: 0 0 10px rgba(0, 128, 200, 0.55);
+}
+@keyframes dividerPulse {
+  0%, 100% { transform: rotate(0deg)   scale(1);   opacity: 0.9; }
+  50%      { transform: rotate(180deg) scale(1.3); opacity: 1;   }
 }
 
 .hero-trophy-row {
@@ -3343,15 +3449,117 @@ body.light-theme .hero-trophy-row {
 }
 body.light-theme .trophy-count { color: #0080cc; }
 
+/* Subtitle — uppercase letter-spaced with a glowing underline accent.
+   Inner .hero-typer span animates as a typewriter on page load. */
 .ps5-hero .hero-subtitle {
-  font-size: 0.92rem !important;
-  color: #9bdbff !important;
-  letter-spacing: 2px !important;
-  margin-bottom: 1.6rem !important;
+  position: relative;
+  display: inline-block !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.85rem !important;
+  color: #b6dcf6 !important;
+  letter-spacing: 3px !important;
+  margin: 0.6rem auto 1.4rem !important;
   font-weight: 600 !important;
   text-transform: uppercase !important;
+  padding: 0.2rem 0 0.6rem !important;
+  background: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  backdrop-filter: none;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  -webkit-text-fill-color: #b6dcf6 !important;
 }
-body.light-theme .ps5-hero .hero-subtitle { color: #2563a8 !important; opacity: 1; }
+.ps5-hero .hero-subtitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 12%;
+  right: 12%;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+  box-shadow: 0 0 8px var(--accent-color);
+}
+
+/* Typewriter animation — text width grows step-by-step revealing one character
+   at a time, with a blinking cyan caret at the end */
+.hero-typer {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: bottom;
+  max-width: max-content;
+  width: 0;
+  border-right: 2px solid var(--accent-color);
+  box-shadow: 0 0 6px var(--accent-color);
+  animation:
+    heroTyperType  2.6s steps(41, end) 0.5s forwards,
+    heroTyperCaret 0.7s step-end infinite;
+}
+
+@keyframes heroTyperType {
+  from { width: 0;    }
+  to   { width: 100%; }
+}
+
+@keyframes heroTyperCaret {
+  0%, 100% { border-right-color: transparent; }
+  50%      { border-right-color: var(--accent-color); }
+}
+
+/* Skill chips row below subtitle */
+.hero-skill-chips {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+.skill-chip {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #b8e0ff;
+  padding: 0.25rem 0.7rem;
+  background: rgba(0, 128, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.25);
+  border-radius: 4px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.skill-chip::before {
+  content: '';
+  position: absolute;
+  left: -1px; top: -1px;
+  width: 5px; height: 5px;
+  border-left: 1px solid #00d4ff;
+  border-top: 1px solid #00d4ff;
+}
+.skill-chip::after {
+  content: '';
+  position: absolute;
+  right: -1px; bottom: -1px;
+  width: 5px; height: 5px;
+  border-right: 1px solid #00d4ff;
+  border-bottom: 1px solid #00d4ff;
+}
+.skill-chip:hover {
+  background: rgba(0, 128, 255, 0.18);
+  border-color: rgba(0, 212, 255, 0.7);
+  color: #fff;
+  transform: translateY(-2px);
+}
+body.light-theme .skill-chip {
+  color: #0a3870;
+  background: rgba(0, 128, 200, 0.10);
+  border-color: rgba(0, 128, 200, 0.45);
+}
+body.light-theme .skill-chip::before,
+body.light-theme .skill-chip::after {
+  border-color: #0080cc;
+}
 
 .ps5-hero .social-links { margin-bottom: 1.6rem !important; }
 .ps5-hero .social-link {
