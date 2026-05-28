@@ -551,8 +551,60 @@
         <div class="pitch-circle"></div>
         <div class="pitch-spot"></div>
         <div class="pitch-line"></div>
-        <div class="penalty-box pb-left"></div>
-        <div class="penalty-box pb-right"></div>
+        <div class="penalty-box pb-top"></div>
+        <div class="penalty-box pb-bottom"></div>
+        <div class="penalty-arc arc-top"></div>
+        <div class="penalty-arc arc-bottom"></div>
+
+        <!-- Goal post at TOP of field -->
+        <svg class="deco-goal goal-top" viewBox="0 0 200 90" aria-hidden="true">
+          <!-- crossbar -->
+          <line x1="10" y1="82" x2="190" y2="82" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+          <!-- left post -->
+          <line x1="10"  y1="82" x2="20"  y2="10" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+          <!-- right post -->
+          <line x1="190" y1="82" x2="180" y2="10" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+          <!-- top of net (back of goal) -->
+          <line x1="20" y1="10" x2="180" y2="10" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+          <!-- net pattern -->
+          <g stroke="#fff" stroke-width="1.1" opacity="0.7" fill="none">
+            <line x1="14"  y1="64" x2="186" y2="64"/>
+            <line x1="16"  y1="46" x2="184" y2="46"/>
+            <line x1="18"  y1="28" x2="182" y2="28"/>
+            <line x1="34"  y1="82" x2="36"  y2="10"/>
+            <line x1="58"  y1="82" x2="58"  y2="10"/>
+            <line x1="82"  y1="82" x2="80"  y2="10"/>
+            <line x1="106" y1="82" x2="104" y2="10"/>
+            <line x1="130" y1="82" x2="128" y2="10"/>
+            <line x1="154" y1="82" x2="152" y2="10"/>
+            <line x1="178" y1="82" x2="174" y2="10"/>
+          </g>
+        </svg>
+
+        <!-- Goal post at BOTTOM of field (mirrored) -->
+        <svg class="deco-goal goal-bottom" viewBox="0 0 200 90" aria-hidden="true">
+          <!-- crossbar (now at top of mirrored view) -->
+          <line x1="10" y1="8" x2="190" y2="8" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+          <!-- left post going down (net depth) -->
+          <line x1="10"  y1="8" x2="20"  y2="80" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+          <!-- right post -->
+          <line x1="190" y1="8" x2="180" y2="80" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+          <!-- back of net -->
+          <line x1="20" y1="80" x2="180" y2="80" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+          <!-- net pattern -->
+          <g stroke="#fff" stroke-width="1.1" opacity="0.7" fill="none">
+            <line x1="14"  y1="26" x2="186" y2="26"/>
+            <line x1="16"  y1="44" x2="184" y2="44"/>
+            <line x1="18"  y1="62" x2="182" y2="62"/>
+            <line x1="34"  y1="8" x2="36"  y2="80"/>
+            <line x1="58"  y1="8" x2="58"  y2="80"/>
+            <line x1="82"  y1="8" x2="80"  y2="80"/>
+            <line x1="106" y1="8" x2="104" y2="80"/>
+            <line x1="130" y1="8" x2="128" y2="80"/>
+            <line x1="154" y1="8" x2="152" y2="80"/>
+            <line x1="178" y1="8" x2="174" y2="80"/>
+          </g>
+        </svg>
         <svg class="deco-cleat" viewBox="0 0 280 170">
           <defs>
             <linearGradient id="cleatBody" x1="0" y1="0" x2="0" y2="1">
@@ -666,26 +718,6 @@
             Z"
             fill="url(#cleatShine)"/>
         </svg>
-        <svg class="deco-goal" viewBox="0 0 160 110">
-          <line x1="8" y1="8"   x2="152" y2="8"   stroke="#fff" stroke-width="5" stroke-linecap="round"/>
-          <line x1="8" y1="8"   x2="8"   y2="102" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
-          <line x1="152" y1="8" x2="152" y2="102" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
-          <g stroke="#fff" stroke-width="1.2" opacity="0.85">
-            <line x1="8" y1="22" x2="152" y2="22"/>
-            <line x1="8" y1="36" x2="152" y2="36"/>
-            <line x1="8" y1="50" x2="152" y2="50"/>
-            <line x1="8" y1="64" x2="152" y2="64"/>
-            <line x1="8" y1="78" x2="152" y2="78"/>
-            <line x1="8" y1="92" x2="152" y2="92"/>
-            <line x1="24"  y1="8" x2="24"  y2="102"/>
-            <line x1="42"  y1="8" x2="42"  y2="102"/>
-            <line x1="60"  y1="8" x2="60"  y2="102"/>
-            <line x1="80"  y1="8" x2="80"  y2="102"/>
-            <line x1="100" y1="8" x2="100" y2="102"/>
-            <line x1="118" y1="8" x2="118" y2="102"/>
-            <line x1="136" y1="8" x2="136" y2="102"/>
-          </g>
-        </svg>
         <svg class="deco-flag" viewBox="0 0 60 100">
           <line x1="14" y1="6" x2="14" y2="94" stroke="#7a3a1c" stroke-width="3"/>
           <path d="M 14 8 L 54 18 L 14 32 Z" fill="#ff3333"/>
@@ -787,10 +819,13 @@
     <section id="leadership" class="themed pickleball-theme">
       <div class="theme-deco" aria-hidden="true">
         <div class="court-bg"></div>
-        <div class="court-kitchen kitchen-left"></div>
-        <div class="court-kitchen kitchen-right"></div>
-        <div class="court-baseline bl-left"></div>
-        <div class="court-baseline bl-right"></div>
+        <!-- Service areas (blue) at top and bottom; vertical center service line in each -->
+        <div class="court-svc svc-top"></div>
+        <div class="court-svc svc-bottom"></div>
+        <!-- Non-Volley Zone (kitchen) - green horizontal strips hugging the net -->
+        <div class="court-kitchen kitchen-top"></div>
+        <div class="court-kitchen kitchen-bottom"></div>
+        <!-- The net (horizontal) -->
         <div class="court-net"></div>
         <svg class="deco-paddle paddle-1" viewBox="0 0 100 160">
           <rect x="42" y="116" width="16" height="42" rx="4" fill="#1a1a1a" stroke="#000" stroke-width="1.5"/>

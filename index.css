@@ -651,8 +651,10 @@ body.light-theme .experience-description {
 
 /* Leadership Achievements Section */
 .leadership-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Flexbox so any leftover cards on the final row stay centered */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -671,6 +673,10 @@ body.light-theme .experience-description {
   align-items: center;
   gap: 1.5rem;
   text-align: center;
+  /* Grow/shrink within row, but cap so a lone card on the last row doesn't stretch full-width */
+  flex: 1 1 280px;
+  min-width: 0;
+  max-width: 360px;
 }
 
 .leadership-card::before {
@@ -1797,27 +1803,61 @@ body.light-theme .football-theme .pitch-circle { background: rgba(255,255,255,0.
   transform: translate(-50%, -50%);
   z-index: 1;
 }
+/* Horizontal halfway line — pitch is oriented vertically with goals at top & bottom */
 .football-theme .pitch-line {
   position: absolute;
-  top: 0; bottom: 0;
-  left: 50%;
-  width: 3px;
+  left: 0; right: 0;
+  top: 50%;
+  height: 3px;
   background: rgba(255,255,255,0.35);
-  transform: translateX(-50%);
+  transform: translateY(-50%);
   box-shadow: 0 0 14px rgba(255,255,255,0.2);
 }
 body.light-theme .football-theme .pitch-line { background: rgba(255,255,255,0.95); }
+
+/* Penalty boxes hugging the goals at top and bottom */
 .football-theme .penalty-box {
   position: absolute;
-  top: 50%;
-  width: 100px;
-  height: 220px;
-  border: 3px solid rgba(255,255,255,0.30);
-  transform: translateY(-50%);
+  left: 50%;
+  width: 280px;
+  height: 80px;
+  border: 3px solid rgba(255,255,255,0.32);
+  transform: translateX(-50%);
 }
-.football-theme .penalty-box.pb-left  { left: 0;  border-left: 0;  }
-.football-theme .penalty-box.pb-right { right: 0; border-right: 0; }
-body.light-theme .football-theme .penalty-box { border-color: rgba(255,255,255,0.9); }
+.football-theme .penalty-box.pb-top    { top: 0;    border-top: 0;    }
+.football-theme .penalty-box.pb-bottom { bottom: 0; border-bottom: 0; }
+body.light-theme .football-theme .penalty-box { border-color: rgba(255,255,255,0.95); }
+
+/* Penalty arcs (curved D in front of each box) */
+.football-theme .penalty-arc {
+  position: absolute;
+  left: 50%;
+  width: 120px;
+  height: 60px;
+  border: 3px solid rgba(255,255,255,0.30);
+  transform: translateX(-50%);
+}
+.football-theme .arc-top    { top: 80px;    border-top: 0;    border-radius: 0 0 60px 60px; }
+.football-theme .arc-bottom { bottom: 80px; border-bottom: 0; border-radius: 60px 60px 0 0; }
+body.light-theme .football-theme .penalty-arc { border-color: rgba(255,255,255,0.85); }
+
+/* Goal posts at top-center and bottom-center of the field */
+.football-theme .deco-goal {
+  position: absolute;
+  left: 50%;
+  width: 220px;
+  height: auto;
+  transform: translateX(-50%);
+  opacity: 0.85;
+  filter: drop-shadow(0 6px 16px rgba(0,0,0,0.55))
+          drop-shadow(0 0 10px rgba(255,255,255,0.25));
+}
+.football-theme .goal-top    { top: -20px; }
+.football-theme .goal-bottom { bottom: -20px; }
+body.light-theme .football-theme .deco-goal {
+  opacity: 1;
+  filter: drop-shadow(0 4px 10px rgba(0, 50, 0, 0.4));
+}
 .football-theme .deco-cleat {
   position: absolute;
   top: 6%;
@@ -1834,14 +1874,6 @@ body.light-theme .football-theme .penalty-box { border-color: rgba(255,255,255,0
   0%, 70%, 100% { transform: rotate(-8deg)  translate(0, 0); }
   20%           { transform: rotate(-22deg) translate(-18px, -8px); }
   40%           { transform: rotate(-15deg) translate(-8px, 4px); }
-}
-.football-theme .deco-goal {
-  position: absolute;
-  bottom: 4%;
-  left: 3%;
-  width: 180px; height: 130px;
-  opacity: 0.8;
-  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
 }
 .football-theme .deco-flag {
   position: absolute;
@@ -1874,71 +1906,124 @@ body.light-theme .pickleball-theme {
   background:
     radial-gradient(ellipse at 50% 50%, rgba(30, 136, 200, 0.40) 0%, rgba(30, 136, 200, 0.20) 60%, rgba(30, 80, 130, 0.10) 100%);
 }
+/* ── Pickleball court — real-court anatomy ──
+   • Outer rectangle = baselines + sidelines (4 white lines around the court)
+   • Net: vertical line through the middle
+   • Kitchen (Non-Volley Zone): GREEN strips hugging the net on each side
+   • Service areas: BLUE rectangles between the kitchen and each baseline
+   • Center service line: horizontal line splitting each service area into
+     a top and bottom service box
+*/
 .pickleball-theme .court-bg {
   position: absolute;
   inset: 12% 6%;
-  border: 4px solid rgba(255,255,255,0.50);
-  border-radius: 8px;
-  box-shadow: inset 0 0 40px rgba(0, 80, 140, 0.25);
-  background: linear-gradient(135deg, rgba(30, 100, 170, 0.08), rgba(30, 136, 200, 0.04));
+  /* Baselines (top/bottom in this orientation) + sidelines as white borders */
+  border: 4px solid rgba(255, 255, 255, 0.85);
+  border-radius: 4px;
+  background: linear-gradient(135deg, rgba(30, 110, 180, 0.22), rgba(30, 100, 170, 0.14));
+  box-shadow: inset 0 0 50px rgba(0, 60, 110, 0.30);
 }
 body.light-theme .pickleball-theme .court-bg {
-  border-color: rgba(255,255,255,0.95);
-  background: linear-gradient(135deg, rgba(30, 136, 200, 0.18), rgba(30, 100, 170, 0.10));
+  border-color: rgba(255, 255, 255, 0.98);
+  background: linear-gradient(135deg, rgba(30, 130, 200, 0.34), rgba(30, 100, 170, 0.22));
+  box-shadow: inset 0 0 50px rgba(0, 60, 110, 0.22);
 }
+
+/* SERVICE areas (blue) at the top and bottom of the court.
+   Each gets a VERTICAL center-service-line that bisects it via ::after */
+.pickleball-theme .court-svc {
+  position: absolute;
+  left: 6%; right: 6%;
+  height: 26%;
+  pointer-events: none;
+}
+.pickleball-theme .svc-top    { top: 12%; }
+.pickleball-theme .svc-bottom { bottom: 12%; }
+.pickleball-theme .court-svc::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0; bottom: 0;
+  width: 3px;
+  background: rgba(255, 255, 255, 0.85);
+  transform: translateX(-50%);
+}
+body.light-theme .pickleball-theme .court-svc::after {
+  background: rgba(255, 255, 255, 0.98);
+}
+
+/* KITCHEN (Non-Volley Zone) — green HORIZONTAL strips hugging the net */
 .pickleball-theme .court-kitchen {
   position: absolute;
-  top: 12%; bottom: 12%;
-  width: 22%;
-  border: 3px solid rgba(255,255,255,0.45);
-  background: rgba(0, 100, 160, 0.10);
+  left: 6%; right: 6%;
+  height: 12%;
+  background: linear-gradient(135deg, rgba(64, 200, 120, 0.55), rgba(40, 170, 100, 0.38));
+  box-shadow: inset 0 0 30px rgba(20, 120, 60, 0.30);
   pointer-events: none;
 }
-.pickleball-theme .kitchen-left  { left: 6%;  border-left: 0;  border-radius: 0 6px 6px 0; }
-.pickleball-theme .kitchen-right { right: 6%; border-right: 0; border-radius: 6px 0 0 6px; }
+/* NVZ line — the white line at the OUTER edge of each kitchen */
+.pickleball-theme .kitchen-top {
+  bottom: 50%;
+  border-top: 3px solid rgba(255, 255, 255, 0.85);
+}
+.pickleball-theme .kitchen-bottom {
+  top: 50%;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.85);
+}
 body.light-theme .pickleball-theme .court-kitchen {
-  border-color: rgba(255,255,255,0.95);
-  background: rgba(0, 100, 160, 0.20);
+  background: linear-gradient(135deg, rgba(64, 200, 120, 0.68), rgba(40, 170, 100, 0.50));
+  box-shadow: inset 0 0 28px rgba(20, 120, 60, 0.25);
 }
-.pickleball-theme .court-baseline {
+body.light-theme .pickleball-theme .kitchen-top    { border-top-color: rgba(255, 255, 255, 0.98); }
+body.light-theme .pickleball-theme .kitchen-bottom { border-bottom-color: rgba(255, 255, 255, 0.98); }
+
+/* "NVZ" label centered horizontally inside each green strip */
+.pickleball-theme .court-kitchen::before {
+  content: 'NVZ';
   position: absolute;
-  width: 22%;
-  height: 50%;
-  border: 3px solid rgba(255,255,255,0.40);
-  pointer-events: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 1px 4px rgba(0, 60, 30, 0.6);
 }
-.pickleball-theme .bl-left  { top: 12%; left: 28%;  border-bottom: 0; border-right: 0; }
-.pickleball-theme .bl-right { bottom: 12%; right: 28%; border-top: 0; border-left: 0;  }
-body.light-theme .pickleball-theme .court-baseline {
-  border-color: rgba(255,255,255,0.9);
+body.light-theme .pickleball-theme .court-kitchen::before {
+  color: rgba(20, 80, 40, 0.6);
+  text-shadow: none;
 }
+
+/* NET — HORIZONTAL line across the middle with triangle finials on each side */
 .pickleball-theme .court-net {
   position: absolute;
-  top: 12%; bottom: 12%;
-  left: 50%;
-  width: 5px;
-  background: rgba(255,255,255,0.6);
-  transform: translateX(-50%);
-  box-shadow: 0 0 16px rgba(255,255,255,0.4);
+  left: 10%; right: 10%;
+  top: 50%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.75);
+  transform: translateY(-50%);
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.45);
 }
 body.light-theme .pickleball-theme .court-net {
   background: rgba(15, 50, 90, 0.85);
+  box-shadow: 0 0 14px rgba(15, 50, 90, 0.30);
 }
 .pickleball-theme .court-net::before,
 .pickleball-theme .court-net::after {
   content: '';
   position: absolute;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-left: 14px solid transparent;
-  border-right: 14px solid transparent;
-  transform: translateX(-50%);
+  top: 50%;
+  width: 0; height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  transform: translateY(-50%);
 }
-.pickleball-theme .court-net::before { top: -8px;    border-bottom: 14px solid rgba(255,255,255,0.6); }
-.pickleball-theme .court-net::after  { bottom: -8px; border-top: 14px solid rgba(255,255,255,0.6);    }
-body.light-theme .pickleball-theme .court-net::before { border-bottom-color: rgba(15, 50, 90, 0.85); }
-body.light-theme .pickleball-theme .court-net::after  { border-top-color:    rgba(15, 50, 90, 0.85); }
+.pickleball-theme .court-net::before { left: -10px;  border-right: 12px solid rgba(255, 255, 255, 0.75); }
+.pickleball-theme .court-net::after  { right: -10px; border-left:  12px solid rgba(255, 255, 255, 0.75); }
+body.light-theme .pickleball-theme .court-net::before { border-right-color: rgba(15, 50, 90, 0.85); }
+body.light-theme .pickleball-theme .court-net::after  { border-left-color:  rgba(15, 50, 90, 0.85); }
 
 .pickleball-theme .deco-paddle {
   position: absolute;
