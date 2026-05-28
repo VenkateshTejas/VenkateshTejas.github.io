@@ -149,9 +149,18 @@ window.addEventListener('scroll', () => {
     setTimeout(() => { intro.remove(); }, 3200);
   }
 
+  // Auto-open the pack after 3.5s if the user hasn't interacted —
+  // saves anyone from getting stuck on the swipe gesture
+  const autoOpenTimer = setTimeout(() => {
+    if (!isOpen) openPack();
+  }, 3500);
+
   // ── Swipe gesture (with live visual feedback on the tear strip) ──
   pack.addEventListener('pointerdown', (e) => {
     if (isOpen) return;
+    // The user is interacting — cancel the auto-open so we don't
+    // interrupt their swipe mid-gesture
+    clearTimeout(autoOpenTimer);
     startX     = e.clientX;
     startY     = e.clientY;
     dragging   = false;

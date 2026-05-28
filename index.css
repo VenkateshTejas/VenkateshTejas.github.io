@@ -2473,10 +2473,14 @@ body.light-theme .pickleball-theme {
    • Center service line: horizontal line splitting each service area into
      a top and bottom service box
 */
+/* Court box pins to fixed offsets so it always wraps every leadership card —
+   no matter how many you add — instead of shrinking proportionally. */
 .pickleball-theme .court-bg {
   position: absolute;
-  inset: 12% 6%;
-  /* Baselines (top/bottom in this orientation) + sidelines as white borders */
+  top: 9rem;        /* leaves room for the section title at top */
+  bottom: 4rem;     /* sits above the section's bottom padding */
+  left: 4%;
+  right: 4%;
   border: 4px solid rgba(255, 255, 255, 0.85);
   border-radius: 4px;
   background: linear-gradient(135deg, rgba(30, 110, 180, 0.22), rgba(30, 100, 170, 0.14));
@@ -2489,15 +2493,15 @@ body.light-theme .pickleball-theme .court-bg {
 }
 
 /* SERVICE areas (blue) at the top and bottom of the court.
-   Each gets a VERTICAL center-service-line that bisects it via ::after */
+   Now positioned relative to .court-bg so they scale with the actual court. */
 .pickleball-theme .court-svc {
   position: absolute;
-  left: 6%; right: 6%;
-  height: 26%;
+  left: 0; right: 0;
+  height: 34%;
   pointer-events: none;
 }
-.pickleball-theme .svc-top    { top: 12%; }
-.pickleball-theme .svc-bottom { bottom: 12%; }
+.pickleball-theme .svc-top    { top: 0; }
+.pickleball-theme .svc-bottom { bottom: 0; }
 .pickleball-theme .court-svc::after {
   content: '';
   position: absolute;
@@ -2511,11 +2515,12 @@ body.light-theme .pickleball-theme .court-svc::after {
   background: rgba(255, 255, 255, 0.98);
 }
 
-/* KITCHEN (Non-Volley Zone) — green HORIZONTAL strips hugging the net */
+/* KITCHEN (Non-Volley Zone) — green HORIZONTAL strips hugging the net.
+   Positioned relative to .court-bg now. */
 .pickleball-theme .court-kitchen {
   position: absolute;
-  left: 6%; right: 6%;
-  height: 12%;
+  left: 0; right: 0;
+  height: 16%;
   background: linear-gradient(135deg, rgba(64, 200, 120, 0.55), rgba(40, 170, 100, 0.38));
   box-shadow: inset 0 0 30px rgba(20, 120, 60, 0.30);
   pointer-events: none;
@@ -2555,10 +2560,11 @@ body.light-theme .pickleball-theme .court-kitchen::before {
   text-shadow: none;
 }
 
-/* NET — HORIZONTAL line across the middle with triangle finials on each side */
+/* NET — HORIZONTAL line across the middle with triangle finials on each side.
+   Positioned relative to .court-bg now. */
 .pickleball-theme .court-net {
   position: absolute;
-  left: 10%; right: 10%;
+  left: 4%; right: 4%;
   top: 50%;
   height: 4px;
   background: rgba(255, 255, 255, 0.75);
