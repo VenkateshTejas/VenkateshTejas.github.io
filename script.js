@@ -1,8 +1,11 @@
-// Theme toggle functionality
+// Theme toggle — always start in dark mode for every visitor
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 const moonIcon = themeToggle.querySelector('.fa-moon');
 const sunIcon = themeToggle.querySelector('.fa-sun');
+
+// Force dark theme on every load (ignore prior session / OS preference)
+body.classList.remove('light-theme');
 
 themeToggle.addEventListener('click', () => {
   body.classList.toggle('light-theme');
