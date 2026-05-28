@@ -1,15 +1,6 @@
-// Theme toggle — always start in dark mode for every visitor
-const themeToggle = document.getElementById('theme-toggle');
+// Light theme has been removed — site is always dark
 const body = document.body;
-const moonIcon = themeToggle.querySelector('.fa-moon');
-const sunIcon = themeToggle.querySelector('.fa-sun');
-
-// Force dark theme on every load (ignore prior session / OS preference)
 body.classList.remove('light-theme');
-
-themeToggle.addEventListener('click', () => {
-  body.classList.toggle('light-theme');
-});
 
 // Hamburger menu functionality
 const hamburger = document.getElementById('hamburger');

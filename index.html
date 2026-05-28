@@ -77,8 +77,9 @@
       <div class="nav-top">
         <span class="nav-corner nav-corner-l" aria-hidden="true"></span>
         <a href="#about" class="logo">
-          <span class="logo-prefix">&lt;/&gt;</span>
-          Tejas Venkatesh
+          <span class="logo-star" aria-hidden="true">✦</span>
+          <span class="logo-text">Tejas Venkatesh</span>
+          <span class="logo-star" aria-hidden="true">✦</span>
           <span class="logo-status" title="Online">
             <span class="logo-status-dot"></span>
             ONLINE
@@ -98,10 +99,6 @@
         </ul>
         
         <div class="nav-controls">
-          <button class="theme-toggle" id="theme-toggle">
-            <i class="fas fa-moon"></i>
-            <i class="fas fa-sun"></i>
-          </button>
           <div class="hamburger" id="hamburger">
             <span></span>
             <span></span>
@@ -185,14 +182,23 @@
         <span class="ps-sym ps-cir">●</span>
         <span class="ps-sym ps-cross">✕</span>
         <span class="ps-sym ps-sq">■</span>
-        <span class="ps-sym ps-tri ps-sym-2">▲</span>
+        <span class="ps-sym ps-tri  ps-sym-2">▲</span>
         <span class="ps-sym ps-cross ps-sym-3">✕</span>
+        <span class="ps-sym ps-sq    ps-sym-4">■</span>
+        <span class="ps-sym ps-cir   ps-sym-5">●</span>
       </div>
 
       <!-- Hero card -->
       <div class="hero-card">
         <div class="hero-card-header">
           <span class="hero-tag-left"><span class="hero-dot"></span>PROFILE · ONLINE</span>
+          <div class="hero-trophy-row">
+            <span class="trophy plat" title="Platinum">●</span>
+            <span class="trophy gold" title="Gold">●</span>
+            <span class="trophy silv" title="Silver">●</span>
+            <span class="trophy bron" title="Bronze">●</span>
+            <span class="trophy-count">LVL 92</span>
+          </div>
         </div>
 
         <div class="hero-photo-frame">
@@ -200,16 +206,25 @@
           <div class="profile-image">
             <img src="pictures/Remove%20background%20project.jpeg" alt="Tejas Venkatesh" />
           </div>
+
+          <!-- Floating HUD pills around the photo -->
+          <span class="hero-pill pill-live" aria-label="Location">
+            <span class="dot dot-live"></span>
+            <span>LIVE&nbsp;·&nbsp;BOSTON, MA</span>
+          </span>
+
+          <span class="hero-pill pill-mode" aria-label="Current focus">
+            <span class="pill-icon">◆</span>
+            <span>MODE&nbsp;·&nbsp;PRODUCT&nbsp;MGMT</span>
+          </span>
+
+          <span class="hero-pill pill-match" aria-label="Open to opportunities">
+            <span class="dot dot-match"></span>
+            <span>LOOKING FOR MATCH<span class="match-dots"><i>.</i><i>.</i><i>.</i></span></span>
+          </span>
         </div>
 
         <h1 class="hero-title">TEJAS VENKATESH</h1>
-        <div class="hero-trophy-row">
-          <span class="trophy plat" title="Platinum">●</span>
-          <span class="trophy gold" title="Gold">●</span>
-          <span class="trophy silv" title="Silver">●</span>
-          <span class="trophy bron" title="Bronze">●</span>
-          <span class="trophy-count">LVL 92</span>
-        </div>
         <p class="hero-subtitle">Product Enthusiast &amp; Technology Innovator</p>
 
         <div class="social-links">
@@ -246,7 +261,6 @@
             you'll find me enjoying <strong>sports</strong> and exploring new ideas. Let's connect to
             discuss innovations or explore impactful collaborations!
           </p>
-          <span class="quote-byline">— TEJAS V</span>
         </div>
       </div>
 
@@ -412,14 +426,40 @@
       <div class="section-content">
         <div class="education-grid">
           <div class="education-card scroll-reveal">
+            <span class="edu-period"><i class="fas fa-calendar-alt"></i> Sep 2024 &mdash; May 2026</span>
             <div class="university">Northeastern University</div>
             <p class="degree">Master's in Information Systems</p>
-            <p class="location">Boston, MA</p>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Boston, MA</p>
+            <div class="edu-focus">
+              <span class="edu-focus-label">FOCUS AREAS</span>
+              <div class="edu-tags">
+                <span class="edu-tag">Product Management</span>
+                <span class="edu-tag">UX Design</span>
+                <span class="edu-tag">Data Analytics</span>
+                <span class="edu-tag">Cloud Systems</span>
+              </div>
+            </div>
+            <div class="edu-foot">
+              <span class="edu-badge"><i class="fas fa-trophy"></i> Graduate Program</span>
+            </div>
           </div>
           <div class="education-card scroll-reveal">
-            <div class="university">K.S School of Engineering and Management</div>
+            <span class="edu-period"><i class="fas fa-calendar-alt"></i> Aug 2015 &mdash; Jul 2019</span>
+            <div class="university">K.S School of Engineering &amp; Management</div>
             <p class="degree">Bachelor of Computer Science</p>
-            <p class="location">India</p>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Bangalore, India</p>
+            <div class="edu-focus">
+              <span class="edu-focus-label">FOCUS AREAS</span>
+              <div class="edu-tags">
+                <span class="edu-tag">Software Engineering</span>
+                <span class="edu-tag">Algorithms</span>
+                <span class="edu-tag">Database Systems</span>
+                <span class="edu-tag">Web Development</span>
+              </div>
+            </div>
+            <div class="edu-foot">
+              <span class="edu-badge"><i class="fas fa-trophy"></i> Undergraduate Program</span>
+            </div>
           </div>
         </div>
       </div>
@@ -982,9 +1022,11 @@
 
           <div class="ttt-difficulty" id="tttDifficulty">
             <span class="ttt-diff-label">DIFFICULTY</span>
-            <button class="ttt-diff-btn active" data-diff="easy">Easy</button>
-            <button class="ttt-diff-btn" data-diff="medium">Medium</button>
-            <button class="ttt-diff-btn" data-diff="hard">Hard</button>
+            <div class="ttt-diff-buttons">
+              <button class="ttt-diff-btn active" data-diff="easy">Easy</button>
+              <button class="ttt-diff-btn" data-diff="medium">Medium</button>
+              <button class="ttt-diff-btn" data-diff="hard">Hard</button>
+            </div>
           </div>
 
           <div class="ttt-status" id="tttStatus">Your move</div>
