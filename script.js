@@ -232,12 +232,13 @@ window.addEventListener('scroll', () => {
    TIC-TAC-TOE — You (X) vs Me (O)
    ════════════════════════════════════════════════════ */
 (function () {
-  const boardEl  = document.getElementById('tttBoard');
-  const statusEl = document.getElementById('tttStatus');
-  const resetBtn = document.getElementById('tttReset');
-  const scoreXEl = document.getElementById('tttScoreX');
-  const scoreOEl = document.getElementById('tttScoreO');
-  const scoreDEl = document.getElementById('tttScoreD');
+  const boardEl     = document.getElementById('tttBoard');
+  const statusEl    = document.getElementById('tttStatus');
+  const statusRowEl = document.getElementById('tttStatusRow');
+  const resetBtn    = document.getElementById('tttReset');
+  const scoreXEl    = document.getElementById('tttScoreX');
+  const scoreOEl    = document.getElementById('tttScoreO');
+  const scoreDEl    = document.getElementById('tttScoreD');
   if (!boardEl || !statusEl) return;
 
   const HUMAN = 'X';
@@ -362,6 +363,7 @@ window.addEventListener('scroll', () => {
     scoreXEl.textContent = scores.X;
     scoreOEl.textContent = scores.O;
     scoreDEl.textContent = scores.D;
+    if (statusRowEl) statusRowEl.classList.add('show-reset');
     render(result);
   }
 
@@ -370,6 +372,7 @@ window.addEventListener('scroll', () => {
     active = true;
     yourTurn = true;
     setStatus("Your move");
+    if (statusRowEl) statusRowEl.classList.remove('show-reset');
     render();
   }
 

@@ -95,7 +95,7 @@
           <li><a href="#projects">Projects</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#leadership">Leadership Achievements</a></li>
-          <li><a href="#hobbies">Hobbies</a></li>
+          <li><a href="#hobbies">Let's Play</a></li>
         </ul>
         
         <div class="nav-controls">
@@ -1020,7 +1020,10 @@
       <h2 class="section-title">Let's Play</h2>
       <div class="section-content">
         <div class="ttt-wrapper">
-          <p class="ttt-intro">Made it this far? Beat me at a quick game of <strong>Tic-Tac-Toe</strong>. You're <span class="ttt-x">X</span>, I'm <span class="ttt-o">O</span>.</p>
+          <p class="ttt-intro">
+            Made it this far? Beat me at a quick game of<br>
+            <strong>Tic-Tac-Toe</strong>. You're <span class="ttt-x">X</span>, I'm <span class="ttt-o">O</span>.
+          </p>
 
           <div class="ttt-difficulty" id="tttDifficulty">
             <span class="ttt-diff-label">DIFFICULTY</span>
@@ -1031,7 +1034,12 @@
             </div>
           </div>
 
-          <div class="ttt-status" id="tttStatus">Your move</div>
+          <div class="ttt-status-row" id="tttStatusRow">
+            <div class="ttt-status" id="tttStatus">Your move</div>
+            <button class="ttt-reset" id="tttReset">
+              <i class="fas fa-redo"></i> New Game
+            </button>
+          </div>
 
           <div class="ttt-board" id="tttBoard">
             <button class="ttt-cell" data-i="0" aria-label="Cell 1"></button>
@@ -1060,9 +1068,6 @@
             </div>
           </div>
 
-          <button class="ttt-reset" id="tttReset">
-            <i class="fas fa-redo"></i> New Game
-          </button>
         </div>
       </div>
     </section>
