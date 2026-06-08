@@ -1449,6 +1449,20 @@ body.light-theme .nav-menu a:hover {
     margin: 0;
   }
 
+  /* Experience: stack company → role → duration on three lines */
+  .position-role,
+  .position-date {
+    display: block;
+  }
+
+  /* Leadership: drop the pipe and put the category on its own line */
+  .lead-sep {
+    display: none;
+  }
+  .lead-category {
+    display: block;
+  }
+
   .hobbies-list {
     justify-content: flex-start;
   }
