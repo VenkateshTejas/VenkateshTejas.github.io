@@ -1427,6 +1427,28 @@ body.light-theme .nav-menu a:hover {
     grid-template-columns: 1fr;
   }
 
+  /* Project card header: title on its own line, duration below it,
+     and the link pinned to the card's top-right — consistent on phones. */
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+    padding-right: 2.6rem; /* keep title clear of the corner link */
+  }
+  .project-title {
+    flex: none;
+    width: 100%;
+  }
+  .project-date {
+    width: 100%;
+  }
+  .project-link {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    margin: 0;
+  }
+
   .hobbies-list {
     justify-content: flex-start;
   }
