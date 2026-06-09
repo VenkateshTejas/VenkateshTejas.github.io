@@ -739,13 +739,21 @@ body.light-theme .hero-subtitle {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.1rem;
 }
 
 .position {
   font-style: italic;
   opacity: 0.8;
   margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.position-date {
+  white-space: nowrap;
 }
 
 body.light-theme .position {
@@ -1146,6 +1154,15 @@ body.light-theme .experience-description {
   opacity: 0.9;
 }
 
+/* Drop the pipe separator and put the category on its own line */
+.lead-sep {
+  display: none;
+}
+
+.lead-category {
+  display: block;
+}
+
 body.light-theme .leadership-period {
   color: #4facfe;
   opacity: 0.9;
@@ -1450,6 +1467,11 @@ body.light-theme .nav-menu a:hover {
   }
 
   /* Experience: stack company → role → duration on three lines */
+  .position {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
   .position-role,
   .position-date {
     display: block;
