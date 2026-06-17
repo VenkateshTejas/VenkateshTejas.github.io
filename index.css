@@ -1785,9 +1785,11 @@ body.light-theme .cricket-theme .pitch-strip {
 .cricket-theme .boundary-line {
   position: absolute;
   inset: 8% 4%;
-  border: 2px dashed rgba(255,255,255,0.15);
+  border: 6px solid rgba(255, 255, 255, 0.85);
   border-radius: 60% / 30%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   pointer-events: none;
+  z-index: 1;
 }
 body.light-theme .cricket-theme .boundary-line {
   border-color: rgba(56, 142, 60, 0.4);
@@ -1798,10 +1800,10 @@ body.light-theme .cricket-theme .boundary-line {
   right: 4%;
   width: 100px;
   height: 160px;
-  opacity: 0.75;
+  opacity: 0.85;
   filter: drop-shadow(0 8px 14px rgba(0,0,0,0.4));
   animation: tiltFloat 6s ease-in-out infinite;
-  z-index: 0;
+  z-index: 2;
 }
 .cricket-theme .deco-bat {
   position: absolute;
@@ -1810,7 +1812,8 @@ body.light-theme .cricket-theme .boundary-line {
   width: 80px;
   height: 230px;
   transform: rotate(-22deg);
-  opacity: 0.85;
+  opacity: 1;
+  z-index: 3;
   filter: drop-shadow(0 6px 12px rgba(0,0,0,0.35));
   animation: gentleSwing 5s ease-in-out infinite;
 }
