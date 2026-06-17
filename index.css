@@ -2836,9 +2836,9 @@ body.light-theme .ps5-mini {
   position: relative;
   z-index: 3;
   width: 100%;
-  max-width: min(680px, 94vw);
+  max-width: min(840px, 94vw);
   margin: 0 auto;
-  padding: 2.5rem clamp(1.2rem, 4vw, 2.8rem) 2.6rem;
+  padding: 2.5rem clamp(1.2rem, 4vw, 3.2rem) 2.6rem;
   background: rgba(8, 18, 36, 0.78);
   backdrop-filter: blur(22px);
   -webkit-backdrop-filter: blur(22px);
@@ -2889,8 +2889,8 @@ body.light-theme .hero-dot { background: #00a050; box-shadow: 0 0 8px #00a050; }
 /* Profile photo */
 .hero-photo-frame {
   position: relative;
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   margin: 0 auto 1.4rem;
   /* Allow floating pills to escape the photo area */
   overflow: visible;
@@ -3022,8 +3022,8 @@ body.light-theme .hero-dot { background: #00a050; box-shadow: 0 0 8px #00a050; }
 body.light-theme .hero-photo-ring { border-color: rgba(0, 128, 255, 0.7); }
 @keyframes ringSpin { to { transform: rotate(360deg); } }
 .ps5-hero .profile-image {
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   border: 3px solid #00d4ff !important;
   margin: 0 !important;

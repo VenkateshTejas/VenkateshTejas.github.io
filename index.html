@@ -33,8 +33,8 @@
         <ul class="nav-menu">
           <li><a href="#about">About</a></li>
           <li><a href="#education">Education</a></li>
-          <li><a href="#projects">Projects</a></li>
           <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#leadership">Leadership Achievements</a></li>
           <li><a href="#hobbies">Let's Play</a></li>
         </ul>
@@ -453,171 +453,6 @@
       </div>
     </section>
 
-    <!-- Projects Section (Valorant tactical theme) -->
-    <section id="projects" class="themed valorant-theme">
-      <div class="theme-deco" aria-hidden="true">
-        <div class="tac-grid"></div>
-        <div class="tac-scan"></div>
-        <svg class="deco-crosshair" viewBox="0 0 120 120">
-          <circle cx="60" cy="60" r="4" fill="#ff4655"/>
-          <line x1="60" y1="6"  x2="60" y2="42"  stroke="#ff4655" stroke-width="4" stroke-linecap="round"/>
-          <line x1="60" y1="78" x2="60" y2="114" stroke="#ff4655" stroke-width="4" stroke-linecap="round"/>
-          <line x1="6"  y1="60" x2="42"  y2="60" stroke="#ff4655" stroke-width="4" stroke-linecap="round"/>
-          <line x1="78" y1="60" x2="114" y2="60" stroke="#ff4655" stroke-width="4" stroke-linecap="round"/>
-          <circle cx="60" cy="60" r="48" fill="none" stroke="#ff4655" stroke-width="2" stroke-dasharray="6 4" opacity="0.7"/>
-          <circle cx="60" cy="60" r="32" fill="none" stroke="#ff4655" stroke-width="1.5" opacity="0.5"/>
-        </svg>
-        <svg class="deco-crosshair deco-crosshair-2" viewBox="0 0 120 120">
-          <circle cx="60" cy="60" r="3" fill="#00d4ff"/>
-          <line x1="60" y1="20" x2="60" y2="48"  stroke="#00d4ff" stroke-width="3" stroke-linecap="round"/>
-          <line x1="60" y1="72" x2="60" y2="100" stroke="#00d4ff" stroke-width="3" stroke-linecap="round"/>
-          <line x1="20" y1="60" x2="48"  y2="60" stroke="#00d4ff" stroke-width="3" stroke-linecap="round"/>
-          <line x1="72" y1="60" x2="100" y2="60" stroke="#00d4ff" stroke-width="3" stroke-linecap="round"/>
-        </svg>
-        <svg class="deco-spike" viewBox="0 0 80 110">
-          <path d="M 40 6 L 68 30 L 68 80 L 40 102 L 12 80 L 12 30 Z" fill="rgba(255,70,85,0.08)" stroke="#ff4655" stroke-width="3"/>
-          <circle cx="40" cy="54" r="9" fill="#ff4655"/>
-          <circle cx="40" cy="54" r="9" fill="none" stroke="#ff4655" stroke-width="2" opacity="0.5">
-            <animate attributeName="r" values="9;22;9" dur="1.6s" repeatCount="indefinite"/>
-            <animate attributeName="opacity" values="0.6;0;0.6" dur="1.6s" repeatCount="indefinite"/>
-          </circle>
-          <line x1="40" y1="20" x2="40" y2="44" stroke="#ff4655" stroke-width="3" stroke-linecap="round"/>
-          <line x1="40" y1="64" x2="40" y2="88" stroke="#ff4655" stroke-width="3" stroke-linecap="round"/>
-          <text x="40" y="118" text-anchor="middle" fill="#ff4655" font-family="Inter, sans-serif" font-size="8" font-weight="700" letter-spacing="2">SPIKE</text>
-        </svg>
-        <div class="agent-card">
-          <div class="agent-card-top">AGENT · 01</div>
-          <div class="agent-card-num">DUELIST</div>
-        </div>
-        <div class="tac-corner tac-tl"></div>
-        <div class="tac-corner tac-tr"></div>
-        <div class="tac-corner tac-bl"></div>
-        <div class="tac-corner tac-br"></div>
-        <div class="tac-slash tac-slash-1"></div>
-        <div class="tac-slash tac-slash-2"></div>
-      </div>
-      <svg class="section-drop drop-valorant" viewBox="0 0 60 110" aria-hidden="true">
-        <defs>
-          <linearGradient id="bulletBody" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%"  stop-color="#a87410"/>
-            <stop offset="30%" stop-color="#f4d266"/>
-            <stop offset="55%" stop-color="#ffe9a0"/>
-            <stop offset="80%" stop-color="#f4d266"/>
-            <stop offset="100%" stop-color="#a87410"/>
-          </linearGradient>
-          <linearGradient id="bulletTip" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%"  stop-color="#7a5510"/>
-            <stop offset="50%" stop-color="#dba93c"/>
-            <stop offset="100%" stop-color="#7a5510"/>
-          </linearGradient>
-        </defs>
-        <!-- bullet tip -->
-        <path d="M 30 6 Q 50 14 50 42 L 10 42 Q 10 14 30 6 Z" fill="url(#bulletTip)"/>
-        <!-- bullet shell -->
-        <rect x="10" y="42" width="40" height="58" rx="2" fill="url(#bulletBody)"/>
-        <!-- shell rim -->
-        <rect x="10" y="42" width="40" height="4" fill="#7a5510"/>
-        <rect x="10" y="92" width="40" height="3" fill="#7a5510"/>
-        <!-- primer ring -->
-        <circle cx="30" cy="100" r="6" fill="none" stroke="#7a5510" stroke-width="1.5"/>
-      </svg>
-      <h2 class="section-title">Projects</h2>
-      <div class="section-content">
-        <div class="projects-grid">
-
-          <div class="project-card scroll-reveal">
-            <div class="project-header">
-              <h3 class="project-title">BESS Intel Tracker</h3>
-              <div class="project-date">May 2026 – June 2026</div>
-              <a href="https://bess-tracker-lgvertech.streamlit.app" target="_blank" class="project-link" aria-label="Live App">
-                <i class="fas fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-            <div class="project-description">
-              <p>Built an <strong>AI-powered</strong> market intelligence tool that scans <strong>100+</strong> industry articles weekly and auto-categorizes them into competitor, innovation, and policy buckets — each tagged with an impact rating to surface what actually matters.</p>
-              <p>Engineered a <strong>multi-provider LLM pipeline</strong> (Groq, OpenRouter, Cerebras) with fallback handling for rate limits and API errors, keeping the digest running reliably on free-tier infrastructure.</p>
-              <p>Added an <strong>"Ask AI"</strong> feature letting users query the corpus conversationally instead of manually combing through sources.</p>
-              <p>Framed around a core PM principle — <strong>"a PM is only as good as their domain knowledge"</strong> — turning continuous market scanning into a repeatable, automated workflow.</p>
-            </div>
-            <div class="project-tags">
-              <span class="tag">AI / LLM Integration</span>
-              <span class="tag">Market Intelligence</span>
-              <span class="tag">Product Strategy</span>
-              <span class="tag">UI/UX</span>
-            </div>
-          </div>
-
-          <div class="project-card scroll-reveal">
-            <div class="project-header">
-              <h3 class="project-title">EV Analytics Dashboard</h3>
-              <div class="project-date">August 2025</div>
-              <a href="https://venkateshtejas.github.io/ev-dashboard/" target="_blank" class="project-link" aria-label="Live Dashboard">
-                <i class="fas fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-            <div class="project-description">
-              <p>Built an interactive <strong>Tableau</strong> dashboard consolidating siloed EV datasets (EPA fuel economy, state incentives, charging infrastructure) into a single visualization platform for consumers, policymakers, and manufacturers.</p>
-              <p>Surfaced CAFV eligibility insights showing <strong>68%</strong> of analyzed EVs qualified for clean-fuel incentive status, alongside an average emissions reduction of <strong>4.6 metric tons CO₂</strong> per vehicle annually.</p>
-              <p>Designed geographic heat maps, time-series adoption trends, and interactive filters that cut EV buyer research time from hours to minutes.</p>
-            </div>
-            <div class="project-tags">
-              <span class="tag">Data Visualization</span>
-              <span class="tag">Tableau</span>
-              <span class="tag">Sustainability / Clean Energy</span>
-              <span class="tag">Market Intelligence</span>
-            </div>
-          </div>
-
-          <div class="project-card scroll-reveal">
-            <div class="project-header">
-              <h3 class="project-title">ParkEazy</h3>
-              <div class="project-date">June 2025 – July 2025</div>
-              <a href="https://docs.google.com/presentation/d/1OeZFgZbq5A3MPQzjdk5MAh64s9DxRK3myJj7BeILdz0/edit?usp=sharing" target="_blank" class="project-link" aria-label="View Presentation">
-                <i class="fas fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-            <div class="project-description">
-              <p>Identified a citywide parking pain point: drivers spend <strong>30+</strong> minutes daily searching, fueling congestion and productivity loss.</p>
-              <p>Designed a <strong>scalable IoT parking platform </strong> with sensors, gateways, and cloud for real-time spot detection and <strong> AI </strong> routing for 2- and 4-wheelers.</p>
-              <p>Produced detailed product specs and a full <strong> Figma </strong> prototype covering reservation, payment, and navigation flows.</p>
-              <p>Established a <strong>transaction-led </strong>  business model targeting a <strong> 2%</strong>  take rate.</p>
-            </div>
-            <div class="project-tags">
-              <span class="tag">UI/UX Design</span>
-              <span class="tag">User Research</span>
-              <span class="tag">Product Strategy</span>
-              <span class="tag">Accessibility</span>
-              <span class="tag">Market Analysis</span>
-            </div>
-          </div>
-
-
-
-
-          <div class="project-card scroll-reveal">
-            <div class="project-header">
-              <h3 class="project-title">Bumble for Blind</h3>
-              <div class="project-date">March 2025</div>
-              <a href="https://drive.google.com/file/d/1ujhmWA3Ql8qzqOdEkT43SnBfZkZ5fVYl/view" target="_blank" class="project-link" aria-label="View Document">
-                <i class="fas fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-            <div class="project-description">
-              <p>Conducted comprehensive user research on visually impaired market, identifying <strong>76%</strong> loneliness rate in visually impaired individuals vs <strong>25%</strong> in general population, representing 2.2 billion potential users</p>
-              <p>Developed innovative product strategy addressing critical <strong>accessibility</strong> gaps in social connection platforms, defining <strong>5+</strong> key <strong>features</strong> and requirements for this underserved user segment</p>
-            </div>
-            <div class="project-tags">
-              <span class="tag">Product Research & Strategy</span>
-              <span class="tag">User Research</span>
-              <span class="tag">Product Strategy</span>
-              <span class="tag">Accessibility</span>
-              <span class="tag">Market Analysis</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Experience Section (Football pitch theme) -->
     <section id="experience" class="themed football-theme">
       <div class="theme-deco" aria-hidden="true">
@@ -889,6 +724,193 @@
         </div>
       </div>
     </section>
+
+    <!-- Projects Section (Valorant tactical theme) -->
+    <section id="projects" class="themed valorant-theme">
+      <div class="theme-deco" aria-hidden="true">
+        <div class="tac-grid"></div>
+        <div class="tac-scan"></div>
+        <svg class="deco-crosshair" viewBox="0 0 120 120">
+          <circle cx="60" cy="60" r="4" fill="#ff4655"/>
+          <line x1="60" y1="6"  x2="60" y2="42"  stroke="#ff4655" stroke-width="4" stroke-linecap="round"/>
+          <line x1="60" y1="78" x2="60" y2="114" stroke="#ff4655" stroke-width="4" stroke-linecap="round"/>
+          <line x1="6"  y1="60" x2="42"  y2="60" stroke="#ff4655" stroke-width="4" stroke-linecap="round"/>
+          <line x1="78" y1="60" x2="114" y2="60" stroke="#ff4655" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="60" cy="60" r="48" fill="none" stroke="#ff4655" stroke-width="2" stroke-dasharray="6 4" opacity="0.7"/>
+          <circle cx="60" cy="60" r="32" fill="none" stroke="#ff4655" stroke-width="1.5" opacity="0.5"/>
+        </svg>
+        <svg class="deco-crosshair deco-crosshair-2" viewBox="0 0 120 120">
+          <circle cx="60" cy="60" r="3" fill="#00d4ff"/>
+          <line x1="60" y1="20" x2="60" y2="48"  stroke="#00d4ff" stroke-width="3" stroke-linecap="round"/>
+          <line x1="60" y1="72" x2="60" y2="100" stroke="#00d4ff" stroke-width="3" stroke-linecap="round"/>
+          <line x1="20" y1="60" x2="48"  y2="60" stroke="#00d4ff" stroke-width="3" stroke-linecap="round"/>
+          <line x1="72" y1="60" x2="100" y2="60" stroke="#00d4ff" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <svg class="deco-spike" viewBox="0 0 80 110">
+          <path d="M 40 6 L 68 30 L 68 80 L 40 102 L 12 80 L 12 30 Z" fill="rgba(255,70,85,0.08)" stroke="#ff4655" stroke-width="3"/>
+          <circle cx="40" cy="54" r="9" fill="#ff4655"/>
+          <circle cx="40" cy="54" r="9" fill="none" stroke="#ff4655" stroke-width="2" opacity="0.5">
+            <animate attributeName="r" values="9;22;9" dur="1.6s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.6;0;0.6" dur="1.6s" repeatCount="indefinite"/>
+          </circle>
+          <line x1="40" y1="20" x2="40" y2="44" stroke="#ff4655" stroke-width="3" stroke-linecap="round"/>
+          <line x1="40" y1="64" x2="40" y2="88" stroke="#ff4655" stroke-width="3" stroke-linecap="round"/>
+          <text x="40" y="118" text-anchor="middle" fill="#ff4655" font-family="Inter, sans-serif" font-size="8" font-weight="700" letter-spacing="2">SPIKE</text>
+        </svg>
+        <div class="agent-card">
+          <div class="agent-card-top">AGENT · 01</div>
+          <div class="agent-card-num">DUELIST</div>
+        </div>
+        <div class="tac-corner tac-tl"></div>
+        <div class="tac-corner tac-tr"></div>
+        <div class="tac-corner tac-bl"></div>
+        <div class="tac-corner tac-br"></div>
+        <div class="tac-slash tac-slash-1"></div>
+        <div class="tac-slash tac-slash-2"></div>
+      </div>
+      <svg class="section-drop drop-valorant" viewBox="0 0 60 110" aria-hidden="true">
+        <defs>
+          <linearGradient id="bulletBody" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%"  stop-color="#a87410"/>
+            <stop offset="30%" stop-color="#f4d266"/>
+            <stop offset="55%" stop-color="#ffe9a0"/>
+            <stop offset="80%" stop-color="#f4d266"/>
+            <stop offset="100%" stop-color="#a87410"/>
+          </linearGradient>
+          <linearGradient id="bulletTip" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%"  stop-color="#7a5510"/>
+            <stop offset="50%" stop-color="#dba93c"/>
+            <stop offset="100%" stop-color="#7a5510"/>
+          </linearGradient>
+        </defs>
+        <!-- bullet tip -->
+        <path d="M 30 6 Q 50 14 50 42 L 10 42 Q 10 14 30 6 Z" fill="url(#bulletTip)"/>
+        <!-- bullet shell -->
+        <rect x="10" y="42" width="40" height="58" rx="2" fill="url(#bulletBody)"/>
+        <!-- shell rim -->
+        <rect x="10" y="42" width="40" height="4" fill="#7a5510"/>
+        <rect x="10" y="92" width="40" height="3" fill="#7a5510"/>
+        <!-- primer ring -->
+        <circle cx="30" cy="100" r="6" fill="none" stroke="#7a5510" stroke-width="1.5"/>
+      </svg>
+      <h2 class="section-title">Projects</h2>
+      <div class="section-content">
+        <div class="projects-grid">
+
+          <div class="project-card scroll-reveal">
+            <div class="project-header">
+              <h3 class="project-title">BESS Intel Tracker</h3>
+              <div class="project-date">May 2026 – June 2026</div>
+              <a href="https://bess-tracker-lgvertech.streamlit.app" target="_blank" class="project-link" aria-label="Live App">
+                <i class="fas fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+            <div class="project-description">
+              <p>Built an <strong>AI-powered</strong> market intelligence tool that scans <strong>100+</strong> industry articles weekly and auto-categorizes them into competitor, innovation, and policy buckets — each tagged with an impact rating to surface what actually matters.</p>
+              <p>Engineered a <strong>multi-provider LLM pipeline</strong> (Groq, OpenRouter, Cerebras) with fallback handling for rate limits and API errors, keeping the digest running reliably on free-tier infrastructure.</p>
+              <p>Added an <strong>"Ask AI"</strong> feature letting users query the corpus conversationally instead of manually combing through sources.</p>
+              <p>Framed around a core PM principle — <strong>"a PM is only as good as their domain knowledge"</strong> — turning continuous market scanning into a repeatable, automated workflow.</p>
+            </div>
+            <div class="project-tags">
+              <span class="tag">AI / LLM Integration</span>
+              <span class="tag">Market Intelligence</span>
+              <span class="tag">Product Strategy</span>
+              <span class="tag">UI/UX</span>
+            </div>
+          </div>
+
+          <div class="project-card scroll-reveal">
+            <div class="project-header">
+              <h3 class="project-title">Fast Ticket</h3>
+              <div class="project-date">December 2025</div>
+              <a href="https://www.figma.com/proto/ytkc3Xuf3ZOqjvTYwIIjpj/Fast-Ticket?page-id=0%3A1&node-id=99-413&starting-point-node-id=22%3A224&t=HFppEwgpe52aBUeu-1" target="_blank" class="project-link" aria-label="View Figma Prototype">
+                <i class="fas fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+            <div class="project-description">
+              <p>Designed a high-fidelity <strong>Figma prototype</strong> for a <strong>ticket-booking app</strong> spanning <strong>multiple event types</strong>, taking users from discovery all the way through checkout.</p>
+              <p>Built <strong>4 complete end-to-end workflows</strong> — browsing, event details, ticket selection, and payment — fully clickable and interactive.</p>
+              <p>Used <strong>carousels</strong>, micro-interactions, and varied <strong>animations</strong> to create a fluid, engaging booking experience.</p>
+              <p>Crafted a polished <strong>UI/UX</strong> with a cohesive color system and clear visual hierarchy that keeps every flow intuitive.</p>
+            </div>
+            <div class="project-tags">
+              <span class="tag">UI/UX Design</span>
+              <span class="tag">Prototyping</span>
+              <span class="tag">Figma</span>
+              <span class="tag">Interaction Design</span>
+              <span class="tag">Mobile App</span>
+            </div>
+          </div>
+
+          <div class="project-card scroll-reveal">
+            <div class="project-header">
+              <h3 class="project-title">EV Analytics Dashboard</h3>
+              <div class="project-date">August 2025</div>
+              <a href="https://venkateshtejas.github.io/ev-dashboard/" target="_blank" class="project-link" aria-label="Live Dashboard">
+                <i class="fas fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+            <div class="project-description">
+              <p>Built an interactive <strong>Tableau</strong> dashboard consolidating siloed EV datasets (EPA fuel economy, state incentives, charging infrastructure) into a single visualization platform for consumers, policymakers, and manufacturers.</p>
+              <p>Surfaced CAFV eligibility insights showing <strong>68%</strong> of analyzed EVs qualified for clean-fuel incentive status, alongside an average emissions reduction of <strong>4.6 metric tons CO₂</strong> per vehicle annually.</p>
+              <p>Designed geographic heat maps, time-series adoption trends, and interactive filters that cut EV buyer research time from hours to minutes.</p>
+            </div>
+            <div class="project-tags">
+              <span class="tag">Data Visualization</span>
+              <span class="tag">Tableau</span>
+              <span class="tag">Sustainability / Clean Energy</span>
+              <span class="tag">Market Intelligence</span>
+            </div>
+          </div>
+
+          <div class="project-card scroll-reveal">
+            <div class="project-header">
+              <h3 class="project-title">ParkEazy</h3>
+              <div class="project-date">June 2025 – July 2025</div>
+              <a href="https://docs.google.com/presentation/d/1OeZFgZbq5A3MPQzjdk5MAh64s9DxRK3myJj7BeILdz0/edit?usp=sharing" target="_blank" class="project-link" aria-label="View Presentation">
+                <i class="fas fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+            <div class="project-description">
+              <p>Identified a citywide parking pain point: drivers spend <strong>30+</strong> minutes daily searching, fueling congestion and productivity loss.</p>
+              <p>Designed a <strong>scalable IoT parking platform </strong> with sensors, gateways, and cloud for real-time spot detection and <strong> AI </strong> routing for 2- and 4-wheelers.</p>
+              <p>Produced detailed product specs and a full <strong> Figma </strong> prototype covering reservation, payment, and navigation flows.</p>
+              <p>Established a <strong>transaction-led </strong>  business model targeting a <strong> 2%</strong>  take rate.</p>
+            </div>
+            <div class="project-tags">
+              <span class="tag">UI/UX Design</span>
+              <span class="tag">User Research</span>
+              <span class="tag">Product Strategy</span>
+              <span class="tag">Accessibility</span>
+              <span class="tag">Market Analysis</span>
+            </div>
+          </div>
+
+
+          <div class="project-card scroll-reveal">
+            <div class="project-header">
+              <h3 class="project-title">Bumble for Blind</h3>
+              <div class="project-date">March 2025</div>
+              <a href="https://drive.google.com/file/d/1ujhmWA3Ql8qzqOdEkT43SnBfZkZ5fVYl/view" target="_blank" class="project-link" aria-label="View Document">
+                <i class="fas fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+            <div class="project-description">
+              <p>Conducted comprehensive user research on visually impaired market, identifying <strong>76%</strong> loneliness rate in visually impaired individuals vs <strong>25%</strong> in general population, representing 2.2 billion potential users</p>
+              <p>Developed innovative product strategy addressing critical <strong>accessibility</strong> gaps in social connection platforms, defining <strong>5+</strong> key <strong>features</strong> and requirements for this underserved user segment</p>
+            </div>
+            <div class="project-tags">
+              <span class="tag">Product Research & Strategy</span>
+              <span class="tag">User Research</span>
+              <span class="tag">Product Strategy</span>
+              <span class="tag">Accessibility</span>
+              <span class="tag">Market Analysis</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <!-- Leadership Section (Pickleball court theme) -->
     <section id="leadership" class="themed pickleball-theme">
