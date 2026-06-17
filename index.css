@@ -1834,18 +1834,19 @@ body.light-theme .cricket-theme .boundary-line {
   height: 110px;
   filter: drop-shadow(0 8px 16px rgba(180, 30, 50, 0.5));
   animation: ballBounce 3.6s ease-in-out infinite;
+  z-index: 3;
 }
 .cricket-theme .ball-1 {
   top: 12%;
   right: 6%;
-  opacity: 0.9;
+  opacity: 1;
 }
 .cricket-theme .ball-2 {
   bottom: 18%;
   left: 12%;
   width: 70px;
   height: 70px;
-  opacity: 0.7;
+  opacity: 1;
   animation-duration: 4.4s;
   animation-delay: 1.2s;
 }
