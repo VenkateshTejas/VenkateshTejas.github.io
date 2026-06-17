@@ -609,6 +609,8 @@ body.light-theme .section-title::after {
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
+  /* Bias the crop toward the top so the head isn't clipped */
+  object-position: center 18%;
 }
 
 .hero-title {
