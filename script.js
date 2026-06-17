@@ -2,6 +2,12 @@
 const body = document.body;
 body.classList.remove('light-theme');
 
+// Always (re)load from the top — the About/hero screen — instead of
+// restoring the previous scroll position on refresh.
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+window.scrollTo(0, 0);
+window.addEventListener('load', () => window.scrollTo(0, 0));
+
 // Hamburger menu functionality
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.querySelector('.nav-menu');
