@@ -52,6 +52,33 @@ document.querySelectorAll('.scroll-reveal').forEach(el => {
   observer.observe(el);
 });
 
+// Collapsible project cards
+document.querySelectorAll('.project-card').forEach(card => {
+  card.classList.add('collapsed');
+
+  const header = card.querySelector('.project-header');
+  if (!header) return;
+
+  // Add a chevron toggle to each card header
+  const toggle = document.createElement('button');
+  toggle.className = 'project-toggle';
+  toggle.setAttribute('aria-label', 'Toggle project details');
+  toggle.setAttribute('aria-expanded', 'false');
+  toggle.innerHTML = '<i class="fas fa-chevron-down"></i>';
+  header.appendChild(toggle);
+
+  const setExpanded = (expanded) => {
+    card.classList.toggle('collapsed', !expanded);
+    toggle.setAttribute('aria-expanded', String(expanded));
+  };
+
+  // Clicking anywhere on the card toggles it, except the live link
+  card.addEventListener('click', (e) => {
+    if (e.target.closest('.project-link')) return;
+    setExpanded(card.classList.contains('collapsed'));
+  });
+});
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {

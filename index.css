@@ -680,13 +680,20 @@ body.light-theme .hero-subtitle {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1.5rem;
+  grid-template-areas:
+    "logo name"
+    "logo role"
+    "desc desc";
+  align-items: start;
   text-align: left;
 }
 
 .experience-logo {
+  grid-area: logo;
+  align-self: start;
   flex-shrink: 0;
   width: 80px;
   height: 60px;
@@ -705,10 +712,15 @@ body.light-theme .hero-subtitle {
   object-fit: contain;
 }
 
+/* Let the header + description participate directly in the card grid so the
+   bullets can span the full width instead of leaving the logo column empty */
 .experience-content {
-  flex: 1;
+  display: contents;
   text-align: left;
 }
+.company-name { grid-area: name; }
+.position { grid-area: role; }
+.experience-description { grid-area: desc; }
 
 .experience-card::before {
   content: '';
@@ -768,6 +780,8 @@ body.light-theme .position {
   text-align: left;
   line-height: 1.6;
   list-style: none;
+  margin: 0;
+  padding-left: 0;
 }
 
 body.light-theme .experience-description {
@@ -954,6 +968,7 @@ body.light-theme .experience-description {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .project-card::before {
@@ -1029,6 +1044,45 @@ body.light-theme .experience-description {
   background: var(--team);
   border-color: var(--team);
   color: #06121f;
+}
+
+/* Collapsible cards */
+.project-toggle {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 auto;
+  background: var(--card-bg);
+  border: 1px solid rgba(var(--team-rgb), 0.35);
+  border-radius: 50%;
+  color: var(--team);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+.project-toggle:hover {
+  background: var(--team);
+  color: #06121f;
+}
+.project-card:not(.collapsed) .project-toggle {
+  transform: rotate(180deg);
+}
+
+.project-summary {
+  margin: 0;
+  line-height: 1.6;
+  text-align: left;
+  color: var(--text-secondary, inherit);
+}
+.project-card.collapsed .project-description {
+  display: none;
+}
+.project-card.collapsed .project-summary {
+  margin-bottom: 1.2rem;
+}
+.project-card:not(.collapsed) .project-summary {
+  display: none;
 }
 
 .project-description {
@@ -1443,6 +1497,7 @@ body.light-theme .nav-menu a:hover {
   }
 
   .experience-card {
+    display: flex;
     flex-direction: column;
     gap: 1.5rem;
     align-items: center;
@@ -1456,6 +1511,8 @@ body.light-theme .nav-menu a:hover {
   }
 
   .experience-content {
+    display: block;
+    width: 100%;
     text-align: center;
   }
 
@@ -1487,6 +1544,28 @@ body.light-theme .nav-menu a:hover {
     top: 1.5rem;
     right: 1.5rem;
     margin: 0;
+  }
+  /* Pin the collapse chevron directly under the live-link icon instead of
+     leaving it orphaned on its own line */
+  .project-toggle {
+    position: absolute;
+    top: 4.6rem;
+    right: 1.5rem;
+    margin: 0;
+    width: 36px;
+    height: 36px;
+  }
+  /* Give the header room for the two stacked corner buttons */
+  .project-header {
+    min-height: 3.4rem;
+  }
+  /* Tighter, better-packed skill tags on phones */
+  .project-tags {
+    gap: 0.45rem;
+  }
+  .tag {
+    font-size: 0.72rem;
+    padding: 0.32rem 0.65rem;
   }
 
   /* Experience: stack company → role → duration on three lines */
@@ -3714,6 +3793,10 @@ body.light-theme .section-drop::after {
   .pickleball-theme .deco-pball {
     opacity: 0.25;
     transform: scale(0.7);
+  }
+  /* The floating "AGENT · 01 / DUELIST" card overlaps content on phones — hide it */
+  .valorant-theme .agent-card {
+    display: none;
   }
   /* Goal posts must keep their translateX(-50%) centering on mobile */
   .football-theme .deco-goal {
