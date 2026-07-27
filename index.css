@@ -681,15 +681,16 @@ body.light-theme .hero-subtitle {
   position: relative;
   overflow: hidden;
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto 1fr auto;
   column-gap: 1.5rem;
   grid-template-areas:
-    "logo name"
-    "logo role"
-    "desc desc";
+    "logo name toggle"
+    "logo role role"
+    "desc desc desc";
   align-items: start;
   text-align: left;
 }
+.experience-toggle { grid-area: toggle; align-self: start; }
 
 .experience-logo {
   grid-area: logo;
@@ -1047,7 +1048,8 @@ body.light-theme .experience-description {
 }
 
 /* Collapsible cards */
-.project-toggle {
+.project-toggle,
+.experience-toggle {
   width: 40px;
   height: 40px;
   flex: 0 0 auto;
@@ -1061,12 +1063,17 @@ body.light-theme .experience-description {
   cursor: pointer;
   transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
 }
-.project-toggle:hover {
+.project-toggle:hover,
+.experience-toggle:hover {
   background: var(--team);
   color: #06121f;
 }
-.project-card:not(.collapsed) .project-toggle {
+.project-card:not(.collapsed) .project-toggle,
+.experience-card:not(.collapsed) .experience-toggle {
   transform: rotate(180deg);
+}
+.experience-card.collapsed .experience-description {
+  display: none;
 }
 
 .project-summary {
@@ -1514,6 +1521,12 @@ body.light-theme .nav-menu a:hover {
     display: block;
     width: 100%;
     text-align: center;
+  }
+
+  .experience-toggle {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
   }
 
   .experience-description {

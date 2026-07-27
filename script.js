@@ -52,31 +52,34 @@ document.querySelectorAll('.scroll-reveal').forEach(el => {
   observer.observe(el);
 });
 
-// Collapsible project cards
-document.querySelectorAll('.project-card').forEach(card => {
+// Collapsible cards (projects + experience)
+function makeCollapsible(card, { toggleClass, mount, label }) {
   card.classList.add('collapsed');
 
-  const header = card.querySelector('.project-header');
-  if (!header) return;
-
-  // Add a chevron toggle to each card header
   const toggle = document.createElement('button');
-  toggle.className = 'project-toggle';
-  toggle.setAttribute('aria-label', 'Toggle project details');
+  toggle.className = toggleClass;
+  toggle.setAttribute('aria-label', label);
   toggle.setAttribute('aria-expanded', 'false');
   toggle.innerHTML = '<i class="fas fa-chevron-down"></i>';
-  header.appendChild(toggle);
-
-  const setExpanded = (expanded) => {
-    card.classList.toggle('collapsed', !expanded);
-    toggle.setAttribute('aria-expanded', String(expanded));
-  };
+  mount.appendChild(toggle);
 
   // Clicking anywhere on the card toggles it, except the live link
   card.addEventListener('click', (e) => {
     if (e.target.closest('.project-link')) return;
-    setExpanded(card.classList.contains('collapsed'));
+    const expanded = card.classList.contains('collapsed');
+    card.classList.toggle('collapsed', !expanded);
+    toggle.setAttribute('aria-expanded', String(expanded));
   });
+}
+
+document.querySelectorAll('.project-card').forEach(card => {
+  const header = card.querySelector('.project-header');
+  if (!header) return;
+  makeCollapsible(card, { toggleClass: 'project-toggle', mount: header, label: 'Toggle project details' });
+});
+
+document.querySelectorAll('.experience-card').forEach(card => {
+  makeCollapsible(card, { toggleClass: 'experience-toggle', mount: card, label: 'Toggle experience details' });
 });
 
 // Smooth scrolling for navigation links
