@@ -681,16 +681,15 @@ body.light-theme .hero-subtitle {
   position: relative;
   overflow: hidden;
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr;
   column-gap: 1.5rem;
   grid-template-areas:
-    "logo name toggle"
-    "logo role role"
-    "desc desc desc";
+    "logo name"
+    "logo role"
+    "desc desc";
   align-items: start;
   text-align: left;
 }
-.experience-toggle { grid-area: toggle; align-self: start; }
 
 .experience-logo {
   grid-area: logo;
@@ -1072,9 +1071,8 @@ body.light-theme .experience-description {
 .experience-card:not(.collapsed) .experience-toggle {
   transform: rotate(180deg);
 }
-.experience-card.collapsed .experience-description {
-  display: none;
-}
+/* Experience collapse is a phone-only feature — no toggle on desktop */
+.experience-toggle { display: none; }
 
 .project-summary {
   margin: 0;
@@ -1523,10 +1521,17 @@ body.light-theme .nav-menu a:hover {
     text-align: center;
   }
 
+  .experience-card {
+    cursor: pointer;
+  }
   .experience-toggle {
+    display: flex;
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
+  }
+  .experience-card.collapsed .experience-description {
+    display: none;
   }
 
   .experience-description {
