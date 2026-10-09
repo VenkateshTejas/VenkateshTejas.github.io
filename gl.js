@@ -880,7 +880,7 @@ function start() {
   }
 
   // Apply keyframed channels: hips = [x,y,z, rx,ry,rz], others = [rx,ry,rz]
-  const POSE_SKIP = new Set(['t', 'bat', 'rifle', 'lFoot', 'rFoot']);
+  const POSE_SKIP = new Set(['t', 'bat', 'face', 'rifle', 'lFoot', 'rFoot']);
   function applyChannels(F, anim, t, tmp) {
     for (const name in anim) {
       if (POSE_SKIP.has(name)) continue;
@@ -918,18 +918,23 @@ function start() {
     mats.u.uIntensity.value = intensity;
   }
 
-  // Batsman: guard → backlift → lofted straight drive → hold the finish (bowler at +x)
-  const DRIVE = {
-    t:      [0, 0.28, 0.55, 0.78, 1.25, 2.6],
-    hips:   [[0, 0.9, 0, 0.12, 0, 0], [0.03, 0.92, 0, 0.1, -0.12, 0], [0.24, 0.84, 0.02, 0.18, 0.05, -0.08],
-             [0.28, 0.86, 0.02, 0.1, 0.25, -0.04], [0.28, 0.87, 0.02, 0.08, 0.3, -0.03], [0.28, 0.87, 0.02, 0.08, 0.3, -0.03]],
-    spine:  [[0.1, 0, 0], [0.08, -0.08, 0.04], [0.12, 0, -0.08], [0.04, 0.2, -0.04], [0.03, 0.22, -0.02], [0.03, 0.22, -0.02]],
-    chest:  [[0.1, 0, 0], [0.06, -0.18, 0.05], [0.15, 0.08, -0.12], [0.02, 0.3, -0.05], [0.0, 0.32, -0.03], [0.0, 0.32, -0.03]],
-    head:   [[0.05, 1.25, 0], [0.05, 1.3, 0], [0.3, 1.2, 0], [0.0, 0.95, 0], [-0.1, 0.9, 0], [-0.1, 0.9, 0]],
-    bat:    [[0.02, 0.92, 0.3, -0.15, -1, 0.08], [-0.12, 1.25, 0.16, -0.55, 0.8, -0.15], [0.46, 0.98, 0.26, 0.12, -1, 0.02],
-             [0.5, 1.55, 0.28, 0.55, 0.82, -0.12], [0.46, 1.5, 0.3, 0.45, 0.88, -0.15], [0.46, 1.5, 0.3, 0.45, 0.88, -0.15]],
-    lFoot:  [[0.22, 0, 0.02], [0.36, 0.12, 0.06], [0.66, 0, 0.08], [0.66, 0, 0.08], [0.66, 0, 0.08], [0.66, 0, 0.08]],
-    rFoot:  [[-0.2, 0, -0.02], [-0.2, 0, -0.02], [-0.18, 0, -0.02], [-0.1, 0.07, 0], [-0.1, 0.07, 0], [-0.1, 0.07, 0]],
+  // Batsman: guard → back and across, high backlift → horizontal pull at chest
+  // height → rolls through to finish with the bat over the left shoulder.
+  // Figure space: bowler at +x, off side +z (the way he faces), leg side -z.
+  const PULL = {
+    t:      [0, 0.3, 0.55, 0.82, 1.3, 2.6],
+    hips:   [[0, 0.9, 0, 0.12, 0, 0], [-0.1, 0.92, 0.08, 0.08, -0.2, 0], [-0.06, 0.9, 0.06, 0.05, 0.35, 0],
+             [-0.04, 0.9, 0.02, 0, 0.85, 0], [-0.04, 0.9, 0.02, 0.02, 0.8, 0], [-0.04, 0.9, 0.02, 0.02, 0.8, 0]],
+    spine:  [[0.1, 0, 0], [0.05, -0.15, 0], [0.02, 0.25, 0], [-0.02, 0.4, 0], [0, 0.38, 0], [0, 0.38, 0]],
+    chest:  [[0.1, 0, 0], [0, -0.3, 0.04], [-0.05, 0.35, 0], [-0.08, 0.55, 0], [-0.04, 0.5, 0], [-0.04, 0.5, 0]],
+    head:   [[0.05, 1.25, 0], [0.05, 1.4, 0], [0.15, 0.85, 0], [-0.15, 0.5, 0], [-0.2, 0.55, 0], [-0.2, 0.55, 0]],
+    // hands (top of the handle) and the blade direction
+    bat:    [[0.02, 0.92, 0.3, -0.15, -1, 0.08], [-0.15, 1.42, 0.12, -0.35, 0.9, -0.25], [0.08, 1.2, 0.22, 0.7, -0.06, 0.7],
+             [0.22, 1.45, -0.05, -0.5, 0.45, -0.75], [0.2, 1.42, -0.05, -0.55, 0.5, -0.68], [0.2, 1.42, -0.05, -0.55, 0.5, -0.68]],
+    // which way the face of the blade points (toward midwicket at contact)
+    face:   [[1, 0, 0], [1, 0, 0.2], [0.7, 0, -0.7], [0.8, 0, -0.55], [0.8, 0, -0.6], [0.8, 0, -0.6]],
+    lFoot:  [[0.22, 0, 0.02], [0.2, 0.04, 0.02], [0.2, 0, 0], [0.08, 0.06, -0.18], [0.08, 0.03, -0.2], [0.08, 0.03, -0.2]],
+    rFoot:  [[-0.2, 0, -0.02], [-0.32, 0, 0.16], [-0.32, 0, 0.16], [-0.3, 0.04, 0.14], [-0.3, 0.02, 0.14], [-0.3, 0.02, 0.14]],
   };
 
   function makeBatsman(mat) {
@@ -937,18 +942,19 @@ function start() {
     const bat = buildBat(mat);
     bat.scale.setScalar(0.114); // 8.4 model units → 0.96 m
     F.fig.add(bat);
-    const tmp = [], H = new THREE.Vector3(), D = new THREE.Vector3();
-    const face = new THREE.Vector3(1, 0, 0);
+    const tmp = [], H = new THREE.Vector3(), D = new THREE.Vector3(), face = new THREE.Vector3();
     const W = (v) => F.fig.localToWorld(v.clone());
     const poleL = new THREE.Vector3(0.55, 0.75, -0.6), poleR = new THREE.Vector3(-0.35, 0.65, -0.6);
 
     function batAt(t) {
-      sampleKeys(DRIVE.t, DRIVE.bat, t, tmp);
+      sampleKeys(PULL.t, PULL.bat, t, tmp);
       H.set(tmp[0], tmp[1], tmp[2]);
       D.set(tmp[3], tmp[4], tmp[5]).normalize();
+      sampleKeys(PULL.t, PULL.face, t, tmp);
+      face.set(tmp[0], tmp[1], tmp[2]).normalize();
     }
     function pose(t) {
-      applyChannels(F, DRIVE, t, tmp);
+      applyChannels(F, PULL, t, tmp);
       F.fig.updateMatrixWorld(true);
       batAt(t);
       bat.position.copy(H);
@@ -958,7 +964,7 @@ function start() {
       ik2(F.J.lShoulder, F.J.lElbow, W(H.clone().addScaledVector(D, 0.02)), W(poleL), F.len.upper * s, F.len.fore * s);
       ik2(F.J.rShoulder, F.J.rElbow, W(H.clone().addScaledVector(D, 0.13)), W(poleR), F.len.upper * s, F.len.fore * s);
       for (const side of ['l', 'r']) {
-        const foot = sampleKeys(DRIVE.t, DRIVE[side + 'Foot'], t, []);
+        const foot = sampleKeys(PULL.t, PULL[side + 'Foot'], t, []);
         const target = W(new THREE.Vector3(foot[0], foot[1] + 0.09, foot[2]));
         const pole = W(new THREE.Vector3(foot[0] * 0.6, 0.6, 0.9));
         ik2(F.J[side + 'Hip'], F.J[side + 'Knee'], target, pole, F.len.thigh * s, F.len.shin * s);
@@ -1268,17 +1274,17 @@ function start() {
       });
     },
 
-    // From the bowler's end: bowled, pitched, driven straight back at you
+    // From the bowler's end: a short ball, pulled off the chest, comes at you
     cricket(scene) {
       return athleteMoment(scene, {
         make: makeBatsman, rim: 0xff5468, spark: 0xfff1d6,
         place: { anchorX: 0.12, z: -20, yaw: -1.27, extent: 2.35, fill: 1.5, groundK: 0.5 },
-        tContact: 0.55, tArrive: 1.5, holdT: 1.25, duration: 2.6, ballR: 0.036,
+        tContact: 0.55, tArrive: 1.5, holdT: 1.3, duration: 2.6, ballR: 0.036,
         approach(c, A, contact, out, u) {
           const start = atDepth(new THREE.Vector3(), c.hw * 0.1, c.hh * 0.5, 7, c.camZ);
-          const bounce = A.F.fig.localToWorld(new THREE.Vector3(2.2, 0.03, 0.25));
-          if (u < 0.72) out.lerpVectors(start, bounce, u / 0.72);
-          else out.lerpVectors(bounce, contact, (u - 0.72) / 0.28);
+          const bounce = A.F.fig.localToWorld(new THREE.Vector3(3.4, 0.03, 0.5));
+          if (u < 0.6) out.lerpVectors(start, bounce, u / 0.6);
+          else out.lerpVectors(bounce, contact, (u - 0.6) / 0.4);
         },
         flight(c, A, from, out, u) { headOn(c, from, out, u); },
         spin(pivot, dt, phase, u) {

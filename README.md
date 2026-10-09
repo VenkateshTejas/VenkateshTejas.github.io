@@ -9,7 +9,7 @@ Personal portfolio featuring my professional experience, education, projects, an
 ## ✨ Features
 
 - **Console-game front end** - A 3D title screen with the four face-button shapes floating around a player card, then one "game mode" per section
-- **Section moments** - Huge backlit athletes stand behind the section titles and play the shot head-on: a batsman drives the cricket ball, a striker bicycle-kicks the football, a sniper fires the round in bullet time, a pickleball player smashes; the object comes at you and drops into its frame (X and O drop in for Let's Play)
+- **Section moments** - Huge backlit athletes stand behind the section titles and play the shot head-on: a batsman pulls a short ball, a striker bicycle-kicks the football, a sniper fires the round in bullet time, a pickleball player smashes; the object comes at you and drops into its frame (X and O drop in for Let's Play)
 - **Inspectable 3D items** - Drag to spin each item; tap to replay its moment
 - **Product / Program / Project reel** - The role word rolls through all three (static under reduced motion)
 - **In-page resume viewer** - Renders the PDF with PDF.js so it opens in every browser, including phones without a PDF viewer
