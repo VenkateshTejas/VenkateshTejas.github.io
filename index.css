@@ -1552,16 +1552,27 @@ main,
 }
 
 /* ── Let's Play · versus ────────────────────────────────────── */
+/* One centred column: intro, difficulty, score bug, then the board */
 .arena {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(300px, 440px);
-  gap: clamp(32px, 6vw, 88px);
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(28px, 4vw, 40px);
+  text-align: center;
 }
-.arena-side { padding-top: 54px; }
+.arena-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.arena-board {
+  width: 100%;
+  max-width: 440px;
+  text-align: left;
+}
 .arena-intro {
-  max-width: 22em;
-  margin: 0;
+  max-width: 24em;
+  margin: 0 auto;
   color: var(--muted);
   font-family: var(--f-display);
   font-weight: 500;
@@ -1569,13 +1580,13 @@ main,
   font-size: clamp(1.35rem, 2.2vw, 1.8rem);
   line-height: 1.3;
 }
-.arena-intro strong { color: var(--text); font-weight: 700; }
+.arena-intro strong { color: var(--text); font-weight: 700; white-space: nowrap; }
 .mark-x,
 .mark-o { font-weight: 900; }
 .mark-x { color: var(--crs); }
 .mark-o { color: var(--cir); }
 
-.difficulty { margin: 32px 0; }
+.difficulty { margin: 28px 0; }
 .segmented {
   display: inline-flex;
   gap: 2px;
@@ -1726,11 +1737,6 @@ main,
   from { transform: scale(0.4); opacity: 0; }
 }
 
-@media (max-width: 859px) {
-  .arena { grid-template-columns: 1fr; }
-  .arena-side { padding-top: 0; }
-  .arena-board { max-width: 440px; width: 100%; }
-}
 
 /* ════════════════════════════════════════════════════════════════
    Continue? — closing call to action + footer
