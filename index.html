@@ -2,691 +2,320 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tejas V - Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Tejas Venkatesh — Product, Program &amp; Project Manager</title>
+  <meta name="description" content="Tejas Venkatesh is a product, program and project manager in Boston, MA. Experience at LG Energy Solution Vertech, Dell Technologies, TCS and Accenture, plus AI and data projects.">
+  <meta name="theme-color" content="#070914">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Tejas Venkatesh — Product, Program &amp; Project Manager">
+  <meta property="og:description" content="Product, program and project manager who treats every launch like a team sport.">
+  <meta property="og:image" content="pictures/tejas-brazil-bluebg.jpg">
+  <script>
+    document.documentElement.classList.add('js');
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('motion-ok');
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,500..900&family=Instrument+Sans:wdth,wght@75..100,400..700&family=Martian+Mono:wdth,wght@75..112.5,400..600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="pictures/tejas-card-900.webp" imagesrcset="pictures/tejas-card-560.webp 560w, pictures/tejas-card-900.webp 900w" imagesizes="(max-width: 899px) 66vw, 430px">
   <link rel="stylesheet" href="index.css">
+  <script type="importmap">
+    { "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.min.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+    } }
+  </script>
 </head>
 <body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M3.17157 5.17157C2 6.34315 2 8.22876 2 12C2 15.7712 2 17.6569 3.17157 18.8284C4.34315 20 6.22876 20 10 20H14C17.7712 20 19.6569 20 20.8284 18.8284C22 17.6569 22 15.7712 22 12C22 8.22876 22 6.34315 20.8284 5.17157C19.6569 4 17.7712 4 14 4H10C6.22876 4 4.34315 4 3.17157 5.17157ZM18.5762 7.51986C18.8413 7.83807 18.7983 8.31099 18.4801 8.57617L16.2837 10.4066C15.3973 11.1452 14.6789 11.7439 14.0448 12.1517C13.3843 12.5765 12.7411 12.8449 12 12.8449C11.2589 12.8449 10.6157 12.5765 9.95518 12.1517C9.32112 11.7439 8.60271 11.1452 7.71636 10.4066L5.51986 8.57617C5.20165 8.31099 5.15866 7.83807 5.42383 7.51986C5.68901 7.20165 6.16193 7.15866 6.48014 7.42383L8.63903 9.22291C9.57199 10.0004 10.2197 10.5384 10.7666 10.8901C11.2959 11.2306 11.6549 11.3449 12 11.3449C12.3451 11.3449 12.7041 11.2306 13.2334 10.8901C13.7803 10.5384 14.428 10.0004 15.361 9.22291L17.5199 7.42383C17.8381 7.15866 18.311 7.20165 18.5762 7.51986Z" clip-rule="evenodd"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037c-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85c3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.06 2.06 0 0 1-2.063-2.065a2.064 2.064 0 1 1 2.063 2.065m1.782 13.019H3.555V9h3.564zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M16.5562 12.9062L16.1007 13.359C16.1007 13.359 15.0181 14.4355 12.0631 11.4972C9.10812 8.55901 10.1907 7.48257 10.1907 7.48257L10.4775 7.19738C11.1841 6.49484 11.2507 5.36691 10.6342 4.54348L9.37326 2.85908C8.61028 1.83992 7.13596 1.70529 6.26145 2.57483L4.69185 4.13552C4.25823 4.56668 3.96765 5.12559 4.00289 5.74561C4.09304 7.33182 4.81071 10.7447 8.81536 14.7266C13.0621 18.9492 17.0468 19.117 18.6763 18.9651C19.1917 18.9171 19.6399 18.6546 20.0011 18.2954L21.4217 16.883C22.3806 15.9295 22.1102 14.2949 20.8833 13.628L18.9728 12.5894C18.1672 12.1515 17.1858 12.2801 16.5562 12.9062Z"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M18 15V6H9"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><g fill="currentColor"><path d="M12.5535 16.5061C12.4114 16.6615 12.2106 16.75 12 16.75C11.7894 16.75 11.5886 16.6615 11.4465 16.5061L7.44648 12.1311C7.16698 11.8254 7.18822 11.351 7.49392 11.0715C7.79963 10.792 8.27402 10.8132 8.55352 11.1189L11.25 14.0682V3C11.25 2.58579 11.5858 2.25 12 2.25C12.4142 2.25 12.75 2.58579 12.75 3V14.0682L15.4465 11.1189C15.726 10.8132 16.2004 10.792 16.5061 11.0715C16.8118 11.351 16.833 11.8254 16.5535 12.1311L12.5535 16.5061Z"/><path d="M3.75 15C3.75 14.5858 3.41422 14.25 3 14.25C2.58579 14.25 2.25 14.5858 2.25 15V15.0549C2.24998 16.4225 2.24996 17.5248 2.36652 18.3918C2.48754 19.2919 2.74643 20.0497 3.34835 20.6516C3.95027 21.2536 4.70814 21.5125 5.60825 21.6335C6.47522 21.75 7.57754 21.75 8.94513 21.75H15.0549C16.4225 21.75 17.5248 21.75 18.3918 21.6335C19.2919 21.5125 20.0497 21.2536 20.6517 20.6516C21.2536 20.0497 21.5125 19.2919 21.6335 18.3918C21.75 17.5248 21.75 16.4225 21.75 15.0549V15C21.75 14.5858 21.4142 14.25 21 14.25C20.5858 14.25 20.25 14.5858 20.25 15C20.25 16.4354 20.2484 17.4365 20.1469 18.1919C20.0482 18.9257 19.8678 19.3142 19.591 19.591C19.3142 19.8678 18.9257 20.0482 18.1919 20.1469C17.4365 20.2484 16.4354 20.25 15 20.25H9C7.56459 20.25 6.56347 20.2484 5.80812 20.1469C5.07435 20.0482 4.68577 19.8678 4.40901 19.591C4.13225 19.3142 3.9518 18.9257 3.85315 18.1919C3.75159 17.4365 3.75 16.4354 3.75 15Z"/></g></symbol>
+    <symbol id="i-chevron-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9L12 15L5 9"/></symbol>
+    <symbol id="i-restart" viewBox="0 0 24 24"><path fill="currentColor" d="M18.2577 3.50828C18.538 3.62437 18.7207 3.89785 18.7207 4.20119V8.44383C18.7207 8.85805 18.3849 9.19383 17.9707 9.19383H13.728C13.4247 9.19383 13.1512 9.0111 13.0351 8.73085C12.9191 8.45059 12.9832 8.128 13.1977 7.9135L14.8007 6.3105C12.1674 5.20912 9.01606 5.7309 6.87348 7.87348C4.04217 10.7048 4.04217 15.2952 6.87348 18.1265C9.70478 20.9578 14.2952 20.9578 17.1265 18.1265C18.7727 16.4803 19.4622 14.2401 19.1935 12.0937C19.142 11.6827 19.4335 11.3078 19.8445 11.2563C20.2555 11.2049 20.6304 11.4963 20.6819 11.9073C21.0057 14.4934 20.1746 17.1997 18.1872 19.1872C14.7701 22.6043 9.2299 22.6043 5.81282 19.1872C2.39573 15.7701 2.39573 10.2299 5.81282 6.81282C8.55119 4.07444 12.6515 3.5312 15.9309 5.18028L17.4404 3.67086C17.6549 3.45637 17.9774 3.3922 18.2577 3.50828Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M12 2C7.58172 2 4 6.00258 4 10.5C4 14.9622 6.55332 19.8124 10.5371 21.6744C11.4657 22.1085 12.5343 22.1085 13.4629 21.6744C17.4467 19.8124 20 14.9622 20 10.5C20 6.00258 16.4183 2 12 2ZM12 12C13.1046 12 14 11.1046 14 10C14 8.89543 13.1046 8 12 8C10.8954 8 10 8.89543 10 10C10 11.1046 10.8954 12 12 12Z" clip-rule="evenodd"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><g fill="currentColor"><path d="M21.9999 8.16234L21.9999 8.23487C21.9999 9.09561 21.9999 9.52598 21.7927 9.8781C21.5855 10.2302 21.2093 10.4392 20.4569 10.8572L19.6636 11.298C20.2102 9.44984 20.3926 7.46414 20.4601 5.76597C20.4629 5.69316 20.4662 5.61945 20.4695 5.54497L20.4718 5.49279C21.1231 5.71896 21.4887 5.88758 21.7168 6.20408C22 6.59692 22 7.11873 21.9999 8.16234Z"/><path d="M2 8.16234L2 8.23487C2.00003 9.09561 2.00004 9.52598 2.20723 9.8781C2.41442 10.2302 2.79063 10.4392 3.54305 10.8572L4.33681 11.2982C3.79007 9.45001 3.60767 7.46422 3.54025 5.76597C3.53736 5.69316 3.5341 5.61945 3.53081 5.54497L3.5285 5.49266C2.87701 5.7189 2.51126 5.88752 2.2831 6.20408C1.99996 6.59692 1.99997 7.11873 2 8.16234Z"/><path fill-rule="evenodd" d="M12.0002 2C13.7837 2 15.2531 2.15709 16.3771 2.34674C17.5159 2.53887 18.0852 2.63494 18.5609 3.22083C19.0367 3.80673 19.0115 4.43998 18.9612 5.70647C18.7886 10.0545 17.8503 15.4853 12.75 15.9657V19.5H14.1802C14.6569 19.5 15.0673 19.8365 15.1608 20.3039L15.35 21.25H18C18.4142 21.25 18.75 21.5858 18.75 22C18.75 22.4142 18.4142 22.75 18 22.75H6C5.58579 22.75 5.25 22.4142 5.25 22C5.25 21.5858 5.58579 21.25 6 21.25H8.65L8.83922 20.3039C8.93271 19.8365 9.34312 19.5 9.8198 19.5H11.25V15.9657C6.14996 15.4851 5.21169 10.0544 5.03907 5.70647C4.98879 4.43998 4.96365 3.80673 5.43937 3.22083C5.91508 2.63494 6.48445 2.53887 7.62318 2.34674C8.74724 2.15709 10.2166 2 12.0002 2ZM12.9524 6.19887L12.8541 6.02251C12.4741 5.34084 12.2841 5 12 5C11.7159 5 11.5259 5.34084 11.1459 6.02251L11.0476 6.19887C10.9397 6.39258 10.8857 6.48944 10.8015 6.55334C10.7173 6.61725 10.6125 6.64097 10.4028 6.68841L10.2119 6.73161C9.47396 6.89857 9.10501 6.98205 9.01723 7.26432C8.92945 7.54659 9.18097 7.84072 9.68403 8.42898L9.81418 8.58117C9.95713 8.74833 10.0286 8.83191 10.0608 8.93532C10.0929 9.03872 10.0821 9.15023 10.0605 9.37327L10.0408 9.57632C9.96476 10.3612 9.92674 10.7536 10.1565 10.9281C10.3864 11.1025 10.7318 10.9435 11.4227 10.6254L11.6014 10.5431C11.7978 10.4527 11.8959 10.4075 12 10.4075C12.1041 10.4075 12.2022 10.4527 12.3986 10.5431L12.5773 10.6254C13.2682 10.9435 13.6136 11.1025 13.8435 10.9281C14.0733 10.7536 14.0352 10.3612 13.9592 9.57632L13.9395 9.37327C13.9179 9.15023 13.9071 9.03872 13.9392 8.93532C13.9714 8.83191 14.0429 8.74833 14.1858 8.58117L14.316 8.42898C14.819 7.84072 15.0706 7.54659 14.9828 7.26432C14.895 6.98205 14.526 6.89857 13.7881 6.73161L13.5972 6.68841C13.3875 6.64097 13.2827 6.61725 13.1985 6.55334C13.1143 6.48944 13.0603 6.39258 12.9524 6.19887Z" clip-rule="evenodd"/></g></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M20 7L4 7"/><path d="M20 12L4 12"/><path d="M20 17L4 17"/></g></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><g fill="currentColor"><path d="M9.75 12C9.75 10.7574 10.7574 9.75 12 9.75C13.2426 9.75 14.25 10.7574 14.25 12C14.25 13.2426 13.2426 14.25 12 14.25C10.7574 14.25 9.75 13.2426 9.75 12Z"/><path fill-rule="evenodd" d="M2 12C2 13.6394 2.42496 14.1915 3.27489 15.2957C4.97196 17.5004 7.81811 20 12 20C16.1819 20 19.028 17.5004 20.7251 15.2957C21.575 14.1915 22 13.6394 22 12C22 10.3606 21.575 9.80853 20.7251 8.70433C19.028 6.49956 16.1819 4 12 4C7.81811 4 4.97196 6.49956 3.27489 8.70433C2.42496 9.80853 2 10.3606 2 12ZM12 8.25C9.92893 8.25 8.25 9.92893 8.25 12C8.25 14.0711 9.92893 15.75 12 15.75C14.0711 15.75 15.75 14.0711 15.75 12C15.75 9.92893 14.0711 8.25 12 8.25Z" clip-rule="evenodd"/></g></symbol>
+    <symbol id="g-cross" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></symbol>
+    <symbol id="g-triangle" viewBox="0 0 24 24"><path d="M12 5.2l7.4 12.6H4.6z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></symbol>
+    <symbol id="g-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6.6" fill="none" stroke="currentColor" stroke-width="2.4"/></symbol>
+    <symbol id="g-square" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="1.2" fill="none" stroke="currentColor" stroke-width="2.4"/></symbol>
+  </svg>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <header>
-    <nav>
-      <div class="nav-top">
-        <span class="nav-corner nav-corner-l" aria-hidden="true"></span>
-        <a href="#about" class="logo">
-          <span class="logo-star" aria-hidden="true">✦</span>
-          <span class="logo-text">Tejas Venkatesh</span>
-          <span class="logo-star" aria-hidden="true">✦</span>
-          <span class="logo-status" title="Online">
-            <span class="logo-status-dot"></span>
-            ONLINE
-          </span>
-        </a>
-        <span class="nav-corner nav-corner-r" aria-hidden="true"></span>
-      </div>
-      
-      <div class="nav-bottom">
-        <ul class="nav-menu">
+  <!-- One fixed WebGL canvas renders every 3D view (hero shapes + the item in each mode header) -->
+  <canvas id="gl" aria-hidden="true"></canvas>
+
+  <header class="topbar" id="topbar">
+    <div class="topbar-inner">
+      <a href="#about" class="brand" aria-label="Tejas Venkatesh, back to top">
+        <span class="brand-mark" aria-hidden="true">TV</span>
+        <span class="brand-name">Tejas Venkatesh</span>
+      </a>
+
+      <nav class="tabs" aria-label="Sections">
+        <button class="shoulder" type="button" data-step="-1" aria-label="Previous section">L1</button>
+        <ul class="tabs-list">
           <li><a href="#about">About</a></li>
           <li><a href="#education">Education</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#leadership">Leadership Achievements</a></li>
-          <li><a href="#hobbies">Let's Play</a></li>
+          <li><a href="#leadership">Leadership</a></li>
+          <li><a href="#play">Let's Play</a></li>
         </ul>
-        
-        <div class="nav-controls">
-          <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-      </div>
-    </nav>
+        <span class="tabs-indicator" aria-hidden="true"></span>
+        <button class="shoulder" type="button" data-step="1" aria-label="Next section">R1</button>
+      </nav>
+
+      <a class="topbar-resume" href="pictures/Tejas-Venkatesh-Resume.pdf" target="_blank" rel="noopener" data-resume-view>
+        Resume<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="pause">
+        <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+        <span>Menu</span>
+      </button>
+    </div>
   </header>
-  
-  <main>
-    <!-- About Section — PS5 themed -->
-    <section id="about" class="ps5-hero">
-      <!-- Ambient glows -->
-      <div class="ps5-ambient" aria-hidden="true">
-        <div class="ps5-glow ps5-glow-1"></div>
-        <div class="ps5-glow ps5-glow-2"></div>
-        <div class="ps5-glow ps5-glow-3"></div>
-      </div>
 
-      <!-- White PS5 console silhouette -->
-      <svg class="ps5-console" viewBox="0 0 700 820" aria-hidden="true">
-        <defs>
-          <linearGradient id="psStrip" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%"  stop-color="#00d4ff"/>
-            <stop offset="50%" stop-color="#0080ff"/>
-            <stop offset="100%" stop-color="#00d4ff"/>
-          </linearGradient>
-          <filter id="bluePulse">
-            <feGaussianBlur stdDeviation="4"/>
-          </filter>
-          <linearGradient id="consoleShine" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%"  stop-color="rgba(255,255,255,0.95)"/>
-            <stop offset="55%" stop-color="rgba(220,235,250,0.6)"/>
-            <stop offset="100%" stop-color="rgba(180,200,230,0.4)"/>
-          </linearGradient>
-        </defs>
+  <!-- Mobile menu, styled as a game pause screen -->
+  <div class="pause" id="pause" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+    <div class="pause-inner">
+      <p class="pause-title" aria-hidden="true">Paused</p>
+      <ul class="pause-list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#leadership">Leadership</a></li>
+        <li><a href="#play">Let's Play</a></li>
+      </ul>
+      <button class="pause-close" type="button" id="pauseClose">
+        <svg class="prompt prompt-cir" aria-hidden="true"><use href="#g-circle"/></svg>
+        Resume
+      </button>
+    </div>
+  </div>
 
-        <!-- Soft floor shadow -->
-        <ellipse cx="350" cy="800" rx="280" ry="14" fill="rgba(0,128,255,0.18)" filter="url(#bluePulse)"/>
-
-        <!-- Left white wing (curved organic shape) -->
-        <path d="M 80 80 C 80 50, 120 50, 165 50 L 320 50 L 332 100 L 332 720 L 320 760 L 165 760 C 120 760, 80 740, 80 700 Z"
-              fill="url(#consoleShine)" stroke="rgba(0,128,255,0.5)" stroke-width="2"/>
-        <!-- Right white wing -->
-        <path d="M 620 80 C 620 50, 580 50, 535 50 L 380 50 L 368 100 L 368 720 L 380 760 L 535 760 C 580 760, 620 740, 620 700 Z"
-              fill="url(#consoleShine)" stroke="rgba(0,128,255,0.5)" stroke-width="2"/>
-
-        <!-- Black core -->
-        <rect x="332" y="50" width="36" height="710" fill="#050a14"/>
-        <!-- Blue glowing light strip -->
-        <rect x="345" y="70" width="10" height="670" fill="url(#psStrip)" filter="url(#bluePulse)"/>
-        <rect x="347" y="70" width="6"  height="670" fill="#00d4ff"/>
-
-        <!-- PS logo plate (top) -->
-        <circle cx="350" cy="32" r="20" fill="rgba(255,255,255,0.85)" stroke="rgba(0,128,255,0.6)" stroke-width="2"/>
-        <text x="350" y="40" text-anchor="middle" fill="#0080ff" font-family="Arial Black, sans-serif" font-weight="900" font-size="18">PS</text>
-
-        <!-- Vents on left wing -->
-        <g opacity="0.15">
-          <line x1="100" y1="120" x2="120" y2="120" stroke="#0080ff" stroke-width="1.5"/>
-          <line x1="100" y1="135" x2="120" y2="135" stroke="#0080ff" stroke-width="1.5"/>
-          <line x1="100" y1="150" x2="120" y2="150" stroke="#0080ff" stroke-width="1.5"/>
-          <line x1="100" y1="660" x2="120" y2="660" stroke="#0080ff" stroke-width="1.5"/>
-          <line x1="100" y1="675" x2="120" y2="675" stroke="#0080ff" stroke-width="1.5"/>
-          <line x1="100" y1="690" x2="120" y2="690" stroke="#0080ff" stroke-width="1.5"/>
-        </g>
-        <g opacity="0.15">
-          <line x1="580" y1="120" x2="600" y2="120" stroke="#0080ff" stroke-width="1.5"/>
-          <line x1="580" y1="135" x2="600" y2="135" stroke="#0080ff" stroke-width="1.5"/>
-          <line x1="580" y1="150" x2="600" y2="150" stroke="#0080ff" stroke-width="1.5"/>
-          <line x1="580" y1="660" x2="600" y2="660" stroke="#0080ff" stroke-width="1.5"/>
-          <line x1="580" y1="675" x2="600" y2="675" stroke="#0080ff" stroke-width="1.5"/>
-          <line x1="580" y1="690" x2="600" y2="690" stroke="#0080ff" stroke-width="1.5"/>
-        </g>
-      </svg>
-
-      <!-- Floating PlayStation symbols -->
-      <div class="ps-symbols" aria-hidden="true">
-        <span class="ps-sym ps-tri">▲</span>
-        <span class="ps-sym ps-cir">●</span>
-        <span class="ps-sym ps-cross">✕</span>
-        <span class="ps-sym ps-sq">■</span>
-        <span class="ps-sym ps-tri  ps-sym-2">▲</span>
-        <span class="ps-sym ps-cross ps-sym-3">✕</span>
-        <span class="ps-sym ps-sq    ps-sym-4">■</span>
-        <span class="ps-sym ps-cir   ps-sym-5">●</span>
-        <span class="ps-sym ps-tri   ps-sym-6">▲</span>
-        <span class="ps-sym ps-cir   ps-sym-7">●</span>
-        <span class="ps-sym ps-cross ps-sym-8">✕</span>
-        <span class="ps-sym ps-sq    ps-sym-9">■</span>
-        <span class="ps-sym ps-cir   ps-sym-10">●</span>
-        <span class="ps-sym ps-tri   ps-sym-11">▲</span>
-        <span class="ps-sym ps-sq    ps-sym-12">■</span>
-        <span class="ps-sym ps-cross ps-sym-13">✕</span>
-        <span class="ps-sym ps-cir   ps-sym-14">●</span>
-        <span class="ps-sym ps-tri   ps-sym-15">▲</span>
-        <span class="ps-sym ps-cross ps-sym-16">✕</span>
-        <span class="ps-sym ps-sq    ps-sym-17">■</span>
-        <span class="ps-sym ps-cir   ps-sym-18">●</span>
-        <span class="ps-sym ps-sq    ps-sym-19">■</span>
-        <span class="ps-sym ps-tri   ps-sym-20">▲</span>
-        <span class="ps-sym ps-cross ps-sym-21">✕</span>
-        <span class="ps-sym ps-cross ps-sym-22">✕</span>
-        <span class="ps-sym ps-cir   ps-sym-23">●</span>
-        <span class="ps-sym ps-tri   ps-sym-24">▲</span>
-        <span class="ps-sym ps-sq    ps-sym-25">■</span>
-        <span class="ps-sym ps-cross ps-sym-26">✕</span>
-        <span class="ps-sym ps-cir   ps-sym-27">●</span>
-        <span class="ps-sym ps-tri   ps-sym-28">▲</span>
-        <span class="ps-sym ps-cross ps-sym-29">✕</span>
-        <span class="ps-sym ps-sq    ps-sym-30">■</span>
-        <span class="ps-sym ps-cir   ps-sym-31">●</span>
-        <span class="ps-sym ps-tri   ps-sym-32">▲</span>
-        <span class="ps-sym ps-cross ps-sym-33">✕</span>
-        <span class="ps-sym ps-cir   ps-sym-34">●</span>
-        <span class="ps-sym ps-sq    ps-sym-35">■</span>
-        <span class="ps-sym ps-tri   ps-sym-36">▲</span>
-        <span class="ps-sym ps-cross ps-sym-37">✕</span>
-        <span class="ps-sym ps-cir   ps-sym-38">●</span>
-        <span class="ps-sym ps-tri   ps-sym-39">▲</span>
-        <span class="ps-sym ps-sq    ps-sym-40">■</span>
-        <span class="ps-sym ps-cross ps-sym-41">✕</span>
-        <span class="ps-sym ps-cir   ps-sym-42">●</span>
-        <span class="ps-sym ps-tri   ps-sym-43">▲</span>
-      </div>
-
-      <!-- Hero card -->
-      <div class="hero-card">
-        <div class="hero-card-header">
-          <span class="hero-tag-left"><span class="hero-dot"></span>PROFILE · ONLINE</span>
-          <div class="hero-trophy-row">
-            <span class="trophy plat" title="Platinum">●</span>
-            <span class="trophy gold" title="Gold">●</span>
-            <span class="trophy silv" title="Silver">●</span>
-            <span class="trophy bron" title="Bronze">●</span>
-            <span class="trophy-count">LVL 92</span>
-          </div>
+  <!-- Resume viewer: renders the PDF with PDF.js so it opens in every browser, including ones without a PDF viewer -->
+  <dialog class="viewer" id="resumeViewer" aria-labelledby="viewerTitle" data-lenis-prevent>
+    <div class="viewer-panel">
+      <div class="viewer-bar">
+        <p class="viewer-title" id="viewerTitle">Resume <span class="viewer-meta" data-viewer-meta>PDF</span></p>
+        <div class="viewer-actions">
+          <a href="pictures/Tejas-Venkatesh-Resume.pdf" download="Tejas-Venkatesh-Resume.pdf" class="btn btn-ghost btn-sm">
+            <svg class="prompt prompt-tri" aria-hidden="true"><use href="#g-triangle"/></svg>
+            Download
+          </a>
+          <button class="btn btn-ghost btn-sm" type="button" data-viewer-close>
+            <svg class="prompt prompt-cir" aria-hidden="true"><use href="#g-circle"/></svg>
+            Close
+          </button>
         </div>
+      </div>
+      <div class="viewer-pages" data-viewer-pages tabindex="0" aria-label="Resume pages">
+        <p class="viewer-status" role="status" data-viewer-status>Loading resume…</p>
+      </div>
+    </div>
+  </dialog>
 
-        <div class="hero-photo-frame">
-          <div class="hero-photo-ring"></div>
-          <div class="profile-image">
-            <img src="pictures/tejas-brazil-bluebg.jpg" alt="Tejas Venkatesh" />
-          </div>
+  <main id="main" tabindex="-1">
 
-          <!-- Floating HUD pills around the photo -->
-          <span class="hero-pill pill-live" aria-label="Location">
-            <span class="dot dot-live"></span>
-            <span>LIVE&nbsp;·&nbsp;BOSTON, MA</span>
-          </span>
+    <!-- ───────────── Title screen ───────────── -->
+    <section id="about" class="hero" aria-labelledby="hero-name" tabindex="-1">
+      <div class="hero-stage" data-gl-view="hero" aria-hidden="true"></div>
 
-          <span class="hero-pill pill-mode" aria-label="Current focus">
-            <span class="pill-icon">◆</span>
-            <span>MODE&nbsp;·&nbsp;PRODUCT&nbsp;MGMT</span>
-          </span>
-
-          <span class="hero-pill pill-match" aria-label="Open to opportunities">
-            <span class="dot dot-match"></span>
-            <span>WAITING FOR TEAM<span class="match-dots"><i>.</i><i>.</i><i>.</i></span></span>
-          </span>
-        </div>
-
-        <div class="hero-name-block">
-          <h1 class="hero-title">
-            <span class="hero-title-shadow" aria-hidden="true">TEJAS VENKATESH</span>
-            <span class="hero-title-text">TEJAS VENKATESH</span>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <h1 class="hero-name" id="hero-name">
+            <span class="line"><span class="word">Tejas</span></span>
+            <span class="line"><span class="word">Venkatesh</span></span>
           </h1>
-          <p class="hero-subtitle">
-            <span class="hero-typer">Product Enthusiast &amp; Technology Innovator</span>
-          </p>
+          <p class="hero-tagline">I&rsquo;m a <strong><span class="cycler"><span class="cycler-word">Product</span><span class="cycler-sep">/</span><span class="cycler-word">Program</span><span class="cycler-sep">/</span><span class="cycler-word">Project</span></span> Manager</strong> who treats every launch like a team sport.</p>
+
+          <div class="hero-actions">
+            <a href="pictures/Tejas-Venkatesh-Resume.pdf" target="_blank" rel="noopener" class="btn btn-primary" data-resume-view>
+              <svg class="prompt prompt-crs" aria-hidden="true"><use href="#g-cross"/></svg>
+              View resume
+            </a>
+            <a href="pictures/Tejas-Venkatesh-Resume.pdf" download="Tejas-Venkatesh-Resume.pdf" class="btn btn-ghost">
+              <svg class="prompt prompt-tri" aria-hidden="true"><use href="#g-triangle"/></svg>
+              Download resume
+            </a>
+          </div>
+
+          <ul class="socials" aria-label="Contact">
+            <li><a href="mailto:venkatesh.te@northeastern.edu" aria-label="Email"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a></li>
+            <li><a href="https://www.linkedin.com/in/tejas-venkateshli/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+            <li><a href="tel:+16177925754" aria-label="Phone"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></a></li>
+            <li><a href="https://github.com/VenkateshTejas" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a></li>
+          </ul>
         </div>
 
-        <div class="social-links">
-          <a href="mailto:venkatesh.te@northeastern.edu" class="social-link" aria-label="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/tejas-venkateshli/" target="_blank" class="social-link" aria-label="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="tel:+16177925754" class="social-link" aria-label="Phone">
-            <i class="fas fa-phone"></i>
-          </a>
-          <a href="https://github.com/VenkateshTejas" target="_blank" class="social-link" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-
-        <div class="ps-buttons">
-          <a href="pictures/Tejas-Venkatesh-Resume.pdf" target="_blank" class="ps-btn ps-btn-view">
-            <span class="ps-key ps-key-cross"><svg viewBox="0 0 24 24" width="14" height="14"><line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></span>
-            <span class="ps-btn-text">View Resume</span>
-          </a>
-          <a href="pictures/Tejas-Venkatesh-Resume.pdf" download="Tejas-Venkatesh-Resume.pdf" class="ps-btn ps-btn-download">
-            <span class="ps-key ps-key-tri"><svg viewBox="0 0 24 24" width="14" height="14"><polygon points="12,4 22,20 2,20" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg></span>
-            <span class="ps-btn-text">Download Resume</span>
-          </a>
-        </div>
-
-        <div class="hero-quote">
-          <span class="quote-mark">&ldquo;</span>
-          <p class="hero-description">
-            I&rsquo;m a <strong>Product Manager</strong> who treats product development like a team sport.
-            I combine <strong>creative problem-solving</strong> with rigorous market research to call the
-            right plays, leading <strong>cross-functional teams</strong> from kick-off to the final whistle.
-            While I obsess over the smallest details (because the game is won in the margins), I focus on
-            empowering my teammates to score. I bring the strategy of a coach, the energy of a fan, and I
-            promise to keep the halftime speeches short.
-          </p>
-        </div>
-      </div>
-
-      <!-- DualSense Controller -->
-      <svg class="ps5-controller" viewBox="0 0 420 260" aria-hidden="true">
-        <defs>
-          <linearGradient id="ctlBody" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%"  stop-color="#ffffff"/>
-            <stop offset="55%" stop-color="#f1f4fa"/>
-            <stop offset="100%" stop-color="#c8d1e0"/>
-          </linearGradient>
-          <linearGradient id="ctlInset" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%"  stop-color="#1a1a2e"/>
-            <stop offset="100%" stop-color="#0a0a1a"/>
-          </linearGradient>
-          <radialGradient id="stickShine" cx="35%" cy="30%">
-            <stop offset="0%"  stop-color="#3a3a4e"/>
-            <stop offset="100%" stop-color="#0a0a14"/>
-          </radialGradient>
-          <filter id="ctlBlur"><feGaussianBlur stdDeviation="3"/></filter>
-        </defs>
-
-        <!-- Body main shape -->
-        <path d="
-          M 95 25
-          Q 210 8, 325 25
-          Q 370 35, 380 80
-          L 380 140
-          Q 372 215, 290 240
-          Q 250 246, 230 208
-          Q 220 200, 210 200
-          Q 200 200, 190 208
-          Q 170 246, 130 240
-          Q 48 215, 40 140
-          L 40 80
-          Q 50 35, 95 25 Z"
-          fill="url(#ctlBody)" stroke="#1a1a2e" stroke-width="2.5"/>
-
-        <!-- Touchpad outer recess -->
-        <rect x="140" y="48" width="140" height="68" rx="10" fill="#dde3ee" stroke="#1a1a2e" stroke-width="1.2"/>
-        <!-- Touchpad surface -->
-        <rect x="148" y="56" width="124" height="52" rx="6" fill="#f0f3fa"/>
-        <!-- Blue light bar below touchpad -->
-        <rect x="146" y="116" width="128" height="5" rx="2.5" fill="#00d4ff" filter="url(#ctlBlur)" opacity="0.85"/>
-        <rect x="146" y="116" width="128" height="3" rx="1.5" fill="#7df0ff"/>
-
-        <!-- PS logo button (below touchpad center) -->
-        <circle cx="210" cy="155" r="11" fill="#e8ecf2" stroke="#1a1a2e" stroke-width="1.2"/>
-        <text x="210" y="160" text-anchor="middle" fill="#1a1a2e" font-family="Arial Black, sans-serif" font-weight="900" font-size="11">PS</text>
-
-        <!-- Create / Options small bars -->
-        <rect x="116" y="65"  width="14" height="5" rx="2" fill="#1a1a2e"/>
-        <rect x="290" y="65"  width="14" height="5" rx="2" fill="#1a1a2e"/>
-
-        <!-- ─── D-pad (left) ─── -->
-        <g transform="translate(95, 130)">
-          <circle r="26" fill="url(#ctlBody)" stroke="#1a1a2e" stroke-width="1.2"/>
-          <rect x="-18" y="-6" width="36" height="12" rx="3" fill="url(#ctlInset)"/>
-          <rect x="-6"  y="-18" width="12" height="36" rx="3" fill="url(#ctlInset)"/>
-          <!-- subtle highlights -->
-          <polygon points="-15,0 -10,-3 -10,3" fill="rgba(255,255,255,0.4)"/>
-          <polygon points="15,0 10,-3 10,3"    fill="rgba(255,255,255,0.4)"/>
-          <polygon points="0,-15 -3,-10 3,-10" fill="rgba(255,255,255,0.4)"/>
-          <polygon points="0,15 -3,10 3,10"    fill="rgba(255,255,255,0.4)"/>
-        </g>
-
-        <!-- ─── Action buttons (right) ─── -->
-        <g transform="translate(325, 130)">
-          <circle r="26" fill="url(#ctlBody)" stroke="#1a1a2e" stroke-width="1.2"/>
-          <!-- Triangle (top) -->
-          <circle cx="0"   cy="-15" r="8.5" fill="url(#ctlInset)"/>
-          <polygon points="0,-19 -4,-12 4,-12" fill="none" stroke="#6bdb6b" stroke-width="1.6" stroke-linejoin="round"/>
-          <!-- Circle (right) -->
-          <circle cx="15"  cy="0"   r="8.5" fill="url(#ctlInset)"/>
-          <circle cx="15"  cy="0"   r="3.6" fill="none" stroke="#ff6f6f" stroke-width="1.6"/>
-          <!-- Cross (bottom) -->
-          <circle cx="0"   cy="15"  r="8.5" fill="url(#ctlInset)"/>
-          <line x1="-3.6" y1="11.4" x2="3.6"  y2="18.6" stroke="#5cb8ff" stroke-width="1.7" stroke-linecap="round"/>
-          <line x1="3.6"  y1="11.4" x2="-3.6" y2="18.6" stroke="#5cb8ff" stroke-width="1.7" stroke-linecap="round"/>
-          <!-- Square (left) -->
-          <circle cx="-15" cy="0"   r="8.5" fill="url(#ctlInset)"/>
-          <rect x="-18.5" y="-3.5" width="7" height="7" rx="0.8" fill="none" stroke="#ff7fd9" stroke-width="1.6"/>
-        </g>
-
-        <!-- ─── Analog sticks ─── -->
-        <g transform="translate(155, 188)">
-          <circle r="24" fill="#1a1a2e"/>
-          <circle r="19" fill="url(#stickShine)" stroke="#3a3a4e" stroke-width="0.8"/>
-          <circle r="6"  fill="#0a0a14"/>
-        </g>
-        <g transform="translate(265, 188)">
-          <circle r="24" fill="#1a1a2e"/>
-          <circle r="19" fill="url(#stickShine)" stroke="#3a3a4e" stroke-width="0.8"/>
-          <circle r="6"  fill="#0a0a14"/>
-        </g>
-
-        <!-- Microphone / speaker grille -->
-        <ellipse cx="210" cy="225" rx="14" ry="3" fill="#3a3a4e"/>
-
-        <!-- Top status LED -->
-        <circle cx="210" cy="38" r="2" fill="#00d4ff" opacity="0.9"/>
-      </svg>
-    </section>
-
-    <!-- Education Section (Cricket theme) -->
-    <section id="education" class="themed cricket-theme">
-      <div class="theme-deco" aria-hidden="true">
-        <div class="pitch-grass"></div>
-        <div class="pitch-strip"></div>
-        <div class="boundary-line"></div>
-        <svg class="deco-stumps" viewBox="0 0 70 110">
-          <rect x="8"  y="14" width="8" height="88" rx="3" fill="#e8c98e" stroke="#7a4a25" stroke-width="1.5"/>
-          <rect x="31" y="14" width="8" height="88" rx="3" fill="#e8c98e" stroke="#7a4a25" stroke-width="1.5"/>
-          <rect x="54" y="14" width="8" height="88" rx="3" fill="#e8c98e" stroke="#7a4a25" stroke-width="1.5"/>
-          <ellipse cx="23" cy="13" rx="9" ry="4" fill="#caa472" stroke="#7a4a25" stroke-width="1"/>
-          <ellipse cx="47" cy="13" rx="9" ry="4" fill="#caa472" stroke="#7a4a25" stroke-width="1"/>
-          <rect x="2" y="102" width="66" height="6" rx="2" fill="#5c8a3a"/>
-        </svg>
-        <svg class="deco-bat" viewBox="0 0 50 150">
-          <rect x="20" y="0"   width="10" height="42" rx="3" fill="#caa472" stroke="#5a3a1c" stroke-width="1"/>
-          <rect x="17" y="40"  width="16" height="8"  rx="2" fill="#7a4a25"/>
-          <path d="M 8 48 L 42 48 L 44 142 Q 25 152 6 142 Z" fill="#f4d999" stroke="#7a4a25" stroke-width="2"/>
-          <line x1="25" y1="58" x2="25" y2="135" stroke="#a07343" stroke-width="1.2"/>
-          <line x1="18" y1="58" x2="18" y2="132" stroke="#a07343" stroke-width="0.7"/>
-          <line x1="32" y1="58" x2="32" y2="132" stroke="#a07343" stroke-width="0.7"/>
-        </svg>
-        <svg class="deco-bat deco-bat-2" viewBox="0 0 50 150">
-          <rect x="20" y="0"   width="10" height="42" rx="3" fill="#caa472" stroke="#5a3a1c" stroke-width="1"/>
-          <rect x="17" y="40"  width="16" height="8"  rx="2" fill="#7a4a25"/>
-          <path d="M 8 48 L 42 48 L 44 142 Q 25 152 6 142 Z" fill="#f4d999" stroke="#7a4a25" stroke-width="2"/>
-          <line x1="25" y1="58" x2="25" y2="135" stroke="#a07343" stroke-width="1.2"/>
-        </svg>
-        <svg class="deco-ball ball-1" viewBox="0 0 80 80">
-          <circle cx="40" cy="40" r="36" fill="#c41e3a" stroke="#7a0a1a" stroke-width="2"/>
-          <ellipse cx="40" cy="40" rx="36" ry="14" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.9"/>
-          <ellipse cx="40" cy="40" rx="36" ry="14" fill="none" stroke="#fff" stroke-width="1" stroke-dasharray="2 4" opacity="0.6" transform="rotate(15 40 40)"/>
-          <circle cx="40" cy="40" r="36" fill="url(#ballShine)"/>
-          <defs>
-            <radialGradient id="ballShine" cx="30%" cy="30%">
-              <stop offset="0%" stop-color="rgba(255,255,255,0.5)"/>
-              <stop offset="40%" stop-color="rgba(255,255,255,0)"/>
-            </radialGradient>
-          </defs>
-        </svg>
-        <svg class="deco-ball ball-2" viewBox="0 0 80 80">
-          <circle cx="40" cy="40" r="36" fill="#c41e3a" stroke="#7a0a1a" stroke-width="2"/>
-          <ellipse cx="40" cy="40" rx="36" ry="14" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.9"/>
-        </svg>
-      </div>
-      <svg class="section-drop drop-cricket" viewBox="0 0 80 80" aria-hidden="true">
-        <circle cx="40" cy="40" r="36" fill="#c41e3a" stroke="#7a0a1a" stroke-width="2"/>
-        <ellipse cx="40" cy="40" rx="36" ry="14" fill="none" stroke="#fff" stroke-width="1.6" stroke-dasharray="4 3"/>
-        <ellipse cx="40" cy="40" rx="36" ry="14" fill="none" stroke="#fff" stroke-width="1.2" stroke-dasharray="3 5" opacity="0.6" transform="rotate(20 40 40)"/>
-        <circle cx="40" cy="40" r="36" fill="url(#dropBallShine)"/>
-        <defs>
-          <radialGradient id="dropBallShine" cx="30%" cy="30%">
-            <stop offset="0%" stop-color="rgba(255,255,255,0.6)"/>
-            <stop offset="50%" stop-color="rgba(255,255,255,0)"/>
-          </radialGradient>
-        </defs>
-      </svg>
-      <h2 class="section-title">Education</h2>
-      <div class="section-content">
-        <div class="education-grid">
-          <div class="education-card scroll-reveal">
-            <span class="edu-period"><i class="fas fa-calendar-alt"></i> Sep 2024 &mdash; Dec 2026</span>
-            <div class="university">Northeastern University</div>
-            <p class="degree">Master's in Information Systems</p>
-            <p class="location"><i class="fas fa-map-marker-alt"></i> Boston, MA</p>
-            <div class="edu-focus">
-              <span class="edu-focus-label">FOCUS AREAS</span>
-              <div class="edu-tags">
-                <span class="edu-tag">Product Management</span>
-                <span class="edu-tag">UX Design</span>
-                <span class="edu-tag">Data Analytics</span>
-                <span class="edu-tag">Cloud Systems</span>
+        <!-- Player card: the original photo, framed, with the live status details -->
+        <figure class="hero-card">
+          <div class="player-card">
+            <div class="player-card-tilt">
+              <div class="player-card-photo">
+                <img src="pictures/tejas-card-900.webp"
+                     srcset="pictures/tejas-card-560.webp 560w, pictures/tejas-card-900.webp 900w"
+                     sizes="(max-width: 899px) 66vw, 430px"
+                     width="900" height="1125" fetchpriority="high"
+                     alt="Tejas Venkatesh smiling, in a dark blazer and light blue shirt">
               </div>
-            </div>
-            <div class="edu-foot">
-              <span class="edu-badge"><i class="fas fa-trophy"></i> Graduate Program</span>
+              <dl class="player-card-info">
+                <div class="pci-wide">
+                  <dt>Now playing</dt>
+                  <dd>Master's in Information Systems, Northeastern University</dd>
+                </div>
+                <div>
+                  <dt>Status</dt>
+                  <dd><span class="status-dot" aria-hidden="true"></span>Open to new roles</dd>
+                </div>
+                <div>
+                  <dt>Location</dt>
+                  <dd>Boston, MA</dd>
+                </div>
+              </dl>
             </div>
           </div>
-          <div class="education-card scroll-reveal">
-            <span class="edu-period"><i class="fas fa-calendar-alt"></i> Aug 2015 &mdash; Jul 2019</span>
-            <div class="university">K.S School of Engineering &amp; Management</div>
-            <p class="degree">Bachelor of Computer Science</p>
-            <p class="location"><i class="fas fa-map-marker-alt"></i> Bangalore, India</p>
-            <div class="edu-focus">
-              <span class="edu-focus-label">FOCUS AREAS</span>
-              <div class="edu-tags">
-                <span class="edu-tag">Software Engineering</span>
-                <span class="edu-tag">Algorithms</span>
-                <span class="edu-tag">Database Systems</span>
-                <span class="edu-tag">Web Development</span>
-              </div>
-            </div>
-            <div class="edu-foot">
-              <span class="edu-badge"><i class="fas fa-trophy"></i> Undergraduate Program</span>
-            </div>
-          </div>
-        </div>
+        </figure>
       </div>
     </section>
 
-    <!-- Experience Section (Football pitch theme) -->
-    <section id="experience" class="themed football-theme">
-      <div class="theme-deco" aria-hidden="true">
-        <div class="pitch-bg"></div>
-        <div class="pitch-circle-large"></div>
-        <div class="pitch-circle"></div>
-        <div class="pitch-spot"></div>
-        <div class="pitch-line"></div>
-        <div class="penalty-box pb-top"></div>
-        <div class="penalty-box pb-bottom"></div>
-        <div class="penalty-arc arc-top"></div>
-        <div class="penalty-arc arc-bottom"></div>
-
-        <!-- Goal post at TOP of field -->
-        <svg class="deco-goal goal-top" viewBox="0 0 200 90" aria-hidden="true">
-          <!-- crossbar -->
-          <line x1="10" y1="82" x2="190" y2="82" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
-          <!-- left post -->
-          <line x1="10"  y1="82" x2="20"  y2="10" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
-          <!-- right post -->
-          <line x1="190" y1="82" x2="180" y2="10" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
-          <!-- top of net (back of goal) -->
-          <line x1="20" y1="10" x2="180" y2="10" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
-          <!-- net pattern -->
-          <g stroke="#fff" stroke-width="1.1" opacity="0.7" fill="none">
-            <line x1="14"  y1="64" x2="186" y2="64"/>
-            <line x1="16"  y1="46" x2="184" y2="46"/>
-            <line x1="18"  y1="28" x2="182" y2="28"/>
-            <line x1="34"  y1="82" x2="36"  y2="10"/>
-            <line x1="58"  y1="82" x2="58"  y2="10"/>
-            <line x1="82"  y1="82" x2="80"  y2="10"/>
-            <line x1="106" y1="82" x2="104" y2="10"/>
-            <line x1="130" y1="82" x2="128" y2="10"/>
-            <line x1="154" y1="82" x2="152" y2="10"/>
-            <line x1="178" y1="82" x2="174" y2="10"/>
-          </g>
-        </svg>
-
-        <!-- Goal post at BOTTOM of field (mirrored) -->
-        <svg class="deco-goal goal-bottom" viewBox="0 0 200 90" aria-hidden="true">
-          <!-- crossbar (now at top of mirrored view) -->
-          <line x1="10" y1="8" x2="190" y2="8" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
-          <!-- left post going down (net depth) -->
-          <line x1="10"  y1="8" x2="20"  y2="80" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
-          <!-- right post -->
-          <line x1="190" y1="8" x2="180" y2="80" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
-          <!-- back of net -->
-          <line x1="20" y1="80" x2="180" y2="80" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
-          <!-- net pattern -->
-          <g stroke="#fff" stroke-width="1.1" opacity="0.7" fill="none">
-            <line x1="14"  y1="26" x2="186" y2="26"/>
-            <line x1="16"  y1="44" x2="184" y2="44"/>
-            <line x1="18"  y1="62" x2="182" y2="62"/>
-            <line x1="34"  y1="8" x2="36"  y2="80"/>
-            <line x1="58"  y1="8" x2="58"  y2="80"/>
-            <line x1="82"  y1="8" x2="80"  y2="80"/>
-            <line x1="106" y1="8" x2="104" y2="80"/>
-            <line x1="130" y1="8" x2="128" y2="80"/>
-            <line x1="154" y1="8" x2="152" y2="80"/>
-            <line x1="178" y1="8" x2="174" y2="80"/>
-          </g>
-        </svg>
-        <svg class="deco-cleat" viewBox="0 0 280 170">
-          <defs>
-            <linearGradient id="cleatBody" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%"  stop-color="#2a2a2a"/>
-              <stop offset="55%" stop-color="#050505"/>
-              <stop offset="100%" stop-color="#1a1a1a"/>
-            </linearGradient>
-            <linearGradient id="cleatSole" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%"  stop-color="#ffffff"/>
-              <stop offset="100%" stop-color="#9a9aa0"/>
-            </linearGradient>
-            <radialGradient id="cleatShine" cx="30%" cy="25%">
-              <stop offset="0%"  stop-color="rgba(255,255,255,0.45)"/>
-              <stop offset="50%" stop-color="rgba(255,255,255,0)"/>
-            </radialGradient>
-          </defs>
-
-          <!-- Ground shadow -->
-          <ellipse cx="140" cy="162" rx="120" ry="6" fill="rgba(0,0,0,0.45)"/>
-
-          <!-- Studs (bottom row) -->
-          <g fill="#0a0a0a" stroke="#000" stroke-width="1">
-            <ellipse cx="44"  cy="158" rx="8"  ry="5"/>
-            <ellipse cx="78"  cy="160" rx="9"  ry="6"/>
-            <ellipse cx="115" cy="161" rx="9"  ry="6"/>
-            <ellipse cx="150" cy="161" rx="9"  ry="6"/>
-            <ellipse cx="185" cy="160" rx="9"  ry="6"/>
-            <ellipse cx="220" cy="158" rx="8"  ry="5"/>
-            <ellipse cx="248" cy="155" rx="7"  ry="4"/>
-          </g>
-          <!-- Stud tops (highlight rings) -->
-          <g fill="#3a3a3a">
-            <ellipse cx="44"  cy="156" rx="4"  ry="2"/>
-            <ellipse cx="78"  cy="158" rx="5"  ry="2"/>
-            <ellipse cx="115" cy="159" rx="5"  ry="2"/>
-            <ellipse cx="150" cy="159" rx="5"  ry="2"/>
-            <ellipse cx="185" cy="158" rx="5"  ry="2"/>
-            <ellipse cx="220" cy="156" rx="4"  ry="2"/>
-            <ellipse cx="248" cy="153" rx="3"  ry="1.5"/>
-          </g>
-
-          <!-- Sole plate (white) -->
-          <path d="
-            M 30 138
-            Q 22 156, 48 158
-            L 245 154
-            Q 262 152, 258 138
-            Z"
-            fill="url(#cleatSole)" stroke="#000" stroke-width="2"/>
-
-          <!-- Boot upper body -->
-          <path d="
-            M 30 138
-            Q 34 100, 72 82
-            L 118 66
-            Q 158 58, 200 70
-            Q 232 82, 252 108
-            Q 262 126, 258 138
-            Z"
-            fill="url(#cleatBody)" stroke="#000" stroke-width="2.5"/>
-
-          <!-- Three brand stripes (Adidas-style) -->
-          <g stroke="#ffffff" stroke-width="5.5" stroke-linecap="round" fill="none" opacity="0.95">
-            <line x1="106" y1="84" x2="88" y2="132"/>
-            <line x1="120" y1="80" x2="103" y2="132"/>
-            <line x1="134" y1="76" x2="120" y2="132"/>
-          </g>
-
-          <!-- Tongue / collar (white opening) -->
-          <path d="
-            M 72 82
-            Q 84 66, 110 62
-            L 142 60
-            L 148 84
-            Q 122 90, 96 90 Z"
-            fill="#f4f4f4" stroke="#000" stroke-width="2"/>
-
-          <!-- Eyelets -->
-          <g fill="#1a1a1a">
-            <circle cx="108" cy="72" r="2.2"/>
-            <circle cx="120" cy="70" r="2.2"/>
-            <circle cx="132" cy="68" r="2.2"/>
-            <circle cx="108" cy="82" r="2.2"/>
-            <circle cx="120" cy="80" r="2.2"/>
-            <circle cx="132" cy="78" r="2.2"/>
-          </g>
-          <!-- Lace strings -->
-          <g stroke="#1a1a1a" stroke-width="2.2" fill="none" stroke-linecap="round">
-            <path d="M 108 72 Q 120 76, 132 78"/>
-            <path d="M 108 82 Q 120 78, 132 68"/>
-            <path d="M 120 70 L 120 80"/>
-          </g>
-
-          <!-- Toe cap highlight curve -->
-          <path d="M 200 76 Q 232 88, 252 108" fill="none" stroke="#fff" stroke-width="2.5" opacity="0.4"/>
-
-          <!-- Heel detail -->
-          <path d="M 32 118 Q 34 128, 36 138" fill="none" stroke="#fff" stroke-width="2" opacity="0.35"/>
-
-          <!-- Red brand swoosh accent -->
-          <path d="M 162 116 Q 200 104, 240 116" fill="none" stroke="#ff3333" stroke-width="3.5" stroke-linecap="round"/>
-
-          <!-- Subtle body shine highlight -->
-          <path d="
-            M 30 138
-            Q 34 100, 72 82
-            L 118 66
-            Q 158 58, 200 70
-            Q 232 82, 252 108
-            Q 262 126, 258 138
-            Z"
-            fill="url(#cleatShine)"/>
-        </svg>
-        <svg class="deco-flag" viewBox="0 0 60 100">
-          <line x1="14" y1="6" x2="14" y2="94" stroke="#7a3a1c" stroke-width="3"/>
-          <path d="M 14 8 L 54 18 L 14 32 Z" fill="#ff3333"/>
-          <ellipse cx="14" cy="96" rx="9" ry="3" fill="rgba(0,0,0,0.3)"/>
-        </svg>
+    <section class="bio" aria-label="Player bio">
+      <div class="wrap">
+        <p class="bio-label">Player bio</p>
+        <p class="bio-text">
+          I combine <strong>creative problem-solving</strong> with rigorous market research to call the
+          right plays, leading <strong>cross-functional teams</strong> from kick-off to the final whistle.
+          While I obsess over the smallest details (because the game is won in the margins), I focus on
+          empowering my teammates to score. I bring the strategy of a coach, the energy of a fan, and I
+          promise to keep the halftime speeches short.
+        </p>
       </div>
-      <svg class="section-drop drop-football" viewBox="0 0 80 80" aria-hidden="true">
-        <circle cx="40" cy="40" r="36" fill="#fff" stroke="#000" stroke-width="2.5"/>
-        <!-- Central black pentagon -->
-        <polygon points="40,26 54,35 49,51 31,51 26,35" fill="#000"/>
-        <!-- 5 outer black pentagon tips -->
-        <polygon points="40,4  44,10 40,15 36,10" fill="#000"/>
-        <polygon points="76,24 70,29 64,24 70,18" fill="#000"/>
-        <polygon points="60,74 54,67 60,62 67,67" fill="#000"/>
-        <polygon points="20,74 26,67 20,62 13,67" fill="#000"/>
-        <polygon points="4,24  10,29 16,24 10,18" fill="#000"/>
-        <!-- Black seam lines -->
-        <g stroke="#000" stroke-width="2" stroke-linecap="round" fill="none">
-          <line x1="40" y1="26" x2="40" y2="15"/>
-          <line x1="54" y1="35" x2="64" y2="24"/>
-          <line x1="49" y1="51" x2="60" y2="62"/>
-          <line x1="31" y1="51" x2="20" y2="62"/>
-          <line x1="26" y1="35" x2="16" y2="24"/>
-        </g>
-        <!-- Shine -->
-        <circle cx="40" cy="40" r="36" fill="url(#dropFootShine)"/>
-        <defs>
-          <radialGradient id="dropFootShine" cx="30%" cy="25%">
-            <stop offset="0%" stop-color="rgba(255,255,255,0.65)"/>
-            <stop offset="50%" stop-color="rgba(255,255,255,0)"/>
-          </radialGradient>
-        </defs>
-      </svg>
-      <h2 class="section-title">Experience</h2>
-      <div class="section-content">
-        <div class="experience-grid">
-          <div class="experience-card scroll-reveal">
-            <div class="experience-logo">
-              <img src="pictures/logos/lg.svg" alt="LG" />
+    </section>
+
+    <!-- ───────────── Education · Training / Cricket ───────────── -->
+    <section id="education" class="mode" data-mode="cricket" aria-labelledby="education-title" tabindex="-1">
+      <div class="wrap">
+        <header class="mode-head">
+          <div class="mode-stage" aria-hidden="true"></div>
+          <div class="mode-head-text">
+            <p class="mode-label"><span>Training</span><span class="mode-sport">Cricket</span></p>
+            <h2 class="mode-title" id="education-title">Education</h2>
+          </div>
+          <div class="mode-item" data-gl-item="cricket" role="img" aria-label="3D cricket ball, drag to spin">
+            <span class="mode-item-hint" aria-hidden="true">Drag to spin · Tap to replay</span>
+          </div>
+        </header>
+
+        <div class="saves">
+          <article class="save" data-start="2024-09-01" data-end="2026-12-15">
+            <div class="save-top">
+              <span class="save-level">Master's</span>
+              <span class="save-state" data-state>In progress</span>
             </div>
-            <div class="experience-content">
-              <div class="company-name">LG ENERGY SOLUTION VERTECH</div>
-              <div class="position"><span class="position-role">Technical Product Manager (Co-op)</span> <span class="position-date">(Jan 2026 - Present)</span></div>
-              <ul class="experience-description">
-                <li><strong>Technical Product Management:</strong> Drive product initiatives within the battery energy storage (BESS) space, partnering with engineering and business stakeholders to translate requirements into clear, prioritized roadmaps.</li>
-                <li><strong>Market &amp; Competitive Intelligence:</strong> Built an AI-powered market intelligence tool that scans <strong>100+</strong> industry articles weekly, auto-categorizing competitor, innovation, and policy signals to keep the team ahead of the market.</li>
-                <li><strong>Cross-functional Collaboration:</strong> Support cross-functional teams with research and analysis to inform product strategy and roadmap prioritization.</li>
+            <h3 class="save-school">Northeastern University</h3>
+            <p class="save-degree">Master's in Information Systems</p>
+            <p class="save-place"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Boston, MA</p>
+            <div class="save-progress">
+              <div class="bar" role="progressbar" aria-label="Program progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="92">
+                <span class="bar-fill" style="--p: 92%"></span>
+              </div>
+              <div class="save-dates"><span>Sep 2024</span><span class="save-pct" data-pct>92%</span><span>Dec 2026</span></div>
+            </div>
+            <div class="save-focus">
+              <p class="micro-label">Focus areas</p>
+              <ul class="chips">
+                <li>Product Management</li>
+                <li>UX Design</li>
+                <li>Data Analytics</li>
+                <li>Cloud Systems</li>
               </ul>
             </div>
-          </div>
+          </article>
 
-          <div class="experience-card scroll-reveal">
-            <div class="experience-logo">
-              <img src="pictures/logos/dell.svg" alt="Dell Technologies" />
+          <article class="save" data-start="2015-08-01" data-end="2019-07-31">
+            <div class="save-top">
+              <span class="save-level">Bachelor's</span>
+              <span class="save-state" data-state>Completed</span>
             </div>
-            <div class="experience-content">
-              <div class="company-name">DELL TECHNOLOGIES</div>
-              <div class="position"><span class="position-role">Associate Consultant</span> <span class="position-date">(Mar 2022 - Aug 2024)</span></div>
-              <ul class="experience-description">
+            <h3 class="save-school">K.S School of Engineering &amp; Management</h3>
+            <p class="save-degree">Bachelor of Computer Science</p>
+            <p class="save-place"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Bangalore, India</p>
+            <div class="save-progress">
+              <div class="bar" role="progressbar" aria-label="Program progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+                <span class="bar-fill" style="--p: 100%"></span>
+              </div>
+              <div class="save-dates"><span>Aug 2015</span><span class="save-pct" data-pct>100%</span><span>Jul 2019</span></div>
+            </div>
+            <div class="save-focus">
+              <p class="micro-label">Focus areas</p>
+              <ul class="chips">
+                <li>Software Engineering</li>
+                <li>Algorithms</li>
+                <li>Database Systems</li>
+                <li>Web Development</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────── Experience · Career mode / Football ───────────── -->
+    <section id="experience" class="mode" data-mode="football" aria-labelledby="experience-title" tabindex="-1">
+      <div class="wrap">
+        <header class="mode-head">
+          <div class="mode-stage" aria-hidden="true"></div>
+          <div class="mode-head-text">
+            <p class="mode-label"><span>Career mode</span><span class="mode-sport">Football</span></p>
+            <h2 class="mode-title" id="experience-title">Experience</h2>
+          </div>
+          <div class="mode-item" data-gl-item="football" role="img" aria-label="3D football, drag to spin">
+            <span class="mode-item-hint" aria-hidden="true">Drag to spin · Tap to replay</span>
+          </div>
+        </header>
+
+        <div class="career-wrap">
+        <span class="career-rail" aria-hidden="true"><span class="career-rail-fill"></span></span>
+        <ol class="career">
+
+          <li class="role">
+            <div class="role-meta">
+              <div class="role-logo"><img src="pictures/logos/lg.svg" alt="LG" loading="lazy"></div>
+              <div class="role-id">
+                <h3 class="role-company">LG Energy Solution Vertech</h3>
+                <p class="role-title">Technical Product Manager (Co-op)</p>
+                <p class="role-dates">Jan 2026 – Aug 2026</p>
+              </div>
+            </div>
+            <div class="role-body" id="role-lg">
+              <ul class="role-points">
+                <li><strong>Technical Product Management:</strong> Drove product initiatives within the battery energy storage (BESS) space, partnering with engineering and business stakeholders to translate requirements into clear, prioritized roadmaps.</li>
+                <li><strong>Market &amp; Competitive Intelligence:</strong> Built an AI-powered market intelligence tool that scans <strong>100+</strong> industry articles weekly, auto-categorizing competitor, innovation, and policy signals to keep the team ahead of the market.</li>
+                <li><strong>Cross-functional Collaboration:</strong> Supported cross-functional teams with research and analysis to inform product strategy and roadmap prioritization.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="role">
+            <div class="role-meta">
+              <div class="role-logo"><img src="pictures/logos/dell.svg" alt="Dell Technologies" loading="lazy"></div>
+              <div class="role-id">
+                <h3 class="role-company">Dell Technologies</h3>
+                <p class="role-title">Associate Consultant</p>
+                <p class="role-dates">Mar 2022 – Aug 2024</p>
+              </div>
+            </div>
+            <div class="role-body" id="role-dell">
+              <ul class="role-points">
                 <li><strong>Product Ownership:</strong> Led end-to-end migration roadmaps for enterprise clients requiring zero downtime, coordinating multi-stakeholder teams to deliver solutions for <strong>3000+</strong> systems across <strong>Atos</strong>, <strong>Siemens</strong>, <strong>NBN</strong>, <strong>Parexel</strong>, and <strong>GE Aerospace</strong>, achieving <strong>99.9%+</strong> business continuity</li>
                 <li><strong>Process Innovation:</strong> Addressed <strong>40-hour</strong> manual migration cycles by developing Python/PowerCLI automation solutions and standardized workflows, reducing manual work by <strong>50%</strong> and improving customer satisfaction by <strong>35%</strong></li>
                 <li><strong>Customer Success Management:</strong> Managed GE Aerospace's mission-critical migration with <strong>24/7</strong> monitoring protocols, achieving <strong>99.9%+</strong> uptime and securing <strong>$500K+</strong> in additional projects</li>
@@ -694,493 +323,449 @@
                 <li><strong>Cross-functional Leadership:</strong> Coordinated technical teams and stakeholders across complex migrations using RP4VM, vSphere, CMDB, Ansible, HCX, and Zerto, improving team productivity by <strong>40%</strong></li>
               </ul>
             </div>
-          </div>
-          
-          <div class="experience-card scroll-reveal">
-            <div class="experience-logo">
-              <img src="pictures/logos/tcs.svg" alt="Tata Consultancy Services" />
+          </li>
+
+          <li class="role">
+            <div class="role-meta">
+              <div class="role-logo"><img src="pictures/logos/tcs.svg" alt="Tata Consultancy Services" loading="lazy"></div>
+              <div class="role-id">
+                <h3 class="role-company">Tata Consultancy Services</h3>
+                <p class="role-title">Product Specialist</p>
+                <p class="role-dates">Jan 2021 – Feb 2022</p>
+              </div>
             </div>
-            <div class="experience-content">
-              <div class="company-name">TATA CONSULTANCY SERVICES</div>
-              <div class="position"><span class="position-role">Product Specialist</span> <span class="position-date">(Jan 2021 - Feb 2022)</span></div>
-              <ul class="experience-description">
+            <div class="role-body" id="role-tcs">
+              <ul class="role-points">
                 <li><strong>Product Coordination:</strong> Led Google YouTube TV project resolving cross-team alignment issues through daily standups and shared dashboards, achieving <strong>95%</strong> sprint completion with <strong>25%</strong> faster delivery</li>
                 <li><strong>Resource Management:</strong> Addressed inconsistent design-to-production workflows across <strong>25+</strong> team members through training modules and standardized processes, improving design consistency by <strong>60%</strong> while reducing production errors</li>
-                <li><strong>Timeline & Quality Management:</strong> Managed tight project deadlines by implementing systematic review processes and resource allocation strategies, ensuring consistent delivery and reducing time-to-market by <strong>30%</strong></li>
+                <li><strong>Timeline &amp; Quality Management:</strong> Managed tight project deadlines by implementing systematic review processes and resource allocation strategies, ensuring consistent delivery and reducing time-to-market by <strong>30%</strong></li>
               </ul>
             </div>
-          </div>
-          
-          <div class="experience-card scroll-reveal">
-            <div class="experience-logo">
-              <img src="pictures/logos/accenture.svg" alt="Accenture" />
+          </li>
+
+          <li class="role">
+            <div class="role-meta">
+              <div class="role-logo"><img src="pictures/logos/accenture.svg" alt="Accenture" loading="lazy"></div>
+              <div class="role-id">
+                <h3 class="role-company">Accenture</h3>
+                <p class="role-title">Technical Support Specialist</p>
+                <p class="role-dates">Dec 2019 – Nov 2020</p>
+              </div>
             </div>
-            <div class="experience-content">
-              <div class="company-name">ACCENTURE</div>
-              <div class="position"><span class="position-role">Technical Support Specialist</span> <span class="position-date">(Dec 2019 - Nov 2020)</span></div>
-              <ul class="experience-description">
+            <div class="role-body" id="role-accenture">
+              <ul class="role-points">
                 <li><strong>Asset Compliance Management:</strong> Ensured compliance for 100s of company provided assets, achieving a 100% audit pass rate and minimizing regulatory risks.</li>
                 <li>Initiated and managed remote sessions with clients to address and resolve all Accenture native software issues, ensuring devices met necessary standards. Also managed Accenture procurement.</li>
                 <li>Achieved a 95% success rate in resolving compliance and Microsoft application related issues, improving client satisfaction and reducing device-related risks.</li>
               </ul>
             </div>
-          </div>
+          </li>
+        </ol>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section (Valorant tactical theme) -->
-    <section id="projects" class="themed valorant-theme">
-      <div class="theme-deco" aria-hidden="true">
-        <div class="tac-grid"></div>
-        <div class="tac-scan"></div>
-        <svg class="deco-crosshair" viewBox="0 0 120 120">
-          <circle cx="60" cy="60" r="4" fill="#ff4655"/>
-          <line x1="60" y1="6"  x2="60" y2="42"  stroke="#ff4655" stroke-width="4" stroke-linecap="round"/>
-          <line x1="60" y1="78" x2="60" y2="114" stroke="#ff4655" stroke-width="4" stroke-linecap="round"/>
-          <line x1="6"  y1="60" x2="42"  y2="60" stroke="#ff4655" stroke-width="4" stroke-linecap="round"/>
-          <line x1="78" y1="60" x2="114" y2="60" stroke="#ff4655" stroke-width="4" stroke-linecap="round"/>
-          <circle cx="60" cy="60" r="48" fill="none" stroke="#ff4655" stroke-width="2" stroke-dasharray="6 4" opacity="0.7"/>
-          <circle cx="60" cy="60" r="32" fill="none" stroke="#ff4655" stroke-width="1.5" opacity="0.5"/>
-        </svg>
-        <svg class="deco-crosshair deco-crosshair-2" viewBox="0 0 120 120">
-          <circle cx="60" cy="60" r="3" fill="#00d4ff"/>
-          <line x1="60" y1="20" x2="60" y2="48"  stroke="#00d4ff" stroke-width="3" stroke-linecap="round"/>
-          <line x1="60" y1="72" x2="60" y2="100" stroke="#00d4ff" stroke-width="3" stroke-linecap="round"/>
-          <line x1="20" y1="60" x2="48"  y2="60" stroke="#00d4ff" stroke-width="3" stroke-linecap="round"/>
-          <line x1="72" y1="60" x2="100" y2="60" stroke="#00d4ff" stroke-width="3" stroke-linecap="round"/>
-        </svg>
-        <svg class="deco-spike" viewBox="0 0 80 110">
-          <path d="M 40 6 L 68 30 L 68 80 L 40 102 L 12 80 L 12 30 Z" fill="rgba(255,70,85,0.08)" stroke="#ff4655" stroke-width="3"/>
-          <circle cx="40" cy="54" r="9" fill="#ff4655"/>
-          <circle cx="40" cy="54" r="9" fill="none" stroke="#ff4655" stroke-width="2" opacity="0.5">
-            <animate attributeName="r" values="9;22;9" dur="1.6s" repeatCount="indefinite"/>
-            <animate attributeName="opacity" values="0.6;0;0.6" dur="1.6s" repeatCount="indefinite"/>
-          </circle>
-          <line x1="40" y1="20" x2="40" y2="44" stroke="#ff4655" stroke-width="3" stroke-linecap="round"/>
-          <line x1="40" y1="64" x2="40" y2="88" stroke="#ff4655" stroke-width="3" stroke-linecap="round"/>
-          <text x="40" y="118" text-anchor="middle" fill="#ff4655" font-family="Inter, sans-serif" font-size="8" font-weight="700" letter-spacing="2">SPIKE</text>
-        </svg>
-        <div class="agent-card">
-          <div class="agent-card-top">AGENT · 01</div>
-          <div class="agent-card-num">DUELIST</div>
-        </div>
-        <div class="tac-corner tac-tl"></div>
-        <div class="tac-corner tac-tr"></div>
-        <div class="tac-corner tac-bl"></div>
-        <div class="tac-corner tac-br"></div>
-        <div class="tac-slash tac-slash-1"></div>
-        <div class="tac-slash tac-slash-2"></div>
-      </div>
-      <svg class="section-drop drop-valorant" viewBox="0 0 60 110" aria-hidden="true">
-        <defs>
-          <linearGradient id="bulletBody" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%"  stop-color="#a87410"/>
-            <stop offset="30%" stop-color="#f4d266"/>
-            <stop offset="55%" stop-color="#ffe9a0"/>
-            <stop offset="80%" stop-color="#f4d266"/>
-            <stop offset="100%" stop-color="#a87410"/>
-          </linearGradient>
-          <linearGradient id="bulletTip" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%"  stop-color="#7a5510"/>
-            <stop offset="50%" stop-color="#dba93c"/>
-            <stop offset="100%" stop-color="#7a5510"/>
-          </linearGradient>
-        </defs>
-        <!-- bullet tip -->
-        <path d="M 30 6 Q 50 14 50 42 L 10 42 Q 10 14 30 6 Z" fill="url(#bulletTip)"/>
-        <!-- bullet shell -->
-        <rect x="10" y="42" width="40" height="58" rx="2" fill="url(#bulletBody)"/>
-        <!-- shell rim -->
-        <rect x="10" y="42" width="40" height="4" fill="#7a5510"/>
-        <rect x="10" y="92" width="40" height="3" fill="#7a5510"/>
-        <!-- primer ring -->
-        <circle cx="30" cy="100" r="6" fill="none" stroke="#7a5510" stroke-width="1.5"/>
-      </svg>
-      <h2 class="section-title">Projects</h2>
-      <div class="section-content">
-        <div class="projects-grid">
+    <!-- ───────────── Projects · Missions / Tactical ───────────── -->
+    <section id="projects" class="mode" data-mode="tactical" aria-labelledby="projects-title" tabindex="-1">
+      <div class="wrap">
+        <header class="mode-head">
+          <div class="mode-stage" aria-hidden="true"></div>
+          <div class="mode-head-text">
+            <p class="mode-label"><span>Missions</span><span class="mode-sport">Tactical shooter</span></p>
+            <h2 class="mode-title" id="projects-title">Projects</h2>
+          </div>
+          <div class="mode-item" data-gl-item="round" role="img" aria-label="3D brass round, drag to spin">
+            <span class="mode-item-hint" aria-hidden="true">Drag to spin · Tap to replay</span>
+          </div>
+        </header>
 
-          <div class="project-card scroll-reveal">
-            <div class="project-header">
-              <h3 class="project-title">Check Mate</h3>
-              <div class="project-date">May 2026 – June 2026</div>
-              <a href="https://checkmatee.streamlit.app/" target="_blank" class="project-link" aria-label="Live App">
-                <i class="fas fa-arrow-up-right-from-square"></i>
-              </a>
+        <ol class="quests">
+          <li class="quest">
+            <div class="quest-row">
+              <div class="quest-id">
+                <h3 class="quest-title">Check Mate</h3>
+                <p class="quest-date">May 2026 – June 2026</p>
+              </div>
+              <div class="quest-brief">
+                <p class="quest-summary">AI market-intelligence platform tracking 8 industries — fully automated and always up to date.</p>
+                <ul class="chips">
+                  <li>AI / LLM Integration</li>
+                  <li>Market Intelligence</li>
+                  <li>Product Strategy</li>
+                  <li>UI/UX</li>
+                </ul>
+              </div>
+              <div class="quest-actions">
+                <button class="quest-toggle" type="button" aria-expanded="true" aria-controls="q-checkmate">
+                  <svg class="prompt prompt-tri" aria-hidden="true"><use href="#g-triangle"/></svg><span class="quest-toggle-label">Details</span>
+                </button>
+                <a href="https://checkmatee.streamlit.app/" target="_blank" rel="noopener" class="quest-link" aria-label="Open Check Mate live app">Live app<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+              </div>
             </div>
-            <p class="project-summary">AI market-intelligence platform tracking 8 industries — fully automated and always up to date.</p>
-            <div class="project-description">
-              <p>Evolved a single-domain BESS tracker into an <strong>AI-powered</strong> market intelligence platform spanning <strong>8 industries</strong>, auto-categorizing articles into competitor, innovation, and policy buckets — each tagged with an impact rating to surface what actually matters.</p>
-              <p>Runs <strong>fully automatically</strong>, continuously scanning sources so every industry digest stays <strong>up to date</strong> without manual intervention.</p>
-              <p>Engineered a <strong>multi-provider LLM pipeline</strong> (Groq, OpenRouter, Cerebras) with fallback handling for rate limits and API errors, keeping the digest running reliably on free-tier infrastructure.</p>
-              <p>Added an <strong>"Ask AI"</strong> feature letting users query the corpus conversationally instead of manually combing through sources.</p>
+            <div class="quest-details" id="q-checkmate">
+              <div class="quest-details-inner">
+                <p>Evolved a single-domain BESS tracker into an <strong>AI-powered</strong> market intelligence platform spanning <strong>8 industries</strong>, auto-categorizing articles into competitor, innovation, and policy buckets — each tagged with an impact rating to surface what actually matters.</p>
+                <p>Runs <strong>fully automatically</strong>, continuously scanning sources so every industry digest stays <strong>up to date</strong> without manual intervention.</p>
+                <p>Engineered a <strong>multi-provider LLM pipeline</strong> (Groq, OpenRouter, Cerebras) with fallback handling for rate limits and API errors, keeping the digest running reliably on free-tier infrastructure.</p>
+                <p>Added an <strong>"Ask AI"</strong> feature letting users query the corpus conversationally instead of manually combing through sources.</p>
+              </div>
             </div>
-            <div class="project-tags">
-              <span class="tag">AI / LLM Integration</span>
-              <span class="tag">Market Intelligence</span>
-              <span class="tag">Product Strategy</span>
-              <span class="tag">UI/UX</span>
-            </div>
-          </div>
+          </li>
 
-          <div class="project-card scroll-reveal">
-            <div class="project-header">
-              <h3 class="project-title">SmartReview-AI</h3>
-              <div class="project-date">July 2026</div>
-              <a href="https://smartreview-ai.streamlit.app/" target="_blank" class="project-link" aria-label="Live App">
-                <i class="fas fa-arrow-up-right-from-square"></i>
-              </a>
+          <li class="quest">
+            <div class="quest-row">
+              <div class="quest-id">
+                <h3 class="quest-title">SmartReview-AI</h3>
+                <p class="quest-date">July 2026</p>
+              </div>
+              <div class="quest-brief">
+                <p class="quest-summary">Turns customer reviews into ranked actions — sentiment, recurring issues, and a suggested reply for each.</p>
+                <ul class="chips">
+                  <li>AI / LLM Integration</li>
+                  <li>Business Intelligence</li>
+                  <li>Sentiment Analysis</li>
+                  <li>Data Visualization</li>
+                </ul>
+              </div>
+              <div class="quest-actions">
+                <button class="quest-toggle" type="button" aria-expanded="true" aria-controls="q-smartreview">
+                  <svg class="prompt prompt-tri" aria-hidden="true"><use href="#g-triangle"/></svg><span class="quest-toggle-label">Details</span>
+                </button>
+                <a href="https://smartreview-ai.streamlit.app/" target="_blank" rel="noopener" class="quest-link" aria-label="Open SmartReview-AI live app">Live app<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+              </div>
             </div>
-            <p class="project-summary">Turns customer reviews into ranked actions — sentiment, recurring issues, and a suggested reply for each.</p>
-            <div class="project-description">
-              <p>Built an <strong>AI-powered</strong> tool that turns a pile of customer reviews into decisions — scoring <strong>sentiment</strong>, surfacing recurring issues, and producing a ranked action queue with a <strong>suggested reply</strong> for every review.</p>
-              <p>Auto-tags recurring problems across <strong>quality, shipping, sizing, safety, pricing, and service</strong>, then ranks the reviews that need a response first so teams tackle what matters most.</p>
-              <p>Added <strong>drill-down analytics</strong> — click any KPI to see the reviews behind it, plus word clouds and sentiment trends.</p>
-              <p>Ships with a realistic <strong>180-review</strong> sample and supports <strong>CSV upload</strong>, replacing manual spreadsheet triage and hours of reading reviews by hand.</p>
+            <div class="quest-details" id="q-smartreview">
+              <div class="quest-details-inner">
+                <p>Built an <strong>AI-powered</strong> tool that turns a pile of customer reviews into decisions — scoring <strong>sentiment</strong>, surfacing recurring issues, and producing a ranked action queue with a <strong>suggested reply</strong> for every review.</p>
+                <p>Auto-tags recurring problems across <strong>quality, shipping, sizing, safety, pricing, and service</strong>, then ranks the reviews that need a response first so teams tackle what matters most.</p>
+                <p>Added <strong>drill-down analytics</strong> — click any KPI to see the reviews behind it, plus word clouds and sentiment trends.</p>
+                <p>Ships with a realistic <strong>180-review</strong> sample and supports <strong>CSV upload</strong>, replacing manual spreadsheet triage and hours of reading reviews by hand.</p>
+              </div>
             </div>
-            <div class="project-tags">
-              <span class="tag">AI / LLM Integration</span>
-              <span class="tag">Business Intelligence</span>
-              <span class="tag">Sentiment Analysis</span>
-              <span class="tag">Data Visualization</span>
-            </div>
-          </div>
+          </li>
 
-          <div class="project-card scroll-reveal">
-            <div class="project-header">
-              <h3 class="project-title">ArchLab</h3>
-              <div class="project-date">July 2026</div>
-              <a href="https://aarchlab.netlify.app/" target="_blank" class="project-link" aria-label="Live App">
-                <i class="fas fa-arrow-up-right-from-square"></i>
-              </a>
+          <li class="quest">
+            <div class="quest-row">
+              <div class="quest-id">
+                <h3 class="quest-title">ArchLab</h3>
+                <p class="quest-date">July 2026</p>
+              </div>
+              <div class="quest-brief">
+                <p class="quest-summary">Interactive way to learn system design by taking real architectures apart and seeing what breaks.</p>
+                <ul class="chips">
+                  <li>System Design</li>
+                  <li>Interactive Learning</li>
+                  <li>EdTech</li>
+                  <li>UI/UX</li>
+                </ul>
+              </div>
+              <div class="quest-actions">
+                <button class="quest-toggle" type="button" aria-expanded="true" aria-controls="q-archlab">
+                  <svg class="prompt prompt-tri" aria-hidden="true"><use href="#g-triangle"/></svg><span class="quest-toggle-label">Details</span>
+                </button>
+                <a href="https://aarchlab.netlify.app/" target="_blank" rel="noopener" class="quest-link" aria-label="Open ArchLab live app">Live app<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+              </div>
             </div>
-            <p class="project-summary">Interactive way to learn system design by taking real architectures apart and seeing what breaks.</p>
-            <div class="project-description">
-              <p>Built an <strong>interactive</strong> way to learn system design by taking real architectures apart — open a proven design, click any component to see why it was built that way, then <strong>swap a piece and watch what breaks</strong>.</p>
-              <p>Explains trade-offs in <strong>plain language</strong> — the same ones an interviewer actually asks about — with every explanation <strong>hand-written and fact-checked</strong>, not guessed by an AI.</p>
-              <p>Ships opinionated reference designs across domains — <strong>ticket & slot booking, social media feeds, e-commerce checkout, and live betting exchanges</strong> — each showing the downstream cascade of a single decision.</p>
-              <p>Includes a <strong>quiz mode</strong> (predict before you reveal), back-of-envelope estimation, and cross-domain patterns that transfer between problems.</p>
+            <div class="quest-details" id="q-archlab">
+              <div class="quest-details-inner">
+                <p>Built an <strong>interactive</strong> way to learn system design by taking real architectures apart — open a proven design, click any component to see why it was built that way, then <strong>swap a piece and watch what breaks</strong>.</p>
+                <p>Explains trade-offs in <strong>plain language</strong> — the same ones an interviewer actually asks about — with every explanation <strong>hand-written and fact-checked</strong>, not guessed by an AI.</p>
+                <p>Ships opinionated reference designs across domains — <strong>ticket &amp; slot booking, social media feeds, e-commerce checkout, and live betting exchanges</strong> — each showing the downstream cascade of a single decision.</p>
+                <p>Includes a <strong>quiz mode</strong> (predict before you reveal), back-of-envelope estimation, and cross-domain patterns that transfer between problems.</p>
+              </div>
             </div>
-            <div class="project-tags">
-              <span class="tag">System Design</span>
-              <span class="tag">Interactive Learning</span>
-              <span class="tag">EdTech</span>
-              <span class="tag">UI/UX</span>
-            </div>
-          </div>
+          </li>
 
-          <div class="project-card scroll-reveal">
-            <div class="project-header">
-              <h3 class="project-title">Fast Ticket</h3>
-              <div class="project-date">December 2025</div>
-              <a href="https://www.figma.com/proto/ytkc3Xuf3ZOqjvTYwIIjpj/Fast-Ticket?page-id=0%3A1&node-id=22-228&starting-point-node-id=22%3A224&t=HFppEwgpe52aBUeu-1" target="_blank" class="project-link" aria-label="View Figma Prototype">
-                <i class="fas fa-arrow-up-right-from-square"></i>
-              </a>
+          <li class="quest">
+            <div class="quest-row">
+              <div class="quest-id">
+                <h3 class="quest-title">Fast Ticket</h3>
+                <p class="quest-date">December 2025</p>
+              </div>
+              <div class="quest-brief">
+                <p class="quest-summary">High-fidelity Figma prototype for a multi-event ticket-booking app, from discovery through checkout.</p>
+                <ul class="chips">
+                  <li>UI/UX Design</li>
+                  <li>Prototyping</li>
+                  <li>Figma</li>
+                  <li>Interaction Design</li>
+                  <li>Mobile App</li>
+                </ul>
+              </div>
+              <div class="quest-actions">
+                <button class="quest-toggle" type="button" aria-expanded="true" aria-controls="q-fastticket">
+                  <svg class="prompt prompt-tri" aria-hidden="true"><use href="#g-triangle"/></svg><span class="quest-toggle-label">Details</span>
+                </button>
+                <a href="https://www.figma.com/proto/ytkc3Xuf3ZOqjvTYwIIjpj/Fast-Ticket?page-id=0%3A1&amp;node-id=22-228&amp;starting-point-node-id=22%3A224&amp;t=HFppEwgpe52aBUeu-1" target="_blank" rel="noopener" class="quest-link" aria-label="Open Fast Ticket Figma prototype">Prototype<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+              </div>
             </div>
-            <p class="project-summary">High-fidelity Figma prototype for a multi-event ticket-booking app, from discovery through checkout.</p>
-            <div class="project-description">
-              <p>Designed a high-fidelity <strong>Figma prototype</strong> for a <strong>ticket-booking app</strong> spanning <strong>multiple event types</strong>, taking users from discovery all the way through checkout.</p>
-              <p>Built <strong>4 complete end-to-end workflows</strong> — browsing, event details, ticket selection, and payment — fully clickable and interactive.</p>
-              <p>Used <strong>carousels</strong>, micro-interactions, and varied <strong>animations</strong> to create a fluid, engaging booking experience.</p>
-              <p>Crafted a polished <strong>UI/UX</strong> with a cohesive color system and clear visual hierarchy that keeps every flow intuitive.</p>
+            <div class="quest-details" id="q-fastticket">
+              <div class="quest-details-inner">
+                <p>Designed a high-fidelity <strong>Figma prototype</strong> for a <strong>ticket-booking app</strong> spanning <strong>multiple event types</strong>, taking users from discovery all the way through checkout.</p>
+                <p>Built <strong>4 complete end-to-end workflows</strong> — browsing, event details, ticket selection, and payment — fully clickable and interactive.</p>
+                <p>Used <strong>carousels</strong>, micro-interactions, and varied <strong>animations</strong> to create a fluid, engaging booking experience.</p>
+                <p>Crafted a polished <strong>UI/UX</strong> with a cohesive color system and clear visual hierarchy that keeps every flow intuitive.</p>
+              </div>
             </div>
-            <div class="project-tags">
-              <span class="tag">UI/UX Design</span>
-              <span class="tag">Prototyping</span>
-              <span class="tag">Figma</span>
-              <span class="tag">Interaction Design</span>
-              <span class="tag">Mobile App</span>
-            </div>
-          </div>
+          </li>
 
-          <div class="project-card scroll-reveal">
-            <div class="project-header">
-              <h3 class="project-title">EV Analytics Dashboard</h3>
-              <div class="project-date">August 2025</div>
-              <a href="https://venkateshtejas.github.io/ev-dashboard/" target="_blank" class="project-link" aria-label="Live Dashboard">
-                <i class="fas fa-arrow-up-right-from-square"></i>
-              </a>
+          <li class="quest">
+            <div class="quest-row">
+              <div class="quest-id">
+                <h3 class="quest-title">EV Analytics Dashboard</h3>
+                <p class="quest-date">August 2025</p>
+              </div>
+              <div class="quest-brief">
+                <p class="quest-summary">Interactive Tableau dashboard unifying EV datasets for consumers, policymakers, and manufacturers.</p>
+                <ul class="chips">
+                  <li>Data Visualization</li>
+                  <li>Tableau</li>
+                  <li>Sustainability / Clean Energy</li>
+                  <li>Market Intelligence</li>
+                </ul>
+              </div>
+              <div class="quest-actions">
+                <button class="quest-toggle" type="button" aria-expanded="true" aria-controls="q-ev">
+                  <svg class="prompt prompt-tri" aria-hidden="true"><use href="#g-triangle"/></svg><span class="quest-toggle-label">Details</span>
+                </button>
+                <a href="https://venkateshtejas.github.io/ev-dashboard/" target="_blank" rel="noopener" class="quest-link" aria-label="Open EV Analytics live dashboard">Dashboard<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+              </div>
             </div>
-            <p class="project-summary">Interactive Tableau dashboard unifying EV datasets for consumers, policymakers, and manufacturers.</p>
-            <div class="project-description">
-              <p>Built an interactive <strong>Tableau</strong> dashboard consolidating siloed EV datasets (EPA fuel economy, state incentives, charging infrastructure) into a single visualization platform for consumers, policymakers, and manufacturers.</p>
-              <p>Surfaced CAFV eligibility insights showing <strong>68%</strong> of analyzed EVs qualified for clean-fuel incentive status, alongside an average emissions reduction of <strong>4.6 metric tons CO₂</strong> per vehicle annually.</p>
-              <p>Designed geographic heat maps, time-series adoption trends, and interactive filters that cut EV buyer research time from hours to minutes.</p>
+            <div class="quest-details" id="q-ev">
+              <div class="quest-details-inner">
+                <p>Built an interactive <strong>Tableau</strong> dashboard consolidating siloed EV datasets (EPA fuel economy, state incentives, charging infrastructure) into a single visualization platform for consumers, policymakers, and manufacturers.</p>
+                <p>Surfaced CAFV eligibility insights showing <strong>68%</strong> of analyzed EVs qualified for clean-fuel incentive status, alongside an average emissions reduction of <strong>4.6 metric tons CO₂</strong> per vehicle annually.</p>
+                <p>Designed geographic heat maps, time-series adoption trends, and interactive filters that cut EV buyer research time from hours to minutes.</p>
+              </div>
             </div>
-            <div class="project-tags">
-              <span class="tag">Data Visualization</span>
-              <span class="tag">Tableau</span>
-              <span class="tag">Sustainability / Clean Energy</span>
-              <span class="tag">Market Intelligence</span>
-            </div>
-          </div>
+          </li>
 
-          <div class="project-card scroll-reveal">
-            <div class="project-header">
-              <h3 class="project-title">ParkEazy</h3>
-              <div class="project-date">June 2025 – July 2025</div>
-              <a href="https://docs.google.com/presentation/d/1OeZFgZbq5A3MPQzjdk5MAh64s9DxRK3myJj7BeILdz0/edit?usp=sharing" target="_blank" class="project-link" aria-label="View Presentation">
-                <i class="fas fa-arrow-up-right-from-square"></i>
-              </a>
+          <li class="quest">
+            <div class="quest-row">
+              <div class="quest-id">
+                <h3 class="quest-title">ParkEazy</h3>
+                <p class="quest-date">June 2025 – July 2025</p>
+              </div>
+              <div class="quest-brief">
+                <p class="quest-summary">Scalable IoT parking platform with real-time spot detection and AI routing for 2- and 4-wheelers.</p>
+                <ul class="chips">
+                  <li>UI/UX Design</li>
+                  <li>User Research</li>
+                  <li>Product Strategy</li>
+                  <li>Accessibility</li>
+                  <li>Market Analysis</li>
+                </ul>
+              </div>
+              <div class="quest-actions">
+                <button class="quest-toggle" type="button" aria-expanded="true" aria-controls="q-parkeazy">
+                  <svg class="prompt prompt-tri" aria-hidden="true"><use href="#g-triangle"/></svg><span class="quest-toggle-label">Details</span>
+                </button>
+                <a href="https://docs.google.com/presentation/d/1OeZFgZbq5A3MPQzjdk5MAh64s9DxRK3myJj7BeILdz0/edit?usp=sharing" target="_blank" rel="noopener" class="quest-link" aria-label="Open ParkEazy presentation">Deck<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+              </div>
             </div>
-            <p class="project-summary">Scalable IoT parking platform with real-time spot detection and AI routing for 2- and 4-wheelers.</p>
-            <div class="project-description">
-              <p>Identified a citywide parking pain point: drivers spend <strong>30+</strong> minutes daily searching, fueling congestion and productivity loss.</p>
-              <p>Designed a <strong>scalable IoT parking platform </strong> with sensors, gateways, and cloud for real-time spot detection and <strong> AI </strong> routing for 2- and 4-wheelers.</p>
-              <p>Produced detailed product specs and a full <strong> Figma </strong> prototype covering reservation, payment, and navigation flows.</p>
-              <p>Established a <strong>transaction-led </strong>  business model targeting a <strong> 2%</strong>  take rate.</p>
+            <div class="quest-details" id="q-parkeazy">
+              <div class="quest-details-inner">
+                <p>Identified a citywide parking pain point: drivers spend <strong>30+</strong> minutes daily searching, fueling congestion and productivity loss.</p>
+                <p>Designed a <strong>scalable IoT parking platform</strong> with sensors, gateways, and cloud for real-time spot detection and <strong>AI</strong> routing for 2- and 4-wheelers.</p>
+                <p>Produced detailed product specs and a full <strong>Figma</strong> prototype covering reservation, payment, and navigation flows.</p>
+                <p>Established a <strong>transaction-led</strong> business model targeting a <strong>2%</strong> take rate.</p>
+              </div>
             </div>
-            <div class="project-tags">
-              <span class="tag">UI/UX Design</span>
-              <span class="tag">User Research</span>
-              <span class="tag">Product Strategy</span>
-              <span class="tag">Accessibility</span>
-              <span class="tag">Market Analysis</span>
-            </div>
-          </div>
+          </li>
 
-
-          <div class="project-card scroll-reveal">
-            <div class="project-header">
-              <h3 class="project-title">Bumble for Blind</h3>
-              <div class="project-date">March 2025</div>
-              <a href="https://drive.google.com/file/d/1ujhmWA3Ql8qzqOdEkT43SnBfZkZ5fVYl/view" target="_blank" class="project-link" aria-label="View Document">
-                <i class="fas fa-arrow-up-right-from-square"></i>
-              </a>
+          <li class="quest">
+            <div class="quest-row">
+              <div class="quest-id">
+                <h3 class="quest-title">Bumble for Blind</h3>
+                <p class="quest-date">March 2025</p>
+              </div>
+              <div class="quest-brief">
+                <p class="quest-summary">Product strategy addressing accessibility gaps in social connection for visually impaired users.</p>
+                <ul class="chips">
+                  <li>Product Research &amp; Strategy</li>
+                  <li>User Research</li>
+                  <li>Product Strategy</li>
+                  <li>Accessibility</li>
+                  <li>Market Analysis</li>
+                </ul>
+              </div>
+              <div class="quest-actions">
+                <button class="quest-toggle" type="button" aria-expanded="true" aria-controls="q-bumble">
+                  <svg class="prompt prompt-tri" aria-hidden="true"><use href="#g-triangle"/></svg><span class="quest-toggle-label">Details</span>
+                </button>
+                <a href="https://drive.google.com/file/d/1ujhmWA3Ql8qzqOdEkT43SnBfZkZ5fVYl/view" target="_blank" rel="noopener" class="quest-link" aria-label="Open Bumble for Blind document">Doc<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+              </div>
             </div>
-            <p class="project-summary">Product strategy addressing accessibility gaps in social connection for visually impaired users.</p>
-            <div class="project-description">
-              <p>Conducted comprehensive user research on visually impaired market, identifying <strong>76%</strong> loneliness rate in visually impaired individuals vs <strong>25%</strong> in general population, representing 2.2 billion potential users</p>
-              <p>Developed innovative product strategy addressing critical <strong>accessibility</strong> gaps in social connection platforms, defining <strong>5+</strong> key <strong>features</strong> and requirements for this underserved user segment</p>
+            <div class="quest-details" id="q-bumble">
+              <div class="quest-details-inner">
+                <p>Conducted comprehensive user research on visually impaired market, identifying <strong>76%</strong> loneliness rate in visually impaired individuals vs <strong>25%</strong> in general population, representing 2.2 billion potential users</p>
+                <p>Developed innovative product strategy addressing critical <strong>accessibility</strong> gaps in social connection platforms, defining <strong>5+</strong> key <strong>features</strong> and requirements for this underserved user segment</p>
+              </div>
             </div>
-            <div class="project-tags">
-              <span class="tag">Product Research & Strategy</span>
-              <span class="tag">User Research</span>
-              <span class="tag">Product Strategy</span>
-              <span class="tag">Accessibility</span>
-              <span class="tag">Market Analysis</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- Leadership Section (Pickleball court theme) -->
-    <section id="leadership" class="themed pickleball-theme">
-      <div class="theme-deco" aria-hidden="true">
-        <!-- Court box scales with the section's actual content height -->
-        <div class="court-bg">
-          <!-- Service areas (blue) at top and bottom; vertical center service line in each -->
-          <div class="court-svc svc-top"></div>
-          <div class="court-svc svc-bottom"></div>
-          <!-- Non-Volley Zone (kitchen) - green horizontal strips hugging the net -->
-          <div class="court-kitchen kitchen-top"></div>
-          <div class="court-kitchen kitchen-bottom"></div>
-          <!-- The net (horizontal) -->
-          <div class="court-net"></div>
-        </div>
-        <svg class="deco-paddle paddle-1" viewBox="0 0 100 160">
-          <rect x="42" y="116" width="16" height="42" rx="4" fill="#1a1a1a" stroke="#000" stroke-width="1.5"/>
-          <rect x="38" y="108" width="24" height="10" rx="3" fill="#2d2d2d"/>
-          <ellipse cx="50" cy="58" rx="42" ry="56" fill="#1976c8" stroke="#0a3f70" stroke-width="3.5"/>
-          <ellipse cx="50" cy="58" rx="42" ry="56" fill="url(#paddleHoles)" opacity="0.4"/>
-          <ellipse cx="50" cy="58" rx="42" ry="56" fill="url(#paddleShine)"/>
-          <text x="50" y="64" text-anchor="middle" fill="#fff" font-family="Impact, sans-serif" font-size="20" font-weight="900" opacity="0.5">TV</text>
-          <defs>
-            <pattern id="paddleHoles" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
-              <circle cx="5" cy="5" r="1.5" fill="#0a3f70"/>
-            </pattern>
-            <radialGradient id="paddleShine" cx="30%" cy="25%">
-              <stop offset="0%" stop-color="rgba(255,255,255,0.5)"/>
-              <stop offset="45%" stop-color="rgba(255,255,255,0)"/>
-            </radialGradient>
-          </defs>
-        </svg>
-        <svg class="deco-paddle paddle-2" viewBox="0 0 100 160">
-          <rect x="42" y="116" width="16" height="42" rx="4" fill="#1a1a1a" stroke="#000" stroke-width="1.5"/>
-          <rect x="38" y="108" width="24" height="10" rx="3" fill="#2d2d2d"/>
-          <ellipse cx="50" cy="58" rx="42" ry="56" fill="#d63b3b" stroke="#7a1818" stroke-width="3.5"/>
-          <ellipse cx="50" cy="58" rx="42" ry="56" fill="url(#paddleHoles2)" opacity="0.4"/>
-          <defs>
-            <pattern id="paddleHoles2" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
-              <circle cx="5" cy="5" r="1.5" fill="#7a1818"/>
-            </pattern>
-          </defs>
-        </svg>
-        <svg class="deco-pball pball-1" viewBox="0 0 80 80">
-          <circle cx="40" cy="40" r="36" fill="#ffe33d" stroke="#caa400" stroke-width="2.5"/>
-          <circle cx="28" cy="28" r="4" fill="#a07a00"/>
-          <circle cx="48" cy="24" r="4" fill="#a07a00"/>
-          <circle cx="56" cy="40" r="4" fill="#a07a00"/>
-          <circle cx="50" cy="56" r="4" fill="#a07a00"/>
-          <circle cx="28" cy="54" r="4" fill="#a07a00"/>
-          <circle cx="22" cy="40" r="4" fill="#a07a00"/>
-          <circle cx="40" cy="14" r="4" fill="#a07a00"/>
-          <circle cx="40" cy="40" r="36" fill="url(#pballShine)"/>
-          <defs>
-            <radialGradient id="pballShine" cx="30%" cy="25%">
-              <stop offset="0%" stop-color="rgba(255,255,255,0.55)"/>
-              <stop offset="45%" stop-color="rgba(255,255,255,0)"/>
-            </radialGradient>
-          </defs>
-        </svg>
-        <svg class="deco-pball pball-2" viewBox="0 0 80 80">
-          <circle cx="40" cy="40" r="36" fill="#ffe33d" stroke="#caa400" stroke-width="2.5"/>
-          <circle cx="28" cy="28" r="4" fill="#a07a00"/>
-          <circle cx="48" cy="24" r="4" fill="#a07a00"/>
-          <circle cx="56" cy="40" r="4" fill="#a07a00"/>
-          <circle cx="50" cy="56" r="4" fill="#a07a00"/>
-          <circle cx="28" cy="54" r="4" fill="#a07a00"/>
-        </svg>
-      </div>
-      <svg class="section-drop drop-pickleball" viewBox="0 0 80 80" aria-hidden="true">
-        <circle cx="40" cy="40" r="36" fill="#ffe33d" stroke="#caa400" stroke-width="2.5"/>
-        <circle cx="26" cy="26" r="3.5" fill="#a07a00"/>
-        <circle cx="48" cy="22" r="3.5" fill="#a07a00"/>
-        <circle cx="56" cy="38" r="3.5" fill="#a07a00"/>
-        <circle cx="52" cy="56" r="3.5" fill="#a07a00"/>
-        <circle cx="28" cy="56" r="3.5" fill="#a07a00"/>
-        <circle cx="20" cy="40" r="3.5" fill="#a07a00"/>
-        <circle cx="40" cy="14" r="3.5" fill="#a07a00"/>
-        <circle cx="40" cy="40" r="36" fill="url(#dropPBShine)"/>
-        <defs>
-          <radialGradient id="dropPBShine" cx="30%" cy="25%">
-            <stop offset="0%" stop-color="rgba(255,255,255,0.7)"/>
-            <stop offset="50%" stop-color="rgba(255,255,255,0)"/>
-          </radialGradient>
-        </defs>
-      </svg>
-      <h2 class="section-title">Leadership Achievements</h2>
-      <div class="section-content">
-        <div class="leadership-grid">
-          <div class="leadership-card scroll-reveal">
-            <div class="leadership-logo">
-              <img src="data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='38' fill='%23B8860B' stroke='%23B8860B' stroke-width='2'/%3E%3Ccircle cx='40' cy='40' r='28' fill='%23DC143C'/%3E%3Ccircle cx='40' cy='40' r='18' fill='white' stroke='%23B8860B' stroke-width='1'/%3E%3Ctext x='40' y='45' text-anchor='middle' fill='%23B8860B' font-family='Arial' font-weight='bold' font-size='14'%3ER%3C/text%3E%3Cpath d='M 15 15 Q 40 5 65 15' stroke='%23B8860B' stroke-width='1' fill='none'/%3E%3Cpath d='M 15 65 Q 40 75 65 65' stroke='%23B8860B' stroke-width='1' fill='none'/%3E%3Ctext x='40' y='12' text-anchor='middle' fill='%23B8860B' font-family='Arial' font-weight='bold' font-size='8'%3EROTARACT%3C/text%3E%3Ctext x='40' y='72' text-anchor='middle' fill='%23B8860B' font-family='Arial' font-weight='bold' font-size='8'%3ECLUB%3C/text%3E%3C/svg%3E" alt="Rotaract Club" />
-            </div>
-            <div class="leadership-content">
-              <h3 class="leadership-title">President - Rotaract Club</h3>
-              <p class="leadership-period"><span class="lead-duration">Jan 2018 - Jan 2019 · 1 yr</span><span class="lead-sep"> | </span><span class="lead-category">Social Services</span></p>
-              <p class="leadership-description">Led Rotaract Club of KSSEM organizing multiple community service events including city cleaning initiatives, providing learning essentials to school children in need, blood donation camps, and city wall painting projects.</p>
-            </div>
-          </div>
-          
-          <div class="leadership-card scroll-reveal">
-            <div class="leadership-logo">
-              <img src="data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='38' fill='%23B8860B' stroke='%23B8860B' stroke-width='2'/%3E%3Ccircle cx='40' cy='40' r='28' fill='%23DC143C'/%3E%3Ccircle cx='40' cy='40' r='18' fill='white' stroke='%23B8860B' stroke-width='1'/%3E%3Ctext x='40' y='45' text-anchor='middle' fill='%23B8860B' font-family='Arial' font-weight='bold' font-size='14'%3ER%3C/text%3E%3Cpath d='M 15 15 Q 40 5 65 15' stroke='%23B8860B' stroke-width='1' fill='none'/%3E%3Cpath d='M 15 65 Q 40 75 65 65' stroke='%23B8860B' stroke-width='1' fill='none'/%3E%3Ctext x='40' y='12' text-anchor='middle' fill='%23B8860B' font-family='Arial' font-weight='bold' font-size='8'%3EROTARACT%3C/text%3E%3Ctext x='40' y='72' text-anchor='middle' fill='%23B8860B' font-family='Arial' font-weight='bold' font-size='8'%3ECLUB%3C/text%3E%3C/svg%3E" alt="Rotaract Club" />
-            </div>
-            <div class="leadership-content">
-              <h3 class="leadership-title">Treasurer - Rotaract Club</h3>
-              <p class="leadership-period"><span class="lead-duration">Jan 2017 - Jan 2018 · 1 yr</span><span class="lead-sep"> | </span><span class="lead-category">Social Services</span></p>
-              <p class="leadership-description">Helped organize 2 Guinness World Record events: maximum blood units collected across multiple venues (2017) and maximum blood samples collected for Diabetes check across multiple venues (2017). Was unanimously elected as President for the following year.</p>
-            </div>
-          </div>
-          
-          <div class="leadership-card scroll-reveal">
-            <div class="leadership-logo">
-              <img src="data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='38' fill='%23B8860B' stroke='%23B8860B' stroke-width='2'/%3E%3Ccircle cx='40' cy='40' r='28' fill='%23DC143C'/%3E%3Ccircle cx='40' cy='40' r='18' fill='white' stroke='%23B8860B' stroke-width='1'/%3E%3Ctext x='40' y='45' text-anchor='middle' fill='%23B8860B' font-family='Arial' font-weight='bold' font-size='14'%3ER%3C/text%3E%3Cpath d='M 15 15 Q 40 5 65 15' stroke='%23B8860B' stroke-width='1' fill='none'/%3E%3Cpath d='M 15 65 Q 40 75 65 65' stroke='%23B8860B' stroke-width='1' fill='none'/%3E%3Ctext x='40' y='12' text-anchor='middle' fill='%23B8860B' font-family='Arial' font-weight='bold' font-size='8'%3EROTARACT%3C/text%3E%3Ctext x='40' y='72' text-anchor='middle' fill='%23B8860B' font-family='Arial' font-weight='bold' font-size='8'%3ECLUB%3C/text%3E%3C/svg%3E" alt="Rotaract Club" />
-            </div>
-            <div class="leadership-content">
-              <h3 class="leadership-title">Board Member - Rotaract Club</h3>
-              <p class="leadership-period"><span class="lead-duration">Jan 2016 - Jan 2017 · 1 yr</span><span class="lead-sep"> | </span><span class="lead-category">Social Services</span></p>
-              <p class="leadership-description">Served as a Board Member of Rotaract Club of KSSEM, contributing to strategic decision-making and planning of community service initiatives and organizational development activities.</p>
-            </div>
-          </div>
-          
-          <div class="leadership-card scroll-reveal">
-            <div class="leadership-logo">
-              <img src="data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='38' fill='%23B8860B' stroke='%23B8860B' stroke-width='2'/%3E%3Ccircle cx='40' cy='40' r='28' fill='%23DC143C'/%3E%3Ccircle cx='40' cy='40' r='18' fill='white' stroke='%23B8860B' stroke-width='1'/%3E%3Ctext x='40' y='45' text-anchor='middle' fill='%23B8860B' font-family='Arial' font-weight='bold' font-size='14'%3ER%3C/text%3E%3Cpath d='M 15 15 Q 40 5 65 15' stroke='%23B8860B' stroke-width='1' fill='none'/%3E%3Cpath d='M 15 65 Q 40 75 65 65' stroke='%23B8860B' stroke-width='1' fill='none'/%3E%3Ctext x='40' y='12' text-anchor='middle' fill='%23B8860B' font-family='Arial' font-weight='bold' font-size='8'%3EROTARACT%3C/text%3E%3Ctext x='40' y='72' text-anchor='middle' fill='%23B8860B' font-family='Arial' font-weight='bold' font-size='8'%3ECLUB%3C/text%3E%3C/svg%3E" alt="Rotaract Club" />
-            </div>
-            <div class="leadership-content">
-              <h3 class="leadership-title">Member - Rotaract Club</h3>
-              <p class="leadership-period"><span class="lead-duration">Dec 2015 - Aug 2016 · 9 mos</span><span class="lead-sep"> | </span><span class="lead-category">Social Services</span></p>
-              <p class="leadership-description">Active member of Rotaract Club of KSSEM, participating in various community service projects and social initiatives, contributing to the club's mission of service above self.</p>
-            </div>
-          </div>
-        </div>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <!-- Tic-Tac-Toe Section -->
-    <section id="hobbies" class="themed ttt-theme">
-      <div class="theme-deco" aria-hidden="true">
-        <div class="ttt-bg-grid"></div>
+    <!-- ───────────── Leadership · Ranked / Pickleball ───────────── -->
+    <section id="leadership" class="mode" data-mode="pickleball" aria-labelledby="leadership-title" tabindex="-1">
+      <div class="wrap">
+        <header class="mode-head">
+          <div class="mode-stage" aria-hidden="true"></div>
+          <div class="mode-head-text">
+            <p class="mode-label"><span>Ranked</span><span class="mode-sport">Pickleball</span></p>
+            <h2 class="mode-title" id="leadership-title">Leadership</h2>
+          </div>
+          <div class="mode-item" data-gl-item="pickleball" role="img" aria-label="3D pickleball, drag to spin">
+            <span class="mode-item-hint" aria-hidden="true">Drag to spin · Tap to replay</span>
+          </div>
+        </header>
+
+        <p class="ranks-intro"><strong>Rotaract Club of KSSEM</strong> · Social Services · 2015 – 2019</p>
+
+        <ol class="ranks">
+          <li class="rank" style="--step: 0">
+            <div class="rank-head">
+              <span class="rank-tier" aria-hidden="true">I</span>
+              <div>
+                <h3 class="rank-title">Member</h3>
+                <p class="rank-dates">Dec 2015 – Aug 2016<span class="rank-len">9 mos</span></p>
+              </div>
+            </div>
+            <p class="rank-desc">Active member of Rotaract Club of KSSEM, participating in various community service projects and social initiatives, contributing to the club's mission of service above self.</p>
+          </li>
+
+          <li class="rank" style="--step: 1">
+            <div class="rank-head">
+              <span class="rank-tier" aria-hidden="true">II</span>
+              <div>
+                <h3 class="rank-title">Board Member</h3>
+                <p class="rank-dates">Jan 2016 – Jan 2017<span class="rank-len">1 yr</span></p>
+              </div>
+            </div>
+            <p class="rank-desc">Served as a Board Member of Rotaract Club of KSSEM, contributing to strategic decision-making and planning of community service initiatives and organizational development activities.</p>
+          </li>
+
+          <li class="rank" style="--step: 2">
+            <div class="rank-head">
+              <span class="rank-tier" aria-hidden="true">III</span>
+              <div>
+                <h3 class="rank-title">Treasurer</h3>
+                <p class="rank-dates">Jan 2017 – Jan 2018<span class="rank-len">1 yr</span></p>
+              </div>
+            </div>
+            <p class="rank-desc">Helped organize 2 Guinness World Record events: maximum blood units collected across multiple venues (2017) and maximum blood samples collected for Diabetes check across multiple venues (2017). Was unanimously elected as President for the following year.</p>
+            <p class="achievement"><svg class="icon" aria-hidden="true"><use href="#i-trophy"/></svg><span><span class="achievement-k">Achievement</span> 2 Guinness World Record events</span></p>
+          </li>
+
+          <li class="rank is-top" style="--step: 3">
+            <div class="rank-head">
+              <span class="rank-tier" aria-hidden="true">IV</span>
+              <div>
+                <h3 class="rank-title">President</h3>
+                <p class="rank-dates">Jan 2018 – Jan 2019<span class="rank-len">1 yr</span></p>
+              </div>
+            </div>
+            <p class="rank-desc">Led Rotaract Club of KSSEM organizing multiple community service events including city cleaning initiatives, providing learning essentials to school children in need, blood donation camps, and city wall painting projects.</p>
+            <p class="rank-top-badge">Highest rank</p>
+          </li>
+        </ol>
       </div>
-      <h2 class="section-title">Let's Play</h2>
-      <div class="section-content">
-        <div class="ttt-wrapper">
-          <p class="ttt-intro">
-            Made it this far? Beat me at a quick game of<br>
-            <strong>Tic-Tac-Toe</strong>. You're <span class="ttt-x">X</span>, I'm <span class="ttt-o">O</span>.
-          </p>
+    </section>
 
-          <div class="ttt-difficulty" id="tttDifficulty">
-            <span class="ttt-diff-label">DIFFICULTY</span>
-            <div class="ttt-diff-buttons">
-              <button class="ttt-diff-btn active" data-diff="easy">Easy</button>
-              <button class="ttt-diff-btn" data-diff="medium">Medium</button>
-              <button class="ttt-diff-btn" data-diff="hard">Hard</button>
+    <!-- ───────────── Let's Play · Versus / Tic-Tac-Toe ───────────── -->
+    <section id="play" class="mode" data-mode="versus" aria-labelledby="play-title" tabindex="-1">
+      <div class="wrap">
+        <header class="mode-head">
+          <div class="mode-stage" aria-hidden="true"></div>
+          <div class="mode-head-text">
+            <p class="mode-label"><span>Versus</span><span class="mode-sport">Tic-Tac-Toe</span></p>
+            <h2 class="mode-title" id="play-title">Let's Play</h2>
+          </div>
+          <div class="mode-item" data-gl-item="xo" role="img" aria-label="3D X and O pieces, drag to spin">
+            <span class="mode-item-hint" aria-hidden="true">Drag to spin · Tap to replay</span>
+          </div>
+        </header>
+
+        <div class="arena">
+          <div class="arena-side">
+            <p class="arena-intro">Made it this far? Beat me at a quick game of <strong>Tic-Tac-Toe</strong>. You&rsquo;re <span class="mark-x">X</span>, I&rsquo;m <span class="mark-o">O</span>.</p>
+
+            <div class="difficulty">
+              <p class="micro-label" id="diffLabel">Difficulty</p>
+              <div class="segmented" role="group" aria-labelledby="diffLabel">
+                <button class="seg-btn" type="button" data-diff="easy" aria-pressed="true">Easy</button>
+                <button class="seg-btn" type="button" data-diff="medium" aria-pressed="false">Medium</button>
+                <button class="seg-btn" type="button" data-diff="hard" aria-pressed="false">Hard</button>
+              </div>
+            </div>
+
+            <div class="scorebug" aria-label="Scoreboard">
+              <div class="sb-team sb-x"><span class="sb-name">You</span><span class="sb-val" id="tttScoreX">0</span></div>
+              <div class="sb-mid"><span class="sb-name">Draw</span><span class="sb-val" id="tttScoreD">0</span></div>
+              <div class="sb-team sb-o"><span class="sb-val" id="tttScoreO">0</span><span class="sb-name">Me</span></div>
             </div>
           </div>
 
-          <div class="ttt-status-row" id="tttStatusRow">
-            <div class="ttt-status" id="tttStatus">Your move</div>
-            <button class="ttt-reset" id="tttReset">
-              <i class="fas fa-redo"></i> New Game
-            </button>
-          </div>
-
-          <div class="ttt-board" id="tttBoard">
-            <button class="ttt-cell" data-i="0" aria-label="Cell 1"></button>
-            <button class="ttt-cell" data-i="1" aria-label="Cell 2"></button>
-            <button class="ttt-cell" data-i="2" aria-label="Cell 3"></button>
-            <button class="ttt-cell" data-i="3" aria-label="Cell 4"></button>
-            <button class="ttt-cell" data-i="4" aria-label="Cell 5"></button>
-            <button class="ttt-cell" data-i="5" aria-label="Cell 6"></button>
-            <button class="ttt-cell" data-i="6" aria-label="Cell 7"></button>
-            <button class="ttt-cell" data-i="7" aria-label="Cell 8"></button>
-            <button class="ttt-cell" data-i="8" aria-label="Cell 9"></button>
-          </div>
-
-          <div class="ttt-scoreboard">
-            <div class="ttt-score">
-              <span class="ttt-score-label">YOU</span>
-              <span class="ttt-score-val" id="tttScoreX">0</span>
+          <div class="arena-board">
+            <div class="ttt-status-row" id="tttStatusRow">
+              <p class="ttt-status" id="tttStatus" aria-live="polite">Your move</p>
+              <button class="ttt-reset" id="tttReset" type="button">
+                <svg class="icon" aria-hidden="true"><use href="#i-restart"/></svg>
+                New game
+              </button>
             </div>
-            <div class="ttt-score">
-              <span class="ttt-score-label">DRAW</span>
-              <span class="ttt-score-val" id="tttScoreD">0</span>
-            </div>
-            <div class="ttt-score">
-              <span class="ttt-score-label">ME</span>
-              <span class="ttt-score-val" id="tttScoreO">0</span>
+            <div class="ttt-board" id="tttBoard">
+              <button class="ttt-cell" type="button" data-i="0" aria-label="Row 1, column 1, empty"></button>
+              <button class="ttt-cell" type="button" data-i="1" aria-label="Row 1, column 2, empty"></button>
+              <button class="ttt-cell" type="button" data-i="2" aria-label="Row 1, column 3, empty"></button>
+              <button class="ttt-cell" type="button" data-i="3" aria-label="Row 2, column 1, empty"></button>
+              <button class="ttt-cell" type="button" data-i="4" aria-label="Row 2, column 2, empty"></button>
+              <button class="ttt-cell" type="button" data-i="5" aria-label="Row 2, column 3, empty"></button>
+              <button class="ttt-cell" type="button" data-i="6" aria-label="Row 3, column 1, empty"></button>
+              <button class="ttt-cell" type="button" data-i="7" aria-label="Row 3, column 2, empty"></button>
+              <button class="ttt-cell" type="button" data-i="8" aria-label="Row 3, column 3, empty"></button>
             </div>
           </div>
-
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="footer-links">
-      <a href="mailto:venkatesh.te@northeastern.edu" class="footer-link" aria-label="Email">
-        <i class="fas fa-envelope"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/tejas-venkateshli/" target="_blank" class="footer-link" aria-label="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="tel:+16177925754" class="footer-link" aria-label="Phone">
-        <i class="fas fa-phone"></i>
-      </a>
-      <a href="https://github.com/VenkateshTejas" target="_blank" class="footer-link" aria-label="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
+  <footer class="continue">
+    <div class="wrap">
+      <p class="mode-label"><span>Continue?</span></p>
+      <h2 class="continue-title">Got a spot on the team?</h2>
+      <p class="continue-copy">I&rsquo;m open to <span class="cycler"><span class="cycler-word">product</span><span class="cycler-sep">/</span><span class="cycler-word">program</span><span class="cycler-sep">/</span><span class="cycler-word">project</span></span> management roles. Send a message and let&rsquo;s talk.</p>
+      <div class="continue-actions">
+        <a href="mailto:venkatesh.te@northeastern.edu" class="btn btn-primary">
+          <svg class="prompt prompt-crs" aria-hidden="true"><use href="#g-cross"/></svg>
+          Email me
+        </a>
+        <a href="https://www.linkedin.com/in/tejas-venkateshli/" target="_blank" rel="noopener" class="btn btn-ghost">
+          <svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>
+          Message on LinkedIn
+        </a>
+      </div>
+
+      <div class="footer-bar">
+        <p>&copy; 2026 Tejas Venkatesh. All Rights Reserved.</p>
+        <ul class="socials socials-sm" aria-label="Contact">
+          <li><a href="mailto:venkatesh.te@northeastern.edu" aria-label="Email"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/in/tejas-venkateshli/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+          <li><a href="tel:+16177925754" aria-label="Phone"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></a></li>
+          <li><a href="https://github.com/VenkateshTejas" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a></li>
+        </ul>
+        <a href="#about" class="to-top">Back to title screen</a>
+      </div>
     </div>
-    <p>&copy; 2026 Tejas Venkatesh. All Rights Reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Motion: GSAP + ScrollTrigger, Lenis as the only smooth-scroll engine -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="script.js" defer></script>
+  <script type="module" src="gl.js"></script>
 </body>
 </html>
