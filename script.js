@@ -376,7 +376,7 @@
         words[index].classList.add('is-active');
       });
       fit();
-    }, 2600);
+    }, 2000);
   })();
 
   /* ── Player card tilts toward the pointer (mouse only) ───────── */
