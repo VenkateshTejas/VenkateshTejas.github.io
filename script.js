@@ -462,11 +462,6 @@
       ScrollTrigger.refresh();
     });
 
-    // Title screen drifts apart as you leave it
-    const heroScrub = { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true };
-    gsap.to('.hero-copy', { yPercent: -12, ease: 'none', scrollTrigger: heroScrub });
-    gsap.to('.hero-card', { yPercent: 8, ease: 'none', scrollTrigger: { ...heroScrub } });
-
     // Mode banners: title words rise in, then label and inspect frame
     document.querySelectorAll('.mode').forEach((sec) => {
       const head = sec.querySelector('.mode-head');
