@@ -230,6 +230,22 @@
   })();
 
   /* ── Mission log: expandable project details ─────────────────── */
+  // While a panel above `el` collapses, scroll with it so `el` stays where the
+  // reader tapped instead of the page jumping ahead to the next section
+  function keepInPlace(el, duration = 560) {
+    const startTop = el.getBoundingClientRect().top;
+    const t0 = performance.now();
+    const step = () => {
+      const delta = el.getBoundingClientRect().top - startTop;
+      if (Math.abs(delta) > 0.5) {
+        if (lenis) lenis.scrollTo(lenis.scroll + delta, { immediate: true, force: true });
+        else window.scrollBy(0, delta);
+      }
+      if (performance.now() - t0 < duration) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
   let refreshTimer = 0;
   function refreshLater() {
     if (!hasST) return;
@@ -253,12 +269,17 @@
     };
     set(false);
 
-    btn.addEventListener('click', () => set(!quest.classList.contains('is-open')));
+    const toggle = () => {
+      const open = !quest.classList.contains('is-open');
+      if (!open) keepInPlace(row);
+      set(open);
+    };
+    btn.addEventListener('click', toggle);
     // The whole row is a larger pointer target; links and buttons keep their own job
     row.addEventListener('click', (e) => {
       if (e.target.closest('a, button')) return;
       if (String(window.getSelection())) return;
-      set(!quest.classList.contains('is-open'));
+      toggle();
     });
   });
 
@@ -281,7 +302,11 @@
       body.inert = phone.matches && !open;
       refreshLater();
     };
-    btn.addEventListener('click', () => set(!role.classList.contains('is-open')));
+    btn.addEventListener('click', () => {
+      const open = !role.classList.contains('is-open');
+      if (!open) keepInPlace(btn);
+      set(open);
+    });
     return { role, set };
   });
   const applyPhone = () => roles.forEach(({ role, set }) => set(role.classList.contains('is-open')));
