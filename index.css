@@ -578,7 +578,7 @@ main,
    ════════════════════════════════════════════════════════════════ */
 .hero {
   position: relative;
-  min-height: 100svh;
+  min-height: calc(100svh - 64px);
   padding: var(--topbar-h) var(--gutter) 0;
   display: flex;
 }
@@ -597,9 +597,10 @@ main,
   margin: 0 auto;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-rows: 1fr auto;
   align-items: center;
   column-gap: clamp(24px, 4vw, 64px);
-  min-height: calc(100svh - var(--topbar-h));
+  min-height: calc(100svh - var(--topbar-h) - 64px);
 }
 
 .hero-copy {
@@ -678,6 +679,20 @@ main,
   gap: 8px;
   margin: 26px 0 0;
   padding: 0;
+}
+/* Contact icons get their own row, centred on the page under the title screen */
+.hero-socials {
+  position: relative;
+  z-index: 3;
+  grid-column: 1 / -1;
+  justify-content: center;
+  margin: 0;
+  padding: 8px 0 28px;
+}
+@media (min-width: 1080px) {
+  .socials.hero-socials { gap: 14px; }
+  .socials.hero-socials a { width: 60px; height: 60px; }
+  .socials.hero-socials .icon { width: 24px; height: 24px; }
 }
 .socials a {
   display: grid;
@@ -830,7 +845,7 @@ main,
 /* ── Player bio ──────────────────────────────────────────────── */
 .bio {
   position: relative;
-  padding: clamp(88px, 13vw, 180px) 0 clamp(40px, 6vw, 80px);
+  padding: clamp(24px, 3vw, 44px) 0 clamp(40px, 6vw, 80px);
 }
 .bio-label {
   display: flex;
