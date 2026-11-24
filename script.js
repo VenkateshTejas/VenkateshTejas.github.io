@@ -283,6 +283,51 @@
     });
   });
 
+  /* ── AgentBros HQ ↔ the apps inside it ───────────────────────── */
+  // Hovering or focusing a link lights the card it points at; clicking
+  // scrolls there (clear of the top bar) and keeps that card lit briefly.
+  const litTimers = new WeakMap();
+  function flashQuest(quest) {
+    clearTimeout(litTimers.get(quest));
+    quest.classList.add('is-lit');
+    litTimers.set(quest, setTimeout(() => {
+      litTimers.delete(quest);
+      if (!quest.matches(':hover')) quest.classList.remove('is-lit');
+    }, 2600));
+  }
+  function jumpToQuest(quest) {
+    const offset = -(topbar.offsetHeight + 24);
+    if (!quest.hasAttribute('tabindex')) quest.setAttribute('tabindex', '-1');
+    flashQuest(quest);
+    if (lenis) {
+      lenis.scrollTo(quest, { offset, duration: 1.1 });
+    } else {
+      const top = quest.getBoundingClientRect().top + window.scrollY + offset;
+      window.scrollTo({ top, behavior: reduceMotion ? 'auto' : 'smooth' });
+    }
+    quest.focus({ preventScroll: true });
+  }
+  document.querySelectorAll('[data-quest-link]').forEach((link) => {
+    const target = document.querySelector(link.getAttribute('href'));
+    if (!target) return;
+    const on = () => target.classList.add('is-lit');
+    const off = () => { if (!litTimers.has(target)) target.classList.remove('is-lit'); };
+    link.addEventListener('pointerenter', on);
+    link.addEventListener('pointerleave', off);
+    link.addEventListener('focus', on);
+    link.addEventListener('blur', off);
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation(); // the general in-page link handler would scroll to the very top edge
+      jumpToQuest(target);
+    });
+    // Hovering an app card also lights its link on the AgentBros card
+    if (link.closest('.quest-inside')) {
+      target.addEventListener('pointerenter', () => link.classList.add('is-lit'));
+      target.addEventListener('pointerleave', () => link.classList.remove('is-lit'));
+    }
+  });
+
   /* ── Career mode: bullets collapse on phones only ────────────── */
   const phone = matchMedia('(max-width: 759px)');
   const roles = [...document.querySelectorAll('.role')].map((role) => {

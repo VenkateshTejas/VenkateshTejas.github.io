@@ -381,11 +381,53 @@
         </header>
 
         <ol class="quests">
-          <li class="quest">
+          <li class="quest quest--hub" id="p-agentbros">
+            <div class="quest-row">
+              <div class="quest-id">
+                <h3 class="quest-title">AgentBros HQ</h3>
+                <p class="quest-date">October 2026 – Present (WIP)</p>
+              </div>
+              <div class="quest-brief">
+                <p class="quest-summary">A 3D office where 56 AI agents from five projects work at desks you can walk up to and chat with.</p>
+                <div class="quest-inside">
+                  <p class="quest-inside-label" id="agentbros-inside">Inside the office</p>
+                  <ul class="quest-inside-list" aria-labelledby="agentbros-inside">
+                    <li><a href="#p-checkmate" data-quest-link>Check Mate</a></li>
+                    <li><a href="#p-smartreview" data-quest-link>SmartReview-AI</a></li>
+                    <li><a href="#p-archlab" data-quest-link>ArchLab</a></li>
+                  </ul>
+                </div>
+                <ul class="chips">
+                  <li>Agentic AI</li>
+                  <li>Claude Code</li>
+                  <li>AI / LLM Integration</li>
+                  <li>Three.js</li>
+                  <li>UI/UX</li>
+                </ul>
+              </div>
+              <div class="quest-actions">
+                <button class="quest-toggle" type="button" aria-expanded="true" aria-controls="q-agentbros">
+                  <svg class="prompt prompt-tri" aria-hidden="true"><use href="#g-triangle"/></svg><span class="quest-toggle-label">Details</span>
+                </button>
+                <a href="https://agentbros.netlify.app/" target="_blank" rel="noopener" class="quest-link" aria-label="Open AgentBros HQ live app">Live app<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+              </div>
+            </div>
+            <div class="quest-details" id="q-agentbros">
+              <div class="quest-details-inner">
+                <p>Built a <strong>3D office</strong> where the <strong>56 Claude Code agents</strong> behind <strong>5 projects</strong> (Scout, Tailor, Check Mate, SmartReview-AI and ArchLab) appear as people at their desks. Each agent is wired <strong>read-only</strong> to its real project, so working agents show what they are doing right now and idle ones recap their last task.</p>
+                <p><strong>Talk to any agent.</strong> Click someone, or walk up to them in first person, and ask what they do: they answer from their own project&rsquo;s real files. Each one runs <strong>headless Claude Code</strong> limited to read-only tools (Read, Grep, Glob), so a conversation can never change a project.</p>
+                <p><strong>Watch real work play back.</strong> Past runs are rebuilt from their <strong>Claude Code transcripts</strong>: each subagent lights up its desk as it starts, every tool call appears on screen, and idle gaps are cut so a long run plays back like a time-lapse. In the founder&rsquo;s cabin, agents drop by with what needs attention, like a new job pack, a failed <strong>GitHub Actions</strong> run or an urgent review, each with a button to act on it.</p>
+                <p><strong>A safe public version.</strong> Anyone can explore a snapshot of the office and chat, but guests can only look, never put the team to work. Replies come from <strong>Google Gemini</strong> through one <strong>Netlify serverless function</strong> that has no tools, knows only what the page already shows, and caps message length and requests per visitor. A strict content security policy blocks outside scripts, and the build <strong>scans every file and fails</strong> if anything personal or secret slips in.</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="quest quest--linked" id="p-checkmate">
             <div class="quest-row">
               <div class="quest-id">
                 <h3 class="quest-title">Check Mate</h3>
                 <p class="quest-date">May 2026 – June 2026</p>
+                <a class="quest-hq" href="#p-agentbros" data-quest-link><svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg>Also in AgentBros HQ</a>
               </div>
               <div class="quest-brief">
                 <p class="quest-summary">AI market-intelligence platform tracking 8 industries — fully automated and always up to date.</p>
@@ -413,11 +455,12 @@
             </div>
           </li>
 
-          <li class="quest">
+          <li class="quest quest--linked" id="p-smartreview">
             <div class="quest-row">
               <div class="quest-id">
                 <h3 class="quest-title">SmartReview-AI</h3>
                 <p class="quest-date">July 2026</p>
+                <a class="quest-hq" href="#p-agentbros" data-quest-link><svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg>Also in AgentBros HQ</a>
               </div>
               <div class="quest-brief">
                 <p class="quest-summary">Turns customer reviews into ranked actions — sentiment, recurring issues, and a suggested reply for each.</p>
@@ -445,11 +488,12 @@
             </div>
           </li>
 
-          <li class="quest">
+          <li class="quest quest--linked quest--linked-end" id="p-archlab">
             <div class="quest-row">
               <div class="quest-id">
                 <h3 class="quest-title">ArchLab</h3>
                 <p class="quest-date">July 2026</p>
+                <a class="quest-hq" href="#p-agentbros" data-quest-link><svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg>Also in AgentBros HQ</a>
               </div>
               <div class="quest-brief">
                 <p class="quest-summary">Interactive way to learn system design by taking real architectures apart and seeing what breaks.</p>

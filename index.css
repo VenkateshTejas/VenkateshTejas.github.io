@@ -1306,6 +1306,9 @@ main,
 }
 .quest {
   --cols: minmax(220px, 1fr) minmax(0, 1.5fr) 232px;
+  --row-pt: 30px;
+  --pad-l: 26px;
+  --title-fs: clamp(1.3rem, 2.2vw, 1.85rem);
   position: relative;
   border-bottom: 1px solid var(--line);
   transition: background-color 0.25s;
@@ -1319,7 +1322,7 @@ main,
   transform: scaleY(0);
   transition: transform 0.35s var(--ease-out);
 }
-.quest:hover { background: rgba(255, 255, 255, 0.022); }
+.quest:hover { background-color: rgba(255, 255, 255, 0.022); }
 .quest:hover::before,
 .quest.is-open::before { transform: scaleY(1); }
 
@@ -1328,7 +1331,7 @@ main,
   grid-template-columns: var(--cols);
   gap: clamp(16px, 3vw, 40px);
   align-items: start;
-  padding: 30px 8px 30px 26px;
+  padding: var(--row-pt) 8px var(--row-pt) var(--pad-l);
 }
 .js .quest-row { cursor: pointer; }
 
@@ -1337,9 +1340,10 @@ main,
   font-family: var(--f-display);
   font-weight: 800;
   font-stretch: 96%;
-  font-size: clamp(1.3rem, 2.2vw, 1.85rem);
+  font-size: var(--title-fs);
   line-height: 1.02;
   text-transform: uppercase;
+  transition: color 0.25s;
 }
 .quest-date {
   margin: 0;
@@ -1402,7 +1406,7 @@ main,
   column-gap: clamp(16px, 3vw, 40px);
   min-height: 0;
   overflow: hidden;
-  padding: 0 8px 0 26px;
+  padding: 0 8px 0 var(--pad-l);
 }
 .quest-details-inner p {
   grid-column: 2;
@@ -1416,11 +1420,152 @@ main,
   .quest-actions { grid-column: 2; justify-content: flex-start; }
 }
 @media (max-width: 679px) {
-  .quest { --cols: minmax(0, 1fr); }
-  .quest-row { gap: 12px; padding: 24px 4px 24px 18px; }
+  .quest { --cols: minmax(0, 1fr); --row-pt: 24px; --pad-l: 18px; }
+  .quest-row { gap: 12px; padding-right: 4px; }
   .quest-actions { grid-column: 1; margin-top: 4px; }
-  .quest-details-inner { padding: 0 4px 0 18px; }
+  .quest-details-inner { padding-right: 4px; }
   .quest-details-inner p { grid-column: 1; }
+}
+
+/* AgentBros HQ and the three apps that also run inside it.
+   A rail drops from a marker beside the AgentBros title and branches
+   into each app card (├ ├ └), so the group reads as one family while
+   every app keeps its own card. */
+@property --rail {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: transparent;
+}
+.quest--hub,
+.quest--linked {
+  --rail-x: 12px;
+  --rail-w: 2px;
+  --indent: 22px;
+  --rail: color-mix(in oklab, var(--accent) 40%, var(--bg));
+  --node-y: calc(var(--row-pt) + var(--title-fs) * 0.51);
+  background-image: linear-gradient(var(--rail), var(--rail));
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  transition: background-color 0.25s, --rail 0.3s;
+}
+.quests:has(.quest--hub:hover, .quest--linked:hover, .quest.is-lit) :is(.quest--hub, .quest--linked) {
+  --rail: var(--accent);
+}
+
+/* Hub: a waypoint beside the title and the rail running down from it */
+.quest--hub {
+  background-size: var(--rail-w) calc(100% - var(--node-y));
+  background-position: var(--rail-x) var(--node-y);
+}
+.quest--hub::after {
+  content: "";
+  position: absolute;
+  left: calc(var(--rail-x) + var(--rail-w) / 2 - 5px);
+  top: calc(var(--node-y) - 5px);
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background: var(--rail);
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+/* Apps: the rail passes through, with a branch into each title */
+.quest--linked {
+  --title-x: calc(var(--pad-l) + var(--indent));
+  background-size: var(--rail-w) 100%;
+  background-position: var(--rail-x) 0;
+}
+.quest--linked-end { background-image: none; }
+.quest--linked::after {
+  content: "";
+  position: absolute;
+  left: var(--rail-x);
+  top: -1px;
+  width: calc(var(--title-x) - var(--rail-x) - 8px);
+  height: calc(var(--node-y) + 1px + var(--rail-w) / 2);
+  border-left: var(--rail-w) solid var(--rail);
+  border-bottom: var(--rail-w) solid var(--rail);
+  pointer-events: none;
+}
+.quest--linked-end::after { border-bottom-left-radius: 12px; }
+.quest--linked .quest-id { padding-left: var(--indent); }
+
+/* "Inside the office" links on the hub, "Also in AgentBros HQ" on each app */
+.quest-inside {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 10px;
+  margin: 0 0 14px;
+}
+.quest-inside-label {
+  margin: 0;
+  color: var(--muted);
+  font-family: var(--f-mono);
+  font-stretch: 87.5%;
+  font-size: 0.6875rem;
+}
+.quest-inside-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+}
+.quest-inside-list a,
+.quest-hq {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 7px;
+  color: var(--accent);
+  text-decoration: none;
+  background-color: color-mix(in oklab, var(--accent) 9%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--accent) 34%, transparent);
+  transition: background-color 0.2s, color 0.2s;
+}
+.quest-inside-list a {
+  gap: 7px;
+  min-height: 30px;
+  padding: 0 11px 0 10px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+.quest-inside-list a::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.quest-hq {
+  gap: 5px;
+  min-height: 26px;
+  margin-top: 12px;
+  padding: 0 9px 0 6px;
+  font-family: var(--f-mono);
+  font-stretch: 87.5%;
+  font-size: 0.6875rem;
+}
+.quest-hq .icon { width: 13px; height: 13px; transform: rotate(180deg); }
+.quest-inside-list a:hover,
+.quest-inside-list a.is-lit,
+.quest-hq:hover {
+  background-color: color-mix(in oklab, var(--accent) 20%, transparent);
+  color: var(--text);
+}
+
+/* The card a link points at lights up while you hover it, and after a jump */
+.quest.is-lit { background-color: color-mix(in oklab, var(--accent) 7%, transparent); }
+.quest.is-lit::before { transform: scaleY(1); }
+.quest.is-lit .quest-title { color: var(--accent); }
+
+@media (max-width: 679px) {
+  .quest--hub,
+  .quest--linked { --rail-x: 7px; --indent: 16px; }
+  .quest--linked { --pad-l: calc(18px + var(--indent)); --title-x: var(--pad-l); }
+  .quest--linked .quest-id { padding-left: 0; }
 }
 
 /* ── Leadership · rank progression ──────────────────────────── */
