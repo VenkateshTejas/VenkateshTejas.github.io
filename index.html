@@ -19,7 +19,9 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,500..900&family=Instrument+Sans:wdth,wght@75..100,400..700&family=Martian+Mono:wdth,wght@75..112.5,400..600&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="pictures/tejas-card-900.webp" imagesrcset="pictures/tejas-card-560.webp 560w, pictures/tejas-card-900.webp 900w" imagesizes="(max-width: 899px) 66vw, 430px">
-  <link rel="stylesheet" href="index.css">
+  <!-- Bump ?v= whenever index.css, script.js or gl.js change: GitHub Pages lets browsers
+       keep these for 10 minutes, so new HTML could otherwise load old styles and scripts. -->
+  <link rel="stylesheet" href="index.css?v=2026-11-24">
   <script type="importmap">
     { "imports": {
         "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.min.js",
@@ -810,7 +812,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
-  <script src="script.js" defer></script>
-  <script type="module" src="gl.js"></script>
+  <script src="script.js?v=2026-11-24" defer></script>
+  <script type="module" src="gl.js?v=2026-11-24"></script>
 </body>
 </html>
